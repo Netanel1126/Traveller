@@ -14,6 +14,8 @@
 		84AC8CC01FFE23A800AB9BF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */; };
 		84AC8CCB1FFE23A800AB9BF9 /* TravellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CCA1FFE23A800AB9BF9 /* TravellerTests.swift */; };
 		84AC8CD61FFE23A800AB9BF9 /* TravellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CD51FFE23A800AB9BF9 /* TravellerUITests.swift */; };
+		84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */; };
+		84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0AB271FFE55DE0093C30F /* Algo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		84AC8CD11FFE23A800AB9BF9 /* TravellerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravellerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AC8CD51FFE23A800AB9BF9 /* TravellerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerUITests.swift; sourceTree = "<group>"; };
 		84AC8CD71FFE23A800AB9BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocatorViewController.swift; sourceTree = "<group>"; };
+		84E0AB271FFE55DE0093C30F /* Algo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				84AC8CBC1FFE23A800AB9BF9 /* Assets.xcassets */,
 				84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */,
 				84AC8CC11FFE23A800AB9BF9 /* Info.plist */,
+				84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */,
+				84E0AB271FFE55DE0093C30F /* Algo.swift */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */,
+				84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */,
 				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
 				84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */,
 			);
