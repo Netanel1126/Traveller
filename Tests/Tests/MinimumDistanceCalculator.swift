@@ -1,15 +1,9 @@
-//
-//  DistanceCalculator.swift
-//  Tests
-//
-//  Created by admin on 04/01/2018.
-//  Copyright © 2018 admin. All rights reserved.
-//
 import Darwin
 
 import Foundation
 class MinimumDistanceCalculator {
     
+    // Calculates the 2D distance between two positions on the map
     private static func distance(pos1:Position,pos2:Position)->Double {
         var x1:Double=pos1.x!-pos2.x!
         x1=pow(x1,2)
@@ -18,7 +12,9 @@ class MinimumDistanceCalculator {
         return sqrt(x1+x2)
     }
     
-    private static func getMinDistance(positions: [Position], stPos:Position) -> (Double, Position) {
+    // Returns the distance of the closest position to 'stPos'.
+    // 'stPos' is the position from the GPS
+    private static func getMinDistance(positions: [Position], stPos:Position) -> (Double) {
         var minDistance:Double=Double.greatestFiniteMagnitude
         var minPos=positions[0]
         for pos in positions {
@@ -30,32 +26,29 @@ class MinimumDistanceCalculator {
             }
         }
         
-        return (minDistance,minPos)
+        return (minDistance)
     }
     
-    static func minLocation(positions: [Position], stPos: Position, maxDistance: Double) -> Bool {
-        return getMinDistance(positions: positions,stPos: stPos).0 < maxDistance
+    // Returns true if 'stPos' is in the ideal range 'maxDistance', otherwise returns false
+    static func withinPathRange(positions: [Position], stPos: Position,maxDistance:Double) -> Bool {
+        return getMinDistance(positions: positions,stPos: stPos) < maxDistance
     }
     
-    //args: position: [measefPos-1,guidePos+1]
-    static func withinPathRange(positions: [Position], stPos: Position) -> Bool {
-        var measefPos = positions[1]
-        var guidePos = positions[positions.count - 2]
+    // Returns the set of positions that represents the relevant/bounded path between the rearguard and the guide.
+    // 'guide' and 'rearguard' are positions that relates to actual positions on the map (not from GPS).
+    static func getRelevantPath(map:[Position],guide:Position,rearguard:Position) -> [Position]{
+        var positions = [Position]()
+        for pos in rearguard.id!...guide.id!{
+            positions.append(map[pos])
+        }
         
-        let result=getMinDistance(positions: positions, stPos: stPos)
-        let resultId=result.1.id
-        let resultPos=result.1
-        let distance=result.0
-        if((resultId! > guidePos.id!) || (resultId! < measefPos.id!)){
-            return false
-        }
-        if resultId == guidePos.id {
-            distance(pos1: resultPos, pos2: resultPos)
-            distance(pos1: resultPos, pos2: resultPos)
-            if(){
-                
-            }
-        }
-        return true
+        return positions
+    }
+    
+    // This is the algorithm function
+    static func isLegalPosition(map:[Position], posToCheck:Position, guide:Position, rearguard:Position, maxDistance: Double) -> Bool {
+        var markedPath = getRelevantPath(map: map, guide:guide, rearguard:rearguard)
+        return withinPathRange(positions: markedPath, stPos: posToCheck, maxDistance:maxDistance)
     }
 }
+
