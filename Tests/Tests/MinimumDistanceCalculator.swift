@@ -14,7 +14,7 @@ class MinimumDistanceCalculator {
     
     // Returns the distance of the closest position to 'stPos'.
     // 'stPos' is the position from the GPS
-    private static func getMinDistance(positions: [Position], stPos:Position) -> (Double) {
+    public static func getMinDistance(positions: [Position], stPos:Position) -> (Double,Position) {
         var minDistance:Double=Double.greatestFiniteMagnitude
         var minPos=positions[0]
         for pos in positions {
@@ -26,28 +26,34 @@ class MinimumDistanceCalculator {
             }
         }
         
-        return (minDistance)
+        return (minDistance,minPos)
     }
     
     // Returns true if 'stPos' is in the ideal range 'maxDistance', otherwise returns false
     static func withinPathRange(positions: [Position], stPos: Position,maxDistance:Double) -> Bool {
-        return getMinDistance(positions: positions,stPos: stPos) < maxDistance
+        return getMinDistance(positions: positions,stPos: stPos).0 < maxDistance
     }
     
     // Returns the set of positions that represents the relevant/bounded path between the rearguard and the guide.
     // 'guide' and 'rearguard' are positions that relates to actual positions on the map (not from GPS).
     static func getRelevantPath(map:[Position],guide:Position,rearguard:Position) -> [Position]{
         var positions = [Position]()
+        if(rearguard.id! < guide.id!){
         for pos in rearguard.id!...guide.id!{
             positions.append(map[pos])
         }
-        
+        }
+        else {
+            for pos in guide.id!...rearguard.id!{
+                positions.append(map[pos])
+            }
+        }
         return positions
     }
     
     // This is the algorithm function
     static func isLegalPosition(map:[Position], posToCheck:Position, guide:Position, rearguard:Position, maxDistance: Double) -> Bool {
-        var markedPath = getRelevantPath(map: map, guide:guide, rearguard:rearguard)
+        let markedPath = getRelevantPath(map: map, guide:guide, rearguard:rearguard)
         return withinPathRange(positions: markedPath, stPos: posToCheck, maxDistance:maxDistance)
     }
 }

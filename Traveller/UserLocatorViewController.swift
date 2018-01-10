@@ -6,9 +6,6 @@ class UserLocatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var a = Algo()
-        
-        print("Test: \(a.locator(pointA:Location(x:8,y:3),pointB:Location(x:4,y:8)))")
     }
 
     override func didReceiveMemoryWarning() {
