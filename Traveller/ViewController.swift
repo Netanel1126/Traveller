@@ -63,8 +63,6 @@ class ViewController: UIViewController {
         }else{
             performSegue(withIdentifier: "algoFalse", sender: nil)
         }
-
-
     }
 }
 
