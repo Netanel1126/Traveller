@@ -17,6 +17,7 @@
 		84AC8CD61FFE23A800AB9BF9 /* TravellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CD51FFE23A800AB9BF9 /* TravellerUITests.swift */; };
 		84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */; };
 		84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0AB271FFE55DE0093C30F /* Algo.swift */; };
+		AC21717E200E33280047BBF8 /* LogInAndGuideHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */; };
 		C1CD94D3200DF02900164EEF /* TravellerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */; };
 		C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD94D4200E03E600164EEF /* GroupTableViewController.swift */; };
 		C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD94D6200E098100164EEF /* GroupTabBarController.swift */; };
@@ -58,6 +59,7 @@
 		84AC8CD71FFE23A800AB9BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocatorViewController.swift; sourceTree = "<group>"; };
 		84E0AB271FFE55DE0093C30F /* Algo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algo.swift; sourceTree = "<group>"; };
+		AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInAndGuideHomePage.storyboard; sourceTree = "<group>"; };
 		C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravellerStoryBoard.storyboard; sourceTree = "<group>"; };
 		C1CD94D4200E03E600164EEF /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 		C1CD94D6200E098100164EEF /* GroupTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTabBarController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */,
 				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
 				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
+				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				84AC8CC01FFE23A800AB9BF9 /* LaunchScreen.storyboard in Resources */,
 				84AC8CBD1FFE23A800AB9BF9 /* Assets.xcassets in Resources */,
 				C1CD94D3200DF02900164EEF /* TravellerStoryBoard.storyboard in Resources */,
+				AC21717E200E33280047BBF8 /* LogInAndGuideHomePage.storyboard in Resources */,
 				C1CD94DB200E237500164EEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
