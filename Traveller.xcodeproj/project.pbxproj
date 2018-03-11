@@ -24,6 +24,7 @@
 		84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */; };
 		84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0AB271FFE55DE0093C30F /* Algo.swift */; };
 		AC21717E200E33280047BBF8 /* LogInAndGuideHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */; };
+		AC6CF6FB2055517D0095C0B5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CF6FA2055517D0095C0B5 /* Groups.swift */; };
 		BAB90B77574D863CDB677450 /* Pods_TravellerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AECBF2EB58F09A8805E3C7 /* Pods_TravellerTests.framework */; };
 		C1CD94D3200DF02900164EEF /* TravellerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */; };
 		C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD94D4200E03E600164EEF /* GroupTableViewController.swift */; };
@@ -78,6 +79,7 @@
 		86AECBF2EB58F09A8805E3C7 /* Pods_TravellerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravellerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890D3CA551821974E400867C /* Pods-TravellerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInAndGuideHomePage.storyboard; sourceTree = "<group>"; };
+		AC6CF6FA2055517D0095C0B5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		AF51120EF5002DC2299BFC5C /* Pods-TravellerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B29E9DB948C7A988E10BBA4F /* Pods_TravellerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravellerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravellerStoryBoard.storyboard; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F905E8D205524D00020ACD5 /* CoreLocation.framework in Frameworks */,
 				84B356F94718B164F5910F99 /* Pods_Traveller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +122,6 @@
 		085DADC82F7879FCE9022834 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0F905E8C205524D00020ACD5 /* CoreLocation.framework */,
 				EC9717E8881BF0AC554BD498 /* Pods_Traveller.framework */,
 				86AECBF2EB58F09A8805E3C7 /* Pods_TravellerTests.framework */,
 				B29E9DB948C7A988E10BBA4F /* Pods_TravellerUITests.framework */,
@@ -136,6 +136,7 @@
 				309FD34F205520A400447472 /* FirebaseModel.swift */,
 				3065D47D20552E2E0057EA94 /* TravellerUser.swift */,
 				3065D47F20553E6F0057EA94 /* TravellerGuide.swift */,
+				AC6CF6FA2055517D0095C0B5 /* Groups.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,7 +183,6 @@
 				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
 				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
 				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
-				0F905E90205525A10020ACD5 /* MapVC.swift */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -521,7 +521,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */,
-				0F905E91205525A10020ACD5 /* MapVC.swift in Sources */,
 				C1CD94D9200E1D4E00164EEF /* JoinGroupController.swift in Sources */,
 				84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */,
 				309FD350205520A400447472 /* FirebaseModel.swift in Sources */,
@@ -534,6 +533,7 @@
 				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,
 				84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */,
+				AC6CF6FB2055517D0095C0B5 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
