@@ -27,8 +27,8 @@ class Groups{
     init(fromJson : [String:Any]){
         self.groupid = fromJson["GroupID"] as! String
         self.groupName = fromJson["GroupName"] as! String
-        self.guideList = fromJson["GuideList"] as! String
-        self.travllerList = fromJson["TravllerList"] as! String
+        self.guideList = fromJson["GuideList"] as! [String]
+        self.travllerList = fromJson["TravllerList"] as! [String]
         self.imageURL = fromJson["ImageURL"] as! String
     }
     
@@ -40,9 +40,11 @@ class Groups{
         json["guideList"] = guideList
         json["travllerList"] = travllerList
         
-        if imgURL != nil{
-            json["imgURL"] = imgURL!
-        }else{imgURL = ""}
+        if imageURL != nil{
+            json["imageURL"] = imageURL!
+        } else{
+            imageURL = ""
+        }
         
         return json
     }
