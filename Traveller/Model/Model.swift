@@ -22,6 +22,8 @@ class ModelNotificationBase<T>{
 
 class ModelNotification{
     static let ConnectedUser = ModelNotificationBase<String>(name: "ConnectedUserNotificatio")
+    static let NewUserNotification = ModelNotificationBase<String>(name : "NewUserNotification")
+    static let LogInNotification = ModelNotificationBase<String>(name : "LogInNotification")
     
     static func removeObserver(observer:Any){
         NotificationCenter.default.removeObserver(observer)
@@ -36,6 +38,12 @@ class Model{
     func getConnectedUserAndObserve(){
         FirebaseModel.getConnectedUserAndObservecallback { (userEmail) in
             ModelNotification.ConnectedUser.post(data: userEmail)
+        }
+    }
+    
+    func addNewUserToDatabase(user:TravellerUser){
+        FirebaseModel.createNewUser(userT: user) { (error) in
+            ModelNotification.NewUserNotification.post(data: error)
         }
     }
 }

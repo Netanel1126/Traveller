@@ -21,13 +21,19 @@ class FirebaseModel{
         }
     }
     
+    static func addUserToFirebase(user: TravellerUser){
+        let myRef = databaseRef?.child("Users").child(user.email)
+        myRef?.setValue(user.tojson())
+    }
+    
     /*Adds new user to firebase returns a string by callback if error*/
-    static func createNewUser(withEmail : String,password: String , callback: @escaping (String?)-> Void){
-        Auth.auth().createUser(withEmail: withEmail, password: password){ (user, error) in
+    static func createNewUser(userT: TravellerUser , callback: @escaping (String?)-> Void){
+        Auth.auth().createUser(withEmail: userT.email, password: userT.password){ (user, error) in
             if(error != nil){
                 callback(error?.localizedDescription)
             }
             else{
+                FirebaseModel.addUserToFirebase(user: userT)
                 callback(nil)
             }
         }
@@ -43,5 +49,17 @@ class FirebaseModel{
                 callback(nil)
             }
         }
+    }
+    
+    static func chackAuthentication(authentication:String,callback: @escaping(String?)-> Void){
+        var myRef = databaseRef?.child("Authentications").child(authentication)
+        
+        myRef?.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let val = snapshot.value as? [String:Any]{
+                callback(nil)
+            }else{
+                callback("Error - Authentication is incorrect")
+            }
+        })
     }
 }
