@@ -1,21 +1,14 @@
-//
-//  AppDelegate.swift
-//  Traveller
-//
-//  Created by admin on 04/01/2018.
-//  Copyright © 2018 Traveller52. All rights reserved.
-//
-
 import UIKit
+import FirebaseDatabase
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
