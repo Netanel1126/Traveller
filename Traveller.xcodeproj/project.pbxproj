@@ -94,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F905E8D205524D00020ACD5 /* CoreLocation.framework in Frameworks */,
 				84B356F94718B164F5910F99 /* Pods_Traveller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +121,7 @@
 		085DADC82F7879FCE9022834 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F905E8C205524D00020ACD5 /* CoreLocation.framework */,
 				EC9717E8881BF0AC554BD498 /* Pods_Traveller.framework */,
 				86AECBF2EB58F09A8805E3C7 /* Pods_TravellerTests.framework */,
 				B29E9DB948C7A988E10BBA4F /* Pods_TravellerUITests.framework */,
@@ -180,6 +182,7 @@
 				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
 				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
 				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
+				0F905E90205525A10020ACD5 /* MapVC.swift */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */,
+				0F905E91205525A10020ACD5 /* MapVC.swift in Sources */,
 				C1CD94D9200E1D4E00164EEF /* JoinGroupController.swift in Sources */,
 				84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */,
 				309FD350205520A400447472 /* FirebaseModel.swift in Sources */,
