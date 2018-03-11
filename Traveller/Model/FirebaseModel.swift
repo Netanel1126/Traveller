@@ -28,6 +28,15 @@ class FirebaseModel{
     
     /*Adds new user to firebase returns a string by callback if error*/
     static func createNewUser(userT: TravellerUser , callback: @escaping (String?)-> Void){
+        
+        if let userG = userT as? TravellerGuide{
+            FirebaseModel.chackAuthentication(authentication: userG.authentication, callback: { (error) in
+                if error != nil {
+                    callback(error)
+                    return
+                }
+            })
+        }
         Auth.auth().createUser(withEmail: userT.email, password: userT.password){ (user, error) in
             if(error != nil){
                 callback(error?.localizedDescription)
