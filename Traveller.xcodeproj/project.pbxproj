@@ -31,6 +31,7 @@
 		C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD94D6200E098100164EEF /* GroupTabBarController.swift */; };
 		C1CD94D9200E1D4E00164EEF /* JoinGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */; };
 		C1CD94DB200E237500164EEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1CD94DA200E237500164EEF /* Main.storyboard */; };
+		C1EA0AC120555F62000E71A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */; };
 		F1AD4747F73EB863BF7B816F /* Pods_TravellerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29E9DB948C7A988E10BBA4F /* Pods_TravellerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +56,6 @@
 		027FD91F11404A1421F865CB /* Pods-TravellerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests.release.xcconfig"; sourceTree = "<group>"; };
 		3065D47D20552E2E0057EA94 /* TravellerUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerUser.swift; sourceTree = "<group>"; };
 		3065D47F20553E6F0057EA94 /* TravellerGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerGuide.swift; sourceTree = "<group>"; };
-		3065D48120555D280057EA94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		309FD34D2055208F00447472 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		309FD34F205520A400447472 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinimumDistanceCalculator.swift; path = Tests/Tests/MinimumDistanceCalculator.swift; sourceTree = SOURCE_ROOT; };
@@ -88,6 +88,7 @@
 		C1CD94D6200E098100164EEF /* GroupTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTabBarController.swift; sourceTree = "<group>"; };
 		C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupController.swift; sourceTree = "<group>"; };
 		C1CD94DA200E237500164EEF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C382E509764CF5FF340F7980 /* Pods-Traveller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.debug.xcconfig"; sourceTree = "<group>"; };
 		EC9717E8881BF0AC554BD498 /* Pods_Traveller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traveller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,7 +184,7 @@
 				C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */,
 				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
 				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
-				3065D48120555D280057EA94 /* GoogleService-Info.plist */,
+				C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */,
 				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
 			);
 			path = Traveller;
@@ -342,6 +343,7 @@
 				C1CD94DB200E237500164EEF /* Main.storyboard in Resources */,
 				849BD54F20226D8800EBC02D /* Assets.xcassets in Resources */,
 				849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */,
+				C1EA0AC120555F62000E71A9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
