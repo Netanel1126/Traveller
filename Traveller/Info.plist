@@ -23,7 +23,9 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>LogInAndGuideHomePage</string>
+	<string>TourGuideUI</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Change it on ifno :)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

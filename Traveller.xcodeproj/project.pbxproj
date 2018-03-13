@@ -13,6 +13,9 @@
 		309FD350205520A400447472 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FD34F205520A400447472 /* FirebaseModel.swift */; };
 		30EC2C5E2006198D0065FA2A /* MinimumDistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */; };
 		30EC2C5F2006198D0065FA2A /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5D2006198D0065FA2A /* Position.swift */; };
+		845EC3EC205838CC00075E49 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3EB205838CC00075E49 /* AuthenticationModel.swift */; };
+		8498ED602058344200728827 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498ED5F2058344200728827 /* CoreLocation.framework */; };
+		8498ED63205834C300728827 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498ED62205834C300728827 /* MapVC.swift */; };
 		849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54B202263A800EBC02D /* TourGuideUI.storyboard */; };
 		849BD54F20226D8800EBC02D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54E20226D8800EBC02D /* Assets.xcassets */; };
 		84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */; };
@@ -58,9 +61,12 @@
 		3065D47F20553E6F0057EA94 /* TravellerGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerGuide.swift; sourceTree = "<group>"; };
 		309FD34D2055208F00447472 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		309FD34F205520A400447472 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
-		30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinimumDistanceCalculator.swift; path = Tests/Tests/MinimumDistanceCalculator.swift; sourceTree = SOURCE_ROOT; };
-		30EC2C5D2006198D0065FA2A /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Tests/Tests/Position.swift; sourceTree = SOURCE_ROOT; };
+		30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinimumDistanceCalculator.swift; path = Traveller/Model/alg/MinimumDistanceCalculator.swift; sourceTree = SOURCE_ROOT; };
+		30EC2C5D2006198D0065FA2A /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Traveller/Model/data/Position.swift; sourceTree = SOURCE_ROOT; };
 		58FCB9CAB13EDB20CB716E51 /* Pods-Traveller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.release.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.release.xcconfig"; sourceTree = "<group>"; };
+		845EC3EB205838CC00075E49 /* AuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		8498ED5F2058344200728827 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8498ED62205834C300728827 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		849BD54B202263A800EBC02D /* TourGuideUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourGuideUI.storyboard; sourceTree = "<group>"; };
 		849BD54E20226D8800EBC02D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84AC8CB21FFE23A800AB9BF9 /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8498ED602058344200728827 /* CoreLocation.framework in Frameworks */,
 				84B356F94718B164F5910F99 /* Pods_Traveller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +131,7 @@
 		085DADC82F7879FCE9022834 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8498ED5F2058344200728827 /* CoreLocation.framework */,
 				EC9717E8881BF0AC554BD498 /* Pods_Traveller.framework */,
 				86AECBF2EB58F09A8805E3C7 /* Pods_TravellerTests.framework */,
 				B29E9DB948C7A988E10BBA4F /* Pods_TravellerUITests.framework */,
@@ -134,13 +142,46 @@
 		309FD34C2055203500447472 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				845EC3F02058396000075E49 /* data */,
+				8498ED5E205832FF00728827 /* alg */,
 				309FD34D2055208F00447472 /* Model.swift */,
+				845EC3EB205838CC00075E49 /* AuthenticationModel.swift */,
 				309FD34F205520A400447472 /* FirebaseModel.swift */,
 				3065D47D20552E2E0057EA94 /* TravellerUser.swift */,
 				3065D47F20553E6F0057EA94 /* TravellerGuide.swift */,
 				AC6CF6FA2055517D0095C0B5 /* Groups.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		845EC3F02058396000075E49 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				30EC2C5D2006198D0065FA2A /* Position.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		8498ED5E205832FF00728827 /* alg */ = {
+			isa = PBXGroup;
+			children = (
+				30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */,
+				84E0AB271FFE55DE0093C30F /* Algo.swift */,
+			);
+			path = alg;
+			sourceTree = "<group>";
+		};
+		8498ED61205834A600728827 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
+				84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */,
+				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
+				84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */,
+				C1CD94D4200E03E600164EEF /* GroupTableViewController.swift */,
+				8498ED62205834C300728827 /* MapVC.swift */,
+			);
+			path = vc;
 			sourceTree = "<group>";
 		};
 		84AC8CA91FFE23A800AB9BF9 = {
@@ -168,24 +209,17 @@
 		84AC8CB41FFE23A800AB9BF9 /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
+				84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */,
+				8498ED61205834A600728827 /* vc */,
 				309FD34C2055203500447472 /* Model */,
-				C1CD94D4200E03E600164EEF /* GroupTableViewController.swift */,
 				849BD54B202263A800EBC02D /* TourGuideUI.storyboard */,
 				C1CD94DA200E237500164EEF /* Main.storyboard */,
-				30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */,
-				30EC2C5D2006198D0065FA2A /* Position.swift */,
-				84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */,
-				84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */,
+				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
+				C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */,
 				84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */,
 				84AC8CC11FFE23A800AB9BF9 /* Info.plist */,
-				84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */,
-				84E0AB271FFE55DE0093C30F /* Algo.swift */,
 				849BD54E20226D8800EBC02D /* Assets.xcassets */,
-				C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */,
-				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
-				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
 				C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */,
-				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -529,11 +563,13 @@
 				84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */,
 				309FD350205520A400447472 /* FirebaseModel.swift in Sources */,
 				30EC2C5E2006198D0065FA2A /* MinimumDistanceCalculator.swift in Sources */,
+				845EC3EC205838CC00075E49 /* AuthenticationModel.swift in Sources */,
 				C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */,
 				309FD34E2055208F00447472 /* Model.swift in Sources */,
 				3065D48020553E6F0057EA94 /* TravellerGuide.swift in Sources */,
 				30EC2C5F2006198D0065FA2A /* Position.swift in Sources */,
 				84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */,
+				8498ED63205834C300728827 /* MapVC.swift in Sources */,
 				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,
 				84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */,
