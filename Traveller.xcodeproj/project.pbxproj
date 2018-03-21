@@ -13,6 +13,8 @@
 		309FD350205520A400447472 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FD34F205520A400447472 /* FirebaseModel.swift */; };
 		30EC2C5E2006198D0065FA2A /* MinimumDistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */; };
 		30EC2C5F2006198D0065FA2A /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5D2006198D0065FA2A /* Position.swift */; };
+		3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */; };
+		3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */; };
 		845EC3EC205838CC00075E49 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3EB205838CC00075E49 /* AuthenticationModel.swift */; };
 		8498ED602058344200728827 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498ED5F2058344200728827 /* CoreLocation.framework */; };
 		8498ED63205834C300728827 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498ED62205834C300728827 /* MapVC.swift */; };
@@ -63,6 +65,8 @@
 		309FD34F205520A400447472 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinimumDistanceCalculator.swift; path = Traveller/Model/alg/MinimumDistanceCalculator.swift; sourceTree = SOURCE_ROOT; };
 		30EC2C5D2006198D0065FA2A /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Traveller/Model/data/Position.swift; sourceTree = SOURCE_ROOT; };
+		3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewController.swift; sourceTree = "<group>"; };
+		3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioRecrdingTest.storyboard; sourceTree = "<group>"; };
 		58FCB9CAB13EDB20CB716E51 /* Pods-Traveller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.release.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.release.xcconfig"; sourceTree = "<group>"; };
 		845EC3EB205838CC00075E49 /* AuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		8498ED5F2058344200728827 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -209,6 +213,7 @@
 		84AC8CB41FFE23A800AB9BF9 /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
+				3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */,
 				84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */,
 				8498ED61205834A600728827 /* vc */,
 				309FD34C2055203500447472 /* Model */,
@@ -220,6 +225,7 @@
 				84AC8CC11FFE23A800AB9BF9 /* Info.plist */,
 				849BD54E20226D8800EBC02D /* Assets.xcassets */,
 				C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */,
+				3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				84AC8CC01FFE23A800AB9BF9 /* LaunchScreen.storyboard in Resources */,
 				C1CD94D3200DF02900164EEF /* TravellerStoryBoard.storyboard in Resources */,
 				AC21717E200E33280047BBF8 /* LogInAndGuideHomePage.storyboard in Resources */,
+				3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */,
 				C1CD94DB200E237500164EEF /* Main.storyboard in Resources */,
 				849BD54F20226D8800EBC02D /* Assets.xcassets in Resources */,
 				849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */,
@@ -569,6 +576,7 @@
 				3065D48020553E6F0057EA94 /* TravellerGuide.swift in Sources */,
 				30EC2C5F2006198D0065FA2A /* Position.swift in Sources */,
 				84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */,
+				3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */,
 				8498ED63205834C300728827 /* MapVC.swift in Sources */,
 				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,

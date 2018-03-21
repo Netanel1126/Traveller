@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JuC-eO-eNp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Recorder View Controller-->
+        <scene sceneID="vEj-tP-GJy">
+            <objects>
+                <viewController id="JuC-eO-eNp" customClass="AudioRecorderViewController" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DeS-hK-hUA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Doh-VT-ebl">
+                                <rect key="frame" x="102" y="36" width="170" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="record:" destination="JuC-eO-eNp" eventType="touchUpInside" id="I7Z-Om-H7J"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmz-Zo-Avx">
+                                <rect key="frame" x="0.0" y="93" width="375" height="574"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="574" id="QRI-xR-SgV"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="7s7-JA-xfJ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7s7-JA-xfJ" id="XrU-Vx-OxM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JuC-eO-eNp" id="h2h-rb-eaF"/>
+                                    <outlet property="delegate" destination="JuC-eO-eNp" id="roV-7M-k3D"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fmz-Zo-Avx" firstAttribute="bottom" secondItem="XWW-Oa-v5Y" secondAttribute="bottom" id="OXv-fq-NcC"/>
+                            <constraint firstItem="fmz-Zo-Avx" firstAttribute="leading" secondItem="XWW-Oa-v5Y" secondAttribute="leading" id="hzJ-39-5fO"/>
+                            <constraint firstItem="fmz-Zo-Avx" firstAttribute="trailing" secondItem="XWW-Oa-v5Y" secondAttribute="trailing" id="nuy-yi-t0p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XWW-Oa-v5Y"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLabel" destination="Doh-VT-ebl" id="ddr-jv-3fC"/>
+                        <outlet property="myTableView" destination="fmz-Zo-Avx" id="RH9-dE-vj7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbr-eF-b9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="66.11694152923539"/>
+        </scene>
+    </scenes>
+</document>
