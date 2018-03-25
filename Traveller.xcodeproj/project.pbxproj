@@ -213,16 +213,11 @@
 		84AC8CB41FFE23A800AB9BF9 /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
-				3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */,
-				84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */,
+				84F85C7820679CC0003E6652 /* Storyboards */,
 				8498ED61205834A600728827 /* vc */,
 				309FD34C2055203500447472 /* Model */,
-				849BD54B202263A800EBC02D /* TourGuideUI.storyboard */,
-				C1CD94DA200E237500164EEF /* Main.storyboard */,
-				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
-				C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */,
-				84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */,
 				84AC8CC11FFE23A800AB9BF9 /* Info.plist */,
+				84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */,
 				849BD54E20226D8800EBC02D /* Assets.xcassets */,
 				C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */,
 				3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */,
@@ -246,6 +241,19 @@
 				84AC8CD71FFE23A800AB9BF9 /* Info.plist */,
 			);
 			path = TravellerUITests;
+			sourceTree = "<group>";
+		};
+		84F85C7820679CC0003E6652 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */,
+				C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */,
+				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
+				C1CD94DA200E237500164EEF /* Main.storyboard */,
+				849BD54B202263A800EBC02D /* TourGuideUI.storyboard */,
+				3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		93374568E66DF246A6BD68C0 /* Pods */ = {
