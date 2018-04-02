@@ -3,6 +3,11 @@ import Foundation
 class TravellerGuide: TravellerUser{
     var authentication: String
     
+    override init() {
+        self.authentication = ""
+        super.init()
+    }
+    
   init(userName: String, email: String, password: String, firstName: String, lastName: String, phoneNumber: String, imgURL: String?,authentication: String) {
     self.authentication = authentication
 
@@ -10,16 +15,32 @@ class TravellerGuide: TravellerUser{
     
     }
     
+    func TravellerToGuide (user: TravellerUser){
+        self.userName = user.userName
+        self.email = user.email
+        self.password = user.password
+        self.firstName = user.firstName
+        self.lastName = user.lastName
+        self.phoneNumber = user.phoneNumber
+        self.imgURL = user.imgURL
+    }
+    
     override init(fromJson: [String : Any]) {
         self.authentication = fromJson["authentication"] as! String
         super.init(fromJson: fromJson)
+        self.userType = "Guide"
     }
     
     override func tojson() -> [String : Any] {
         var json = [String:Any]()
         
+        json["userType"] = userType
         json["userName"] = userName
-        json["email"] = email
+        
+        /*encode email adress so you cold save it to FB*/
+        let newEmail = email.replacingOccurrences(of: ".", with: ",", options: .literal, range: nil)
+        json["email"] = newEmail
+        
         json["password"] = password
         json["firstName"] = firstName
         json["lastName"] = lastName
