@@ -43,6 +43,14 @@ class Model{
         }
     }
     
+    func saveGroupToFirebaseDatabase(group: Group) {
+        FirebaseModel.saveGroupToDatabase(group: group)
+    }
+    
+    func saveTripToFirebaseDatabase(trip: Trip) {
+        FirebaseModel.saveTripToDatabase(trip: trip)
+    }
+    
     func addNewUserToDatabase(user:TravellerUser, image: UIImage? ,name: String?){
         
         if(image != nil && name != nil){

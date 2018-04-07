@@ -8,7 +8,14 @@
 
 import Foundation
 import UIKit
-class JoinGroupController : UIViewController{
+class JoinGroupController : UIViewController {
     
+    @IBOutlet weak var groupIdTextField: UITextField!
+ 
     
+    @IBAction func joinGroup(_ sender: Any) {
+        FirebaseModel.getDataFromFB(byId: groupIdTextField.text!, table: "Groups") { (correspondingGroup) in
+            
+        }
+    }
 }

@@ -121,6 +121,16 @@ class FirebaseModel{
         }
     }
     
+    static func saveGroupToDatabase(group: Group) {
+        let ref = databaseRef?.child("Groups").child("\(group.getName())")
+        ref?.setValue(group.toJson())
+    }
+    
+    static func saveTripToDatabase(trip: Trip) {
+        let ref = databaseRef?.child("Trips").child("\(trip.getName())")
+        ref?.setValue(trip.toJson())
+    }
+    
     static func saveImageToDatabase(image: UIImage, name: String, callback: @escaping (String?) -> Void) {
         FirebaseModel.storageRef = Storage.storage().reference(forURL: FirebaseModel.storageRootPath)
         let fileRef = FirebaseModel.storageRef.child(name)
