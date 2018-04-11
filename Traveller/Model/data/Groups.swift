@@ -1,6 +1,7 @@
 import Foundation
 
 class Group {
+    // TODO:: Please add group owner id 
     var groupid : String
     var groupName: String
     var guideList : [String]
