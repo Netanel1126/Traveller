@@ -17,8 +17,8 @@ class Group {
         self.imageURL = ImageURL
         //travllerList.count
     }
-    
     */
+    
     init(GroupName:String, ImageURL: String?){
         self.groupid = UUID().uuidString
         self.groupName = GroupName
@@ -48,12 +48,12 @@ class Group {
         var json = [String:Any]()
         
         json["GroupID"] = groupid
-        json["groupName"] = groupName
-        json["guideList"] = guideList
-        json["travllerList"] = travllerList
+        json["GroupName"] = groupName
+        json["GuideList"] = guideList
+        json["TravllerList"] = travllerList
         
         if imageURL != nil{
-            json["imageURL"] = imageURL!
+            json["ImageURL"] = imageURL!
         } else{
             imageURL = ""
         }

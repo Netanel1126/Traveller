@@ -8,6 +8,8 @@
 
 import UIKit
 
+// shows the list of trips of the guide.
+// Connected to LoginAndGuideHomePage.storyboard
 class MyTripsTableViewController: UITableViewController {
 
     override func viewDidLoad() {

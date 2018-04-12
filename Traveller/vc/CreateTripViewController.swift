@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Creates a new trip and a corresponding group.
+// Connected to LoginAndGuideHomePage.storyboard
 class CreateTripViewController: UIViewController {
     
     @IBOutlet weak var tripNameTextField: UITextField!

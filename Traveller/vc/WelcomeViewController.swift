@@ -1,6 +1,8 @@
 
 import UIKit
 
+// Shows Home page
+// Connected to LoginAndGuideHomePage.storyboard
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var guideOrUser: UISegmentedControl!

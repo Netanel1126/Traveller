@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Manages the displaying of the SideMenu options.
+// Connected to SideMenu.storyboard
 class SideMenuVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

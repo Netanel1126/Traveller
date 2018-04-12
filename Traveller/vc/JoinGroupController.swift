@@ -8,10 +8,14 @@
 
 import Foundation
 import UIKit
+
+// Allows joining to a group with group id.
+// Connected to LoginAndGuideHomePage.storyboard
 class JoinGroupController : UIViewController {
     
     @IBOutlet weak var groupIdTextField: UITextField!
- 
+    
+    // TODO: add some decoration to the screen
     
     @IBAction func joinGroup(_ sender: Any) {
         FirebaseModel.getDataFromFB(byId: groupIdTextField.text!, table: "Groups") { (correspondingGroup) in

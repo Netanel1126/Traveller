@@ -8,6 +8,8 @@
 
 import UIKit
 
+// shows the list of groups of the guide.
+// Connected to LoginAndGuideHomePage.storyboard
 class MyGroupsTableViewController: UITableViewController {
 
     override func viewDidLoad() {

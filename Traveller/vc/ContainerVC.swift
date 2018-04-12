@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Represents the functionality of the SideMenu (further options such as logout).
+// Connected to SideMenu.storyboard
 class ContainerVC : UIViewController {
     
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!

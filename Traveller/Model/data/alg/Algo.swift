@@ -19,7 +19,7 @@ class  Algo {
         
         print("C: \(c)");
         
-        return asinf(a/c)
+        return asinf(a/c)//arcsin 
     }
 }
 

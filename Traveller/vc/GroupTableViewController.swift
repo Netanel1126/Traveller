@@ -1,7 +1,8 @@
-
-
 import Foundation
 import UIKit
+
+// Displays the list of groups of the traveler.
+// Connected to TravellerStoryboard.storyboard
 class GroupTableViewController: UITableViewController  {
     
     public var joinedGroups = [Group]()

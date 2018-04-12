@@ -1,5 +1,6 @@
 import UIKit
 
+// TODO: add to popup logic
 class AuthenticationPopUpTestViewController: UIViewController {
 
     @IBOutlet weak var authenticationText: UITextField!

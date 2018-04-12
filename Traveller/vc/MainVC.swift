@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Defines the notifications for displaying the side menus and performing segues to them.
+// Connected to SideMenu.storyboard
 class MainVC: UIViewController {
 
     override func viewDidLoad() {

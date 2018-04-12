@@ -11,10 +11,10 @@
 		3065D48020553E6F0057EA94 /* TravellerGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D47F20553E6F0057EA94 /* TravellerGuide.swift */; };
 		309FD34E2055208F00447472 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FD34D2055208F00447472 /* Model.swift */; };
 		309FD350205520A400447472 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FD34F205520A400447472 /* FirebaseModel.swift */; };
-		30EC2C5E2006198D0065FA2A /* MinimumDistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */; };
 		30EC2C5F2006198D0065FA2A /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5D2006198D0065FA2A /* Position.swift */; };
 		3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */; };
 		3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */; };
+		84459591207F475D007BB278 /* MinimumDistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459590207F475D007BB278 /* MinimumDistanceCalculator.swift */; };
 		845EC3EC205838CC00075E49 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3EB205838CC00075E49 /* AuthenticationModel.swift */; };
 		8498ED602058344200728827 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498ED5F2058344200728827 /* CoreLocation.framework */; };
 		8498ED63205834C300728827 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498ED62205834C300728827 /* MapVC.swift */; };
@@ -76,11 +76,11 @@
 		3065D47F20553E6F0057EA94 /* TravellerGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerGuide.swift; sourceTree = "<group>"; };
 		309FD34D2055208F00447472 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		309FD34F205520A400447472 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
-		30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinimumDistanceCalculator.swift; path = Traveller/Model/alg/MinimumDistanceCalculator.swift; sourceTree = SOURCE_ROOT; };
 		30EC2C5D2006198D0065FA2A /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Traveller/Model/data/Position.swift; sourceTree = SOURCE_ROOT; };
 		3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewController.swift; sourceTree = "<group>"; };
 		3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioRecrdingTest.storyboard; sourceTree = "<group>"; };
 		58FCB9CAB13EDB20CB716E51 /* Pods-Traveller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.release.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.release.xcconfig"; sourceTree = "<group>"; };
+		84459590207F475D007BB278 /* MinimumDistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumDistanceCalculator.swift; sourceTree = "<group>"; };
 		845EC3EB205838CC00075E49 /* AuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		8498ED5F2058344200728827 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8498ED62205834C300728827 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -176,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				845EC3F02058396000075E49 /* data */,
-				8498ED5E205832FF00728827 /* alg */,
 				309FD34D2055208F00447472 /* Model.swift */,
 				845EC3EB205838CC00075E49 /* AuthenticationModel.swift */,
 				309FD34F205520A400447472 /* FirebaseModel.swift */,
@@ -192,6 +191,7 @@
 				3065D47F20553E6F0057EA94 /* TravellerGuide.swift */,
 				30EC2C5D2006198D0065FA2A /* Position.swift */,
 				84CB9078207785BF00D15EC9 /* Trip.swift */,
+				8498ED5E205832FF00728827 /* alg */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 		8498ED5E205832FF00728827 /* alg */ = {
 			isa = PBXGroup;
 			children = (
-				30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */,
+				84459590207F475D007BB278 /* MinimumDistanceCalculator.swift */,
 				84E0AB271FFE55DE0093C30F /* Algo.swift */,
 			);
 			path = alg;
@@ -225,6 +225,7 @@
 				84CB907A2077904400D15EC9 /* CreateTripViewController.swift */,
 				84B336512078E66F00A236E1 /* MyTripsTableViewController.swift */,
 				84B336532078ED1F00A236E1 /* MyGroupsTableViewController.swift */,
+				3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -262,7 +263,6 @@
 				84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */,
 				849BD54E20226D8800EBC02D /* Assets.xcassets */,
 				C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */,
-				3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -628,10 +628,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */,
+				84459591207F475D007BB278 /* MinimumDistanceCalculator.swift in Sources */,
 				C1CD94D9200E1D4E00164EEF /* JoinGroupController.swift in Sources */,
 				84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */,
 				309FD350205520A400447472 /* FirebaseModel.swift in Sources */,
-				30EC2C5E2006198D0065FA2A /* MinimumDistanceCalculator.swift in Sources */,
 				845EC3EC205838CC00075E49 /* AuthenticationModel.swift in Sources */,
 				84CB9077207770D500D15EC9 /* ContainerVC.swift in Sources */,
 				C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */,
