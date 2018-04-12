@@ -8,19 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D47D20552E2E0057EA94 /* TravellerUser.swift */; };
-		3065D48020553E6F0057EA94 /* TravellerGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D47F20553E6F0057EA94 /* TravellerGuide.swift */; };
-		309FD34E2055208F00447472 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FD34D2055208F00447472 /* Model.swift */; };
 		309FD350205520A400447472 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309FD34F205520A400447472 /* FirebaseModel.swift */; };
 		30EC2C5E2006198D0065FA2A /* MinimumDistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */; };
 		30EC2C5F2006198D0065FA2A /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC2C5D2006198D0065FA2A /* Position.swift */; };
 		3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */; };
 		3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */; };
-		845EC3EC205838CC00075E49 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EC3EB205838CC00075E49 /* AuthenticationModel.swift */; };
 		8498ED602058344200728827 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498ED5F2058344200728827 /* CoreLocation.framework */; };
 		8498ED63205834C300728827 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498ED62205834C300728827 /* MapVC.swift */; };
 		849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54B202263A800EBC02D /* TourGuideUI.storyboard */; };
 		849BD54F20226D8800EBC02D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54E20226D8800EBC02D /* Assets.xcassets */; };
-		84A4B67B20713D44009E701D /* AuthenticationPopUpTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B67A20713D44009E701D /* AuthenticationPopUpTestViewController.swift */; };
 		84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */; };
 		84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */; };
 		84AC8CC01FFE23A800AB9BF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */; };
@@ -38,10 +34,18 @@
 		84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0AB271FFE55DE0093C30F /* Algo.swift */; };
 		84F319E5206FB8A10097AEA7 /* TestLogOutTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F319E4206FB8A00097AEA7 /* TestLogOutTestViewController.swift */; };
 		84F85C7A2067A9E4003E6652 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C792067A9E4003E6652 /* WelcomeViewController.swift */; };
-		84F85C7C2067B2EB003E6652 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C7B2067B2EB003E6652 /* SignInViewController.swift */; };
-		84F85C7E2067B829003E6652 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C7D2067B829003E6652 /* LogInViewController.swift */; };
-		AC21717E200E33280047BBF8 /* LogInAndGuideHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */; };
-		AC6CF6FB2055517D0095C0B5 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CF6FA2055517D0095C0B5 /* Groups.swift */; };
+		84F85C7C2067B2EB003E6652 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C7B2067B2EB003E6652 /* SignupViewController.swift */; };
+		84F85C7E2067B829003E6652 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C7D2067B829003E6652 /* LoginViewController.swift */; };
+		AC21717E200E33280047BBF8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC21717D200E33280047BBF8 /* Auth.storyboard */; };
+		AC6CF6FB2055517D0095C0B5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CF6FA2055517D0095C0B5 /* Group.swift */; };
+		B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A27207FC4FA00B83A53 /* FirebaseUserAuth.swift */; };
+		B0387A2B207FC4FA00B83A53 /* FirebaseUserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A28207FC4FA00B83A53 /* FirebaseUserStorage.swift */; };
+		B0387A2C207FC4FA00B83A53 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A29207FC4FA00B83A53 /* AuthManager.swift */; };
+		B0387A2F207FC5A200B83A53 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A2E207FC5A200B83A53 /* Logger.swift */; };
+		B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A31207FC6D100B83A53 /* NotificationModel.swift */; };
+		B0387A37207FCFE500B83A53 /* ImageFirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */; };
+		B0387A39207FD84300B83A53 /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A38207FD84300B83A53 /* FieldValidation.swift */; };
+		B0387A3B207FE63F00B83A53 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0387A3A207FE63F00B83A53 /* Home.storyboard */; };
 		BAB90B77574D863CDB677450 /* Pods_TravellerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AECBF2EB58F09A8805E3C7 /* Pods_TravellerTests.framework */; };
 		C10D72FD2068D5D1005818A5 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */; };
 		C1CD94D3200DF02900164EEF /* TravellerStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */; };
@@ -73,20 +77,16 @@
 /* Begin PBXFileReference section */
 		027FD91F11404A1421F865CB /* Pods-TravellerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests.release.xcconfig"; sourceTree = "<group>"; };
 		3065D47D20552E2E0057EA94 /* TravellerUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerUser.swift; sourceTree = "<group>"; };
-		3065D47F20553E6F0057EA94 /* TravellerGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerGuide.swift; sourceTree = "<group>"; };
-		309FD34D2055208F00447472 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		309FD34F205520A400447472 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		30EC2C5C2006198D0065FA2A /* MinimumDistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinimumDistanceCalculator.swift; path = Traveller/Model/alg/MinimumDistanceCalculator.swift; sourceTree = SOURCE_ROOT; };
 		30EC2C5D2006198D0065FA2A /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Position.swift; path = Traveller/Model/data/Position.swift; sourceTree = SOURCE_ROOT; };
 		3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewController.swift; sourceTree = "<group>"; };
 		3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioRecrdingTest.storyboard; sourceTree = "<group>"; };
 		58FCB9CAB13EDB20CB716E51 /* Pods-Traveller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.release.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.release.xcconfig"; sourceTree = "<group>"; };
-		845EC3EB205838CC00075E49 /* AuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		8498ED5F2058344200728827 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8498ED62205834C300728827 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		849BD54B202263A800EBC02D /* TourGuideUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourGuideUI.storyboard; sourceTree = "<group>"; };
 		849BD54E20226D8800EBC02D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		84A4B67A20713D44009E701D /* AuthenticationPopUpTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPopUpTestViewController.swift; sourceTree = "<group>"; };
 		84AC8CB21FFE23A800AB9BF9 /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,14 +109,22 @@
 		84E0AB271FFE55DE0093C30F /* Algo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algo.swift; sourceTree = "<group>"; };
 		84F319E4206FB8A00097AEA7 /* TestLogOutTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLogOutTestViewController.swift; sourceTree = "<group>"; };
 		84F85C792067A9E4003E6652 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		84F85C7B2067B2EB003E6652 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		84F85C7D2067B829003E6652 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		84F85C7B2067B2EB003E6652 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		84F85C7D2067B829003E6652 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		856531A0451EBCCE8DC6E703 /* Pods-TravellerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		86AECBF2EB58F09A8805E3C7 /* Pods_TravellerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravellerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890D3CA551821974E400867C /* Pods-TravellerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInAndGuideHomePage.storyboard; sourceTree = "<group>"; };
-		AC6CF6FA2055517D0095C0B5 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		AC21717D200E33280047BBF8 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		AC6CF6FA2055517D0095C0B5 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AF51120EF5002DC2299BFC5C /* Pods-TravellerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0387A27207FC4FA00B83A53 /* FirebaseUserAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseUserAuth.swift; path = "Traveller/model/auth\\/FirebaseUserAuth.swift"; sourceTree = SOURCE_ROOT; };
+		B0387A28207FC4FA00B83A53 /* FirebaseUserStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseUserStorage.swift; path = "Traveller/model/auth\\/FirebaseUserStorage.swift"; sourceTree = SOURCE_ROOT; };
+		B0387A29207FC4FA00B83A53 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManager.swift; path = "Traveller/model/auth\\/AuthManager.swift"; sourceTree = SOURCE_ROOT; };
+		B0387A2E207FC5A200B83A53 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B0387A31207FC6D100B83A53 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFirebaseStorage.swift; sourceTree = "<group>"; };
+		B0387A38207FD84300B83A53 /* FieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidation.swift; sourceTree = "<group>"; };
+		B0387A3A207FE63F00B83A53 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B29E9DB948C7A988E10BBA4F /* Pods_TravellerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravellerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		C10D72FE2068D84B005818A5 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
@@ -172,24 +180,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		309FD34C2055203500447472 /* Model */ = {
+		309FD34C2055203500447472 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				B0387A35207FCFD000B83A53 /* db */,
+				B0387A30207FC5E200B83A53 /* auth */,
+				B0387A2D207FC59200B83A53 /* utils */,
 				845EC3F02058396000075E49 /* data */,
 				8498ED5E205832FF00728827 /* alg */,
-				309FD34D2055208F00447472 /* Model.swift */,
-				845EC3EB205838CC00075E49 /* AuthenticationModel.swift */,
 				309FD34F205520A400447472 /* FirebaseModel.swift */,
 			);
-			path = Model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		845EC3F02058396000075E49 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				AC6CF6FA2055517D0095C0B5 /* Groups.swift */,
+				AC6CF6FA2055517D0095C0B5 /* Group.swift */,
 				3065D47D20552E2E0057EA94 /* TravellerUser.swift */,
-				3065D47F20553E6F0057EA94 /* TravellerGuide.swift */,
 				30EC2C5D2006198D0065FA2A /* Position.swift */,
 				84CB9078207785BF00D15EC9 /* Trip.swift */,
 			);
@@ -203,30 +211,6 @@
 				84E0AB271FFE55DE0093C30F /* Algo.swift */,
 			);
 			path = alg;
-			sourceTree = "<group>";
-		};
-		8498ED61205834A600728827 /* vc */ = {
-			isa = PBXGroup;
-			children = (
-				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
-				84CB9074207770D500D15EC9 /* ContainerVC.swift */,
-				84CB9072207770D400D15EC9 /* MainVC.swift */,
-				84CB9073207770D400D15EC9 /* SideMenuVC.swift */,
-				84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */,
-				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
-				84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */,
-				C1CD94D4200E03E600164EEF /* GroupTableViewController.swift */,
-				8498ED62205834C300728827 /* MapVC.swift */,
-				84F85C792067A9E4003E6652 /* WelcomeViewController.swift */,
-				84F85C7B2067B2EB003E6652 /* SignInViewController.swift */,
-				84F85C7D2067B829003E6652 /* LogInViewController.swift */,
-				84F319E4206FB8A00097AEA7 /* TestLogOutTestViewController.swift */,
-				84A4B67A20713D44009E701D /* AuthenticationPopUpTestViewController.swift */,
-				84CB907A2077904400D15EC9 /* CreateTripViewController.swift */,
-				84B336512078E66F00A236E1 /* MyTripsTableViewController.swift */,
-				84B336532078ED1F00A236E1 /* MyGroupsTableViewController.swift */,
-			);
-			path = vc;
 			sourceTree = "<group>";
 		};
 		84AC8CA91FFE23A800AB9BF9 = {
@@ -255,14 +239,13 @@
 		84AC8CB41FFE23A800AB9BF9 /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
+				B0387A3C207FE78500B83A53 /* viewControllers */,
 				84F85C7820679CC0003E6652 /* Storyboards */,
-				8498ED61205834A600728827 /* vc */,
-				309FD34C2055203500447472 /* Model */,
+				309FD34C2055203500447472 /* model */,
 				84AC8CC11FFE23A800AB9BF9 /* Info.plist */,
 				84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */,
 				849BD54E20226D8800EBC02D /* Assets.xcassets */,
 				C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */,
-				3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */,
 			);
 			path = Traveller;
 			sourceTree = "<group>";
@@ -299,12 +282,13 @@
 			isa = PBXGroup;
 			children = (
 				84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */,
+				AC21717D200E33280047BBF8 /* Auth.storyboard */,
+				B0387A3A207FE63F00B83A53 /* Home.storyboard */,
 				C1CD94D2200DF02900164EEF /* TravellerStoryBoard.storyboard */,
-				AC21717D200E33280047BBF8 /* LogInAndGuideHomePage.storyboard */,
-				C1CD94DA200E237500164EEF /* Main.storyboard */,
 				849BD54B202263A800EBC02D /* TourGuideUI.storyboard */,
 				3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */,
 				C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */,
+				C1CD94DA200E237500164EEF /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -320,6 +304,107 @@
 				856531A0451EBCCE8DC6E703 /* Pods-TravellerUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0387A2D207FC59200B83A53 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				B0387A38207FD84300B83A53 /* FieldValidation.swift */,
+				B0387A2E207FC5A200B83A53 /* Logger.swift */,
+				B0387A31207FC6D100B83A53 /* NotificationModel.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		B0387A30207FC5E200B83A53 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				B0387A29207FC4FA00B83A53 /* AuthManager.swift */,
+				B0387A27207FC4FA00B83A53 /* FirebaseUserAuth.swift */,
+				B0387A28207FC4FA00B83A53 /* FirebaseUserStorage.swift */,
+			);
+			name = auth;
+			path = "auth\\";
+			sourceTree = "<group>";
+		};
+		B0387A35207FCFD000B83A53 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		B0387A3C207FE78500B83A53 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */,
+				B0387A42207FE91E00B83A53 /* guide */,
+				B0387A41207FE91500B83A53 /* traveller */,
+				B0387A40207FE8C700B83A53 /* home */,
+				B0387A3F207FE83F00B83A53 /* algTest */,
+				B0387A3E207FE80400B83A53 /* sidemenu */,
+				B0387A3D207FE78D00B83A53 /* auth */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		B0387A3D207FE78D00B83A53 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				84F85C792067A9E4003E6652 /* WelcomeViewController.swift */,
+				84F85C7B2067B2EB003E6652 /* SignupViewController.swift */,
+				84F85C7D2067B829003E6652 /* LoginViewController.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		B0387A3E207FE80400B83A53 /* sidemenu */ = {
+			isa = PBXGroup;
+			children = (
+				84CB9074207770D500D15EC9 /* ContainerVC.swift */,
+				84CB9073207770D400D15EC9 /* SideMenuVC.swift */,
+				84CB9072207770D400D15EC9 /* MainVC.swift */,
+			);
+			path = sidemenu;
+			sourceTree = "<group>";
+		};
+		B0387A3F207FE83F00B83A53 /* algTest */ = {
+			isa = PBXGroup;
+			children = (
+				84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */,
+			);
+			path = algTest;
+			sourceTree = "<group>";
+		};
+		B0387A40207FE8C700B83A53 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				84B336532078ED1F00A236E1 /* MyGroupsTableViewController.swift */,
+				84B336512078E66F00A236E1 /* MyTripsTableViewController.swift */,
+				84CB907A2077904400D15EC9 /* CreateTripViewController.swift */,
+				84F319E4206FB8A00097AEA7 /* TestLogOutTestViewController.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		B0387A41207FE91500B83A53 /* traveller */ = {
+			isa = PBXGroup;
+			children = (
+				C1CD94D4200E03E600164EEF /* GroupTableViewController.swift */,
+				C1CD94D8200E1D4E00164EEF /* JoinGroupController.swift */,
+				84E0AB251FFE53780093C30F /* UserLocatorViewController.swift */,
+				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
+			);
+			path = traveller;
+			sourceTree = "<group>";
+		};
+		B0387A42207FE91E00B83A53 /* guide */ = {
+			isa = PBXGroup;
+			children = (
+				8498ED62205834C300728827 /* MapVC.swift */,
+			);
+			path = guide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,8 +524,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AC8CC01FFE23A800AB9BF9 /* LaunchScreen.storyboard in Resources */,
+				B0387A3B207FE63F00B83A53 /* Home.storyboard in Resources */,
 				C1CD94D3200DF02900164EEF /* TravellerStoryBoard.storyboard in Resources */,
-				AC21717E200E33280047BBF8 /* LogInAndGuideHomePage.storyboard in Resources */,
+				AC21717E200E33280047BBF8 /* Auth.storyboard in Resources */,
 				C10D72FD2068D5D1005818A5 /* SideMenu.storyboard in Resources */,
 				3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */,
 				C1CD94DB200E237500164EEF /* Main.storyboard in Resources */,
@@ -627,21 +713,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0387A2F207FC5A200B83A53 /* Logger.swift in Sources */,
 				C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */,
 				C1CD94D9200E1D4E00164EEF /* JoinGroupController.swift in Sources */,
 				84E0AB281FFE55DE0093C30F /* Algo.swift in Sources */,
 				309FD350205520A400447472 /* FirebaseModel.swift in Sources */,
 				30EC2C5E2006198D0065FA2A /* MinimumDistanceCalculator.swift in Sources */,
-				845EC3EC205838CC00075E49 /* AuthenticationModel.swift in Sources */,
+				B0387A2B207FC4FA00B83A53 /* FirebaseUserStorage.swift in Sources */,
+				B0387A39207FD84300B83A53 /* FieldValidation.swift in Sources */,
 				84CB9077207770D500D15EC9 /* ContainerVC.swift in Sources */,
 				C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */,
 				84CB907B2077904400D15EC9 /* CreateTripViewController.swift in Sources */,
-				309FD34E2055208F00447472 /* Model.swift in Sources */,
+				B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */,
+				B0387A37207FCFE500B83A53 /* ImageFirebaseStorage.swift in Sources */,
 				84F319E5206FB8A10097AEA7 /* TestLogOutTestViewController.swift in Sources */,
-				84A4B67B20713D44009E701D /* AuthenticationPopUpTestViewController.swift in Sources */,
-				84F85C7E2067B829003E6652 /* LogInViewController.swift in Sources */,
-				3065D48020553E6F0057EA94 /* TravellerGuide.swift in Sources */,
-				84F85C7C2067B2EB003E6652 /* SignInViewController.swift in Sources */,
+				84F85C7E2067B829003E6652 /* LoginViewController.swift in Sources */,
+				84F85C7C2067B2EB003E6652 /* SignupViewController.swift in Sources */,
 				84F85C7A2067A9E4003E6652 /* WelcomeViewController.swift in Sources */,
 				30EC2C5F2006198D0065FA2A /* Position.swift in Sources */,
 				84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */,
@@ -652,9 +739,11 @@
 				84CB9079207785BF00D15EC9 /* Trip.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,
 				84CB9076207770D500D15EC9 /* SideMenuVC.swift in Sources */,
+				B0387A2C207FC4FA00B83A53 /* AuthManager.swift in Sources */,
 				84B336522078E66F00A236E1 /* MyTripsTableViewController.swift in Sources */,
 				84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */,
-				AC6CF6FB2055517D0095C0B5 /* Groups.swift in Sources */,
+				AC6CF6FB2055517D0095C0B5 /* Group.swift in Sources */,
+				B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */,
 				84CB9075207770D500D15EC9 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
