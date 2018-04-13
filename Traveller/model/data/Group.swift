@@ -1,65 +1,44 @@
 import Foundation
 
 class Group {
-    // TODO:: Please add group owner id
-    var ownerId: String?
+    var ownerId: String
     var groupId: String
     var groupName: String
-    var guideList: [String]
-    var travllerList: [String]
-    var imageURL: String?
+    var guideIdList: [String]
+    var travellerIdList: [String]
+    var imageUrl: String
     
-    /*
-    init(Gruopid:String,GroupName:String,GuideList:[String],NumTravellers: [String],ImageURL: String?){
-        self.groupid = Gruopid
-        self.groupName = GroupName
-        self.guideList = GuideList
-        self.travllerList = NumTravellers
-        self.imageURL = ImageURL
-        //travllerList.count
+    init(ownerId: String, groupId: String? = UUID().uuidString, groupName: String, guideIdList: [String]? = [String](), travellerIdList: [String]? = [String](), imageUrl: String? = "") {
+        self.ownerId = ownerId
+        self.groupId = groupId!
+        self.groupName = groupName
+        self.guideIdList = guideIdList!
+        self.travellerIdList = travellerIdList!
+        self.imageUrl = imageUrl!
     }
     
-    */
-    init(GroupName:String, ImageURL: String?){
-        self.groupId = UUID().uuidString
-        self.groupName = GroupName
-        self.guideList = [String]()
-        self.travllerList = [String]()
-        self.imageURL = ImageURL
-    }
- 
-    
-    convenience init(GroupName:String) {
-        self.init(GroupName: GroupName, ImageURL: nil)
-    }
-    
-    init(fromJson : [String:Any]){
-        self.groupId = fromJson["GroupID"] as! String
-        self.groupName = fromJson["GroupName"] as! String
-        self.guideList = fromJson["GuideList"] as! [String]
-        self.travllerList = fromJson["TravllerList"] as! [String]
-        self.imageURL = fromJson["ImageURL"] as? String
+    init(json: [String:Any]){
+        self.ownerId = json["ownerId"] as! String
+        self.groupId = json["groupId"] as! String
+        self.groupName = json["groupName"] as! String
+        
+        let guidesTmp = json["guideIdList"] as! String
+        guideIdList = FirebaseConverter.decodeToStringArray(str: guidesTmp)
+        
+        let travellersTmp = json["travellerIdList"] as! String
+        travellerIdList = FirebaseConverter.decodeToStringArray(str: travellersTmp)
+        
+        self.imageUrl = json["imageUrl"] as! String
     }
     
-    func getName() -> String {
-        return groupName
-    }
-    
-    func toJson()-> [String:Any]{
+    func toJson() -> [String:Any] {
         var json = [String:Any]()
-        
-        json["GroupID"] = groupId
+        json["ownerId"] = ownerId
+        json["groupId"] = groupId
         json["groupName"] = groupName
-        json["guideList"] = guideList
-        json["travllerList"] = travllerList
-        
-        if imageURL != nil{
-            json["imageURL"] = imageURL!
-        } else{
-            imageURL = ""
-        }
-        
+        json["guideIdList"] = FirebaseConverter.encodeStringArray(array: guideIdList)
+        json["travellerIdList"] = FirebaseConverter.encodeStringArray(array: travellerIdList)
+        json["imageUrl"] = imageUrl
         return json
     }
-    
 }

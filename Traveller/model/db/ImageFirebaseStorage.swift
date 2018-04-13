@@ -30,8 +30,8 @@ class ImageFirebaseStorage {
     }
     
     static func loadImage(url: String, onComplete: @escaping (UIImage?) -> Void) {
-        FirebaseModel.storageRef = Storage.storage().reference(forURL: url)
-        FirebaseModel.storageRef.getData(maxSize: 10000000, completion: { (data, error) in
+        let ref = Storage.storage().reference(forURL: url)
+        ref.getData(maxSize: 10000000, completion: { (data, error) in
             if error == nil && data != nil {
                 let image = UIImage(data: data!)
                 onComplete(image)

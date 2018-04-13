@@ -13,10 +13,10 @@ class AuthManager {
     static func getConnectedUser(onComplete: @escaping (TravellerUser?) -> Void) {
         let firebaseUser = FirebaseUserAuth.getCurrentUser()
         if firebaseUser != nil {
-            FirebaseUserStorage.getUser(userId: (firebaseUser?.uid)!, onSuccess: { travellerUser in
+            TravellerUserModel.getUser(userId: (firebaseUser?.uid)!, onSuccess: { travellerUser in
                 onComplete(travellerUser)
             }, onFailure: { error in
-                Logger.log(message: "Error getting user info from storage \(error.localizedDescription)", event: .e)
+                Logger.log(message: "Error getting user info from db \(error.localizedDescription)", event: .e)
             })
         } else {
             onComplete(nil)
@@ -26,11 +26,11 @@ class AuthManager {
     static func signIn(email: String, password: String, onComplete: @escaping (TravellerUser) -> Void, onFailure: @escaping (Error) -> Void) {
         FirebaseUserAuth.signIn(email: email, password: password, onSuccess: { user in
             let userId = user.uid
-            FirebaseUserStorage.getUser(userId: userId, onSuccess: { newUser in
+            TravellerUserModel.getUser(userId: userId, onSuccess: { newUser in
                 Logger.log(message: "Sign in succeed", event: .i)
                 onComplete(newUser)
             }, onFailure: { error in
-                Logger.log(message: "Error signup to firebase storage\(error.localizedDescription)", event: .e)
+                Logger.log(message: "Error signup to firebase db\(error.localizedDescription)", event: .e)
                 onFailure(error)
             })
         }, onFailure: { error in
@@ -44,14 +44,11 @@ class AuthManager {
             Logger.log(message: "Added new user to FirebaseAuth", event: .i)
             let id = user.uid // set user id as firebase response user id
             let newUser = TravellerUser(id: id, email: userStruct.email, firstName: userStruct.firstName, lastName: userStruct.lastName, phoneNumber: userStruct.phoneNumber, imgUrl: userStruct.imgUrl)
-            FirebaseUserStorage.storeUser(user: newUser, onSuccess: { newUser in
-                Logger.log(message: "Added new user to FirebaseStorage", event: .i)
-                onComplete(newUser)
-            }, onFailure: { error in
-                Logger.log(message: "Error signup to firebase storage\(error.localizedDescription)", event: .e)
-                onFailure(error)
+            TravellerUserModel.storeUser(travellerUser: newUser, onComplete: { error in
+                if error == nil {
+                    onComplete(newUser)
+                }
             })
-            onComplete(newUser)
         }, onFailure: { error in
             Logger.log(message: "Error signup to firebase auth \(error.localizedDescription)", event: .e)
             onFailure(error)

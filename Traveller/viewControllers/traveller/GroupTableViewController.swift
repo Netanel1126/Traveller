@@ -9,7 +9,7 @@ class GroupTableViewController: UITableViewController  {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "travelerGroupsCell", for: indexPath)
         
-        cell.textLabel?.text = joinedGroups[indexPath.row].getName()
+        cell.textLabel?.text = joinedGroups[indexPath.row].groupName
         
         return cell
     }
