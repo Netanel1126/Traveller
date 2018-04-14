@@ -32,7 +32,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXM-gP-brg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4775" y="290"/>
+            <point key="canvasLocation" x="4951" y="134"/>
         </scene>
         <!--My Trips-->
         <scene sceneID="A1b-Ks-srz">
@@ -84,7 +84,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEO-DF-SBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6117.6000000000004" y="779.46026986506752"/>
+            <point key="canvasLocation" x="5940" y="780"/>
         </scene>
         <!--Create New Trip-->
         <scene sceneID="C13-bQ-oDw">

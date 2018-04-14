@@ -28,5 +28,4 @@ class GroupModel {
             onComplete(error)
         }
     }
-    
 }
