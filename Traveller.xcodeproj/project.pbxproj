@@ -50,6 +50,8 @@
 		B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A31207FC6D100B83A53 /* NotificationModel.swift */; };
 		B0387A37207FCFE500B83A53 /* ImageFirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */; };
 		B0387A3B207FE63F00B83A53 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0387A3A207FE63F00B83A53 /* Home.storyboard */; };
+		B03883DC20869CF800D1F3F8 /* PacketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DA20869CF800D1F3F8 /* PacketBuilder.swift */; };
+		B03883DD20869CF800D1F3F8 /* TSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DB20869CF800D1F3F8 /* TSocket.swift */; };
 		B0F7BC5B208133FD00DCFD3D /* FirebaseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7BC5A208133FD00DCFD3D /* FirebaseConverter.swift */; };
 		B0F7BC5D2081380200DCFD3D /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7BC5C2081380200DCFD3D /* GroupModel.swift */; };
 		C10D72FD2068D5D1005818A5 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */; };
@@ -138,6 +140,8 @@
 		B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFirebaseStorage.swift; sourceTree = "<group>"; };
 		B0387A38207FD84300B83A53 /* FieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidation.swift; sourceTree = "<group>"; };
 		B0387A3A207FE63F00B83A53 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		B03883DA20869CF800D1F3F8 /* PacketBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacketBuilder.swift; sourceTree = "<group>"; };
+		B03883DB20869CF800D1F3F8 /* TSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSocket.swift; sourceTree = "<group>"; };
 		B0F7BC5A208133FD00DCFD3D /* FirebaseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConverter.swift; sourceTree = "<group>"; };
 		B0F7BC5C2081380200DCFD3D /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		309FD34C2055203500447472 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				B03883D920869CE300D1F3F8 /* network */,
 				B0387A35207FCFD000B83A53 /* db */,
 				B0387A30207FC5E200B83A53 /* auth */,
 				B0387A2D207FC59200B83A53 /* utils */,
@@ -412,6 +417,16 @@
 				8498ED62205834C300728827 /* MapVC.swift */,
 			);
 			path = guide;
+			sourceTree = "<group>";
+		};
+		B03883D920869CE300D1F3F8 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				B03883DA20869CF800D1F3F8 /* PacketBuilder.swift */,
+				B03883DB20869CF800D1F3F8 /* TSocket.swift */,
+			);
+			name = network;
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -650,6 +665,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Traveller/Pods-Traveller-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -657,6 +673,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -738,8 +755,10 @@
 				84F85C7C2067B2EB003E6652 /* SignupViewController.swift in Sources */,
 				84BC9B5C20851DC70012AFC8 /* Algo.swift in Sources */,
 				84F85C7A2067A9E4003E6652 /* WelcomeViewController.swift in Sources */,
+				B03883DC20869CF800D1F3F8 /* PacketBuilder.swift in Sources */,
 				30EC2C5F2006198D0065FA2A /* Position.swift in Sources */,
 				84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */,
+				B03883DD20869CF800D1F3F8 /* TSocket.swift in Sources */,
 				B0F7BC5B208133FD00DCFD3D /* FirebaseConverter.swift in Sources */,
 				3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */,
 				8498ED63205834C300728827 /* MapVC.swift in Sources */,

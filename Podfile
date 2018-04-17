@@ -6,7 +6,7 @@ target 'Traveller' do
   use_frameworks!
 
   # Pods for Traveller
-
+  pod 'SwiftSocket'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
