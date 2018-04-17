@@ -37,14 +37,24 @@ class TravellerUser {
         json["imgUrl"] = imgUrl
         return json
     }
-}
 
-// used before signUp
-struct SignUpStruct {
-    var email: String
-    var password: String
-    var firstName: String
-    var lastName: String
-    var phoneNumber: String
-    var imgUrl: String
+    // used before signUp
+    public struct SignUpStruct {
+        
+        init(email: String, password: String, firstName: String, lastName: String, phone: String, imgUrl: String) {
+            self.email = email
+            self.password = password
+            self.firstName = firstName
+            self.lastName = lastName
+            self.phoneNumber = phone
+            self.imgUrl = imgUrl
+        }
+        
+        var email: String
+        var password: String
+        var firstName: String
+        var lastName: String
+        var phoneNumber: String
+        var imgUrl: String
+    }
 }

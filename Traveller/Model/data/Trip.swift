@@ -9,6 +9,7 @@
 import Foundation
 
 class Trip {
+    
     var tripName: String
     var tripDescription: String?
     var tripPath: [Position]?
