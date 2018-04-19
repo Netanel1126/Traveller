@@ -35,9 +35,19 @@ class TravellerNotification {
 //    static let LogOutNotification = ModelNotificationBase<Bool>(name : "LogOutNotification")
 //    static let AuthenticationNotification = ModelNotificationBase<String>(name: "AuthenticationNotification")
     
-    static let getAllTripsNotifcation = ModelNotificationBase<[Trip]>(name: "getAllTripsNotifcation")
+//    static let getAllTripsNotifcation = ModelNotificationBase<[Trip]>(name: "getAllTripsNotifcation")
     static let GetMapNotification = ModelNotificationBase<[Position]>(name: "GetMapNotification")
     static let PopupEndNotification = ModelNotificationBase<Bool>(name: "PopupEndNotification")
+    
+    //model notifications
+    static let travellerUserNotification = ModelNotificationBase<Void>(name: "travellerUserDBNotification")
+    static let tripNotification = ModelNotificationBase<Void>(name: "tripNotification")
+    static let groupNotification = ModelNotificationBase<Void>(name: "groupNotification")
+    //server
+    static let serverChatNotification = ModelNotificationBase<MessageResponse>(name: "serverChatNotification")
+    static let localChatNotification = ModelNotificationBase<Void>(name: "localChatNotification")
+    static let serverCoordinateNotification = ModelNotificationBase<CoordinateResponse>(name: "serverCoordinateNotification")
+    static let localCoordinateNotification = ModelNotificationBase<Void>(name: "localCoordinateNotification")
     
     static func removeObserver(observer:Any){
         NotificationCenter.default.removeObserver(observer)

@@ -12,7 +12,7 @@ class FirebaseModel{
     static var databaseRef:DatabaseReference? = Database.database().reference()
     static let groupPath = "Groups/"
     static let userPath = "Users/"
-    static let tripPath = "Trip/"
+    static let tripPath = "Trips/"
     
     //path example "Users/{userId}"
     static func loadSingleObject(path: String, onComplete: @escaping ([String:Any]) -> Void, onFailure: @escaping (Error) -> Void) {
@@ -40,20 +40,36 @@ class FirebaseModel{
         })
     }
     
-    static func readAllObjects(path: String, onComplete: @escaping ([DataSnapshot]?) -> Void){
-        
-        let ref = databaseRef?.child(path)
-        
-        let handler = {(snapshot:DataSnapshot) in
-            
-            if let data  = snapshot.children.allObjects as? [DataSnapshot]{
-                onComplete(data)
-            }else{
-                Logger.log(message: "Error no Trips Are Available", event: .e)
-                onComplete(nil)
+    static func loadAllDataAndObserve(path: String, onUpdate: @escaping ([Dictionary<String,Any>])->Void){
+        guard let ref = databaseRef?.child(path) else { return }
+        ref.observe(DataEventType.value, with: {(snapshot:DataSnapshot) in
+            Logger.log(message: "\(ref.key) : load all data)", event: .i)
+            var childrensArray = [Dictionary<String,Any>]()
+            for child in snapshot.children.allObjects{
+                if let childData = child as? DataSnapshot{
+                    if let dataJson = childData.value as? Dictionary<String,Any>{
+                        childrensArray.append(dataJson)
+                    }
+                }
             }
-        }
-        
-        ref?.observe(DataEventType.value, with: handler)
+            onUpdate(childrensArray)
+        })
     }
+    
+//    static func readAllObjects(path: String, onComplete: @escaping ([DataSnapshot]?) -> Void){
+//
+//        let ref = databaseRef?.child(path)
+//
+//        let handler = {(snapshot:DataSnapshot) in
+//
+//            if let data  = snapshot.children.allObjects as? [DataSnapshot]{
+//                onComplete(data)
+//            }else{
+//                Logger.log(message: "Error no Trips Are Available", event: .e)
+//                onComplete(nil)
+//            }
+//        }
+//
+//        ref?.observe(DataEventType.value, with: handler)
+//    }
 }

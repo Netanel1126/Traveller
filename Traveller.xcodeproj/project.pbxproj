@@ -50,8 +50,13 @@
 		B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A31207FC6D100B83A53 /* NotificationModel.swift */; };
 		B0387A37207FCFE500B83A53 /* ImageFirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */; };
 		B0387A3B207FE63F00B83A53 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0387A3A207FE63F00B83A53 /* Home.storyboard */; };
-		B03883DC20869CF800D1F3F8 /* PacketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DA20869CF800D1F3F8 /* PacketBuilder.swift */; };
+		B03883DC20869CF800D1F3F8 /* SendPacketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DA20869CF800D1F3F8 /* SendPacketBuilder.swift */; };
 		B03883DD20869CF800D1F3F8 /* TSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DB20869CF800D1F3F8 /* TSocket.swift */; };
+		B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD312087A0AA0056B59C /* ServerModel.swift */; };
+		B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD332087A19A0056B59C /* ServerConfig.swift */; };
+		B0F3CD362087BF530056B59C /* ServerResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD352087BF530056B59C /* ServerResponses.swift */; };
+		B0F3CD392087CBE00056B59C /* MessageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD382087CBE00056B59C /* MessageListener.swift */; };
+		B0F3CD3B2087CE0B0056B59C /* CoordinateListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD3A2087CE0B0056B59C /* CoordinateListener.swift */; };
 		B0F7BC5B208133FD00DCFD3D /* FirebaseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7BC5A208133FD00DCFD3D /* FirebaseConverter.swift */; };
 		B0F7BC5D2081380200DCFD3D /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7BC5C2081380200DCFD3D /* GroupModel.swift */; };
 		C10D72FD2068D5D1005818A5 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */; };
@@ -140,8 +145,13 @@
 		B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFirebaseStorage.swift; sourceTree = "<group>"; };
 		B0387A38207FD84300B83A53 /* FieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidation.swift; sourceTree = "<group>"; };
 		B0387A3A207FE63F00B83A53 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		B03883DA20869CF800D1F3F8 /* PacketBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacketBuilder.swift; sourceTree = "<group>"; };
+		B03883DA20869CF800D1F3F8 /* SendPacketBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPacketBuilder.swift; sourceTree = "<group>"; };
 		B03883DB20869CF800D1F3F8 /* TSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSocket.swift; sourceTree = "<group>"; };
+		B0F3CD312087A0AA0056B59C /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		B0F3CD332087A19A0056B59C /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
+		B0F3CD352087BF530056B59C /* ServerResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponses.swift; sourceTree = "<group>"; };
+		B0F3CD382087CBE00056B59C /* MessageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListener.swift; sourceTree = "<group>"; };
+		B0F3CD3A2087CE0B0056B59C /* CoordinateListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateListener.swift; sourceTree = "<group>"; };
 		B0F7BC5A208133FD00DCFD3D /* FirebaseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConverter.swift; sourceTree = "<group>"; };
 		B0F7BC5C2081380200DCFD3D /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
@@ -336,10 +346,10 @@
 			children = (
 				84BC9B5620851A380012AFC8 /* FirebaseModel.swift */,
 				84BC9B5520851A370012AFC8 /* TripModel.swift */,
-				B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */,
-				B0F7BC5A208133FD00DCFD3D /* FirebaseConverter.swift */,
 				B0387A28207FC4FA00B83A53 /* TravellerUserModel.swift */,
 				B0F7BC5C2081380200DCFD3D /* GroupModel.swift */,
+				B0387A36207FCFE500B83A53 /* ImageFirebaseStorage.swift */,
+				B0F7BC5A208133FD00DCFD3D /* FirebaseConverter.swift */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -422,11 +432,24 @@
 		B03883D920869CE300D1F3F8 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				B03883DA20869CF800D1F3F8 /* PacketBuilder.swift */,
+				B0F3CD372087CBC40056B59C /* networkListenners */,
+				B03883DA20869CF800D1F3F8 /* SendPacketBuilder.swift */,
 				B03883DB20869CF800D1F3F8 /* TSocket.swift */,
+				B0F3CD312087A0AA0056B59C /* ServerModel.swift */,
+				B0F3CD332087A19A0056B59C /* ServerConfig.swift */,
+				B0F3CD352087BF530056B59C /* ServerResponses.swift */,
 			);
 			name = network;
 			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		B0F3CD372087CBC40056B59C /* networkListenners */ = {
+			isa = PBXGroup;
+			children = (
+				B0F3CD382087CBE00056B59C /* MessageListener.swift */,
+				B0F3CD3A2087CE0B0056B59C /* CoordinateListener.swift */,
+			);
+			path = networkListenners;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -739,6 +762,7 @@
 			files = (
 				84BC9B54208519DD0012AFC8 /* TripsTableViewCell.swift in Sources */,
 				84BC9B5F208539F70012AFC8 /* MapAlerts.swift in Sources */,
+				B0F3CD362087BF530056B59C /* ServerResponses.swift in Sources */,
 				B0387A2F207FC5A200B83A53 /* Logger.swift in Sources */,
 				C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */,
 				C1CD94D9200E1D4E00164EEF /* JoinGroupController.swift in Sources */,
@@ -747,6 +771,7 @@
 				C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */,
 				84BC9B5D20851DC70012AFC8 /* MinimumDistanceCalculator.swift in Sources */,
 				84CB907B2077904400D15EC9 /* CreateTripViewController.swift in Sources */,
+				B0F3CD392087CBE00056B59C /* MessageListener.swift in Sources */,
 				B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */,
 				B0387A37207FCFE500B83A53 /* ImageFirebaseStorage.swift in Sources */,
 				84BC9B53208519DD0012AFC8 /* MyMapView.swift in Sources */,
@@ -755,7 +780,8 @@
 				84F85C7C2067B2EB003E6652 /* SignupViewController.swift in Sources */,
 				84BC9B5C20851DC70012AFC8 /* Algo.swift in Sources */,
 				84F85C7A2067A9E4003E6652 /* WelcomeViewController.swift in Sources */,
-				B03883DC20869CF800D1F3F8 /* PacketBuilder.swift in Sources */,
+				B03883DC20869CF800D1F3F8 /* SendPacketBuilder.swift in Sources */,
+				B0F3CD3B2087CE0B0056B59C /* CoordinateListener.swift in Sources */,
 				30EC2C5F2006198D0065FA2A /* Position.swift in Sources */,
 				84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */,
 				B03883DD20869CF800D1F3F8 /* TSocket.swift in Sources */,
@@ -765,6 +791,7 @@
 				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
 				84B336542078ED1F00A236E1 /* MyGroupsTableViewController.swift in Sources */,
 				84CB9079207785BF00D15EC9 /* Trip.swift in Sources */,
+				B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,
 				84BC9B5820851A380012AFC8 /* FirebaseModel.swift in Sources */,
 				84CB9076207770D500D15EC9 /* SideMenuVC.swift in Sources */,
@@ -773,6 +800,7 @@
 				B0F7BC5D2081380200DCFD3D /* GroupModel.swift in Sources */,
 				84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */,
 				AC6CF6FB2055517D0095C0B5 /* Group.swift in Sources */,
+				B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */,
 				84BC9B6020853DBC0012AFC8 /* TravellerUserModel.swift in Sources */,
 				B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */,
 				84CB9075207770D500D15EC9 /* MainVC.swift in Sources */,
@@ -940,7 +968,7 @@
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-1126.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Traveller52.Traveller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -957,7 +985,7 @@
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-1126.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Traveller52.Traveller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

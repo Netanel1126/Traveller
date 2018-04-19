@@ -27,7 +27,7 @@ class MapAlerts{
                 // TripModel class is inside model/db
             AuthManager.getConnectedUser { (user) in
                 if(user != nil){
-                    TripModel.storeTrip(tripCreatorID: (user!.id), tripName: tripName, trip: Trip(name: tripName, description: tripDesc ,path: map)) { (error) in
+                    TripModel.instance.storeTrip(tripCreatorID: (user!.id), tripName: tripName, trip: Trip(name: tripName, description: tripDesc ,path: map)) { (error) in
                         Logger.log(message: (error?.localizedDescription)! , event: .e)
                     }
                 }

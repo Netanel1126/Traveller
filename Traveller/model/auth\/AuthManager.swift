@@ -13,7 +13,7 @@ class AuthManager {
     static func getConnectedUser(onComplete: @escaping (TravellerUser?) -> Void) {
         let firebaseUser = FirebaseUserAuth.getCurrentUser()
         if firebaseUser != nil {
-            TravellerUserModel.getUser(userId: (firebaseUser?.uid)!, onSuccess: { travellerUser in
+            TravellerUserModel.instance.getUser(userId: (firebaseUser?.uid)!, onSuccess: { travellerUser in
                 onComplete(travellerUser)
             }, onFailure: { error in
                 Logger.log(message: "Error getting user info from db \(error.localizedDescription)", event: .e)
@@ -26,7 +26,7 @@ class AuthManager {
     static func signIn(email: String, password: String, onComplete: @escaping (TravellerUser) -> Void, onFailure: @escaping (Error) -> Void) {
         FirebaseUserAuth.signIn(email: email, password: password, onSuccess: { user in
             let userId = user.uid
-            TravellerUserModel.getUser(userId: userId, onSuccess: { newUser in
+            TravellerUserModel.instance.getUser(userId: userId, onSuccess: { newUser in
                 Logger.log(message: "Sign in succeed", event: .i)
                 onComplete(newUser)
             }, onFailure: { error in
@@ -44,7 +44,7 @@ class AuthManager {
             Logger.log(message: "Added new user to FirebaseAuth", event: .i)
             let id = user.uid // set user id as firebase response user id
             let newUser = TravellerUser(id: id, email: userStruct.email, firstName: userStruct.firstName, lastName: userStruct.lastName, phoneNumber: userStruct.phoneNumber, imgUrl: userStruct.imgUrl)
-            TravellerUserModel.storeUser(travellerUser: newUser, onComplete: { error in
+            TravellerUserModel.instance.storeUser(travellerUser: newUser, onComplete: { error in
                 if error == nil {
                     onComplete(newUser)
                 }

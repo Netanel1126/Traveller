@@ -11,6 +11,20 @@ import FirebaseDatabase
 
 class GroupModel {
     
+    static let instance = GroupModel()
+    var data = [Group]()
+    
+    private init() {obseveDatabase()}
+    
+    //SHOULD BE CALLED ONCE!
+    private func obseveDatabase() {
+        let path = FirebaseModel.groupPath
+        FirebaseModel.loadAllDataAndObserve(path: path) { jsons in
+            jsons.forEach {self.data.append(Group.init(json: $0))}
+            TravellerNotification.groupNotification.post(data: ())
+        }
+    }
+    
     static func getGroup(groupId: String, onSuccess: @escaping (Group) -> Void, onFailure: @escaping (Error) -> Void){
         let path = FirebaseModel.groupPath + groupId
         FirebaseModel.loadSingleObject(path: path, onComplete: { json in

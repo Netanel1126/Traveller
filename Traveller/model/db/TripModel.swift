@@ -11,43 +11,35 @@ import Firebase
 
 class TripModel {
     
-    static func getTrip(tripCreatorID: String,tripName:String, onSuccess: @escaping (Trip) -> Void, onFailure: @escaping (Error) -> Void){
+    static let instance = TripModel()
+    var data = [Trip]()
+    private init() { obseveDatabase() }
+    
+    //SHOULD BE CALLED ONCE!
+    private func obseveDatabase() {
+        let path = FirebaseModel.tripPath
+        FirebaseModel.loadAllDataAndObserve(path: path) { jsons in
+            jsons.forEach {self.data.append(Trip.init(json: $0))}
+            TravellerNotification.tripNotification.post(data: ())
+        }
+    }
+    
+    func getTrip(tripCreatorID: String,tripName:String, onSuccess: @escaping (Trip) -> Void, onFailure: @escaping (Error) -> Void){
         let path = FirebaseModel.tripPath + tripCreatorID  + "/" + tripName
         FirebaseModel.loadSingleObject(path: path, onComplete: { json in
-            let trip = Trip(fromJson: json)
+            let trip = Trip(json: json)
             onSuccess(trip)
         }, onFailure: { error in
             onFailure(error)
         })
     }
     
-    static func storeTrip(tripCreatorID: String,tripName:String,trip: Trip, onComplete: @escaping (Error?) -> Void){
+    func storeTrip(tripCreatorID: String,tripName:String,trip: Trip, onComplete: @escaping (Error?) -> Void){
         let json = trip.toJson()
         let path = FirebaseModel.tripPath + tripCreatorID  + "/" + tripName
         
         FirebaseModel.storeObject(path: path, json: json) { error in
             onComplete(error)
         }
-    }
-    
-    static func getAllTrips(tripCreatorID: String){
-        let path = FirebaseModel.tripPath + tripCreatorID
-        var trips = [Trip]()
-        
-        FirebaseModel.readAllObjects(path: path) { (data) in
-            
-            if data != nil{
-                for child in data!{
-                    if let childData = child as? DataSnapshot{
-                        if let json = childData.value as? [String:Any]{
-                            let trip = Trip(fromJson: json)
-                            trips.append(trip)
-                        }
-                    }
-                }
-                TravellerNotification.getAllTripsNotifcation.post(data: trips)
-            }
-        }
-        
     }
 }

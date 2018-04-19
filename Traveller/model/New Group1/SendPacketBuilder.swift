@@ -14,7 +14,19 @@ class PacketBuilder {
         return "#COORDINATE,\(coordinate.longitude),\(coordinate.latitude)\n"
     }
     
+    static func messagePacket(message: String) -> String {
+        return "#MSG,\(message)\n"
+    }
+    
     static func identityPacket(gid: String, uid: String) -> String {
         return "\(gid),\(uid)\n"
+    }
+    
+    static func closeReq() -> String {
+        return "#BB?\n";
+    }
+    
+    static func closeAck() -> String {
+        return "#BBOK\n"
     }
 }

@@ -28,21 +28,18 @@ class Trip {
         tripPath = path
     }
     
-    init(fromJson: [String:Any]) {
-        tripName = fromJson["TripName"] as! String
-        tripDescription = fromJson["TripDescription"] as? String
+    init(json: [String:Any]) {
+        tripName = json["TripName"] as! String
+        tripDescription = json["TripDescription"] as? String
         
-        if fromJson["TripPath"] != nil {
-            tripPath = fromJson["TripPath"] as? [Position]
+        if json["TripPath"] != nil {
+            tripPath = json["TripPath"] as? [Position]
         } else {
             tripPath = nil
         }
     }
     
-    func getName() -> String {
-        return self.tripName
-    }
-    
+   
     func toJson() -> [String:Any] {
         var json = [String:Any]()
         json["TripName"] = tripName
