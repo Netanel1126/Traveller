@@ -48,6 +48,10 @@ class TripModel {
                 TravellerNotification.getAllTripsNotifcation.post(data: trips)
             }
         }
-        
+    }
+    
+    static func removeTrip(tripName:String,tripCreatorID:String){
+        let path = FirebaseModel.tripPath + tripCreatorID + "/" + tripName
+        FirebaseModel.removeData(path: path)
     }
 }

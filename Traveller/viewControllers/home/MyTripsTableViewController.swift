@@ -2,16 +2,17 @@ import UIKit
 
 class MyTripsTableViewController: UITableViewController {
     
-    // TODO:: use notifications to add trips list from Firebase. I don't remember what function of TableView refreshes or updates data to it, sorry.
-
     var trips:[Trip] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TravellerNotification.getAllTripsNotifcation.observe { (trips) in
-            self.trips = trips!
-            self.tableView.reloadData()
+        TravellerNotification.getAllTripsNotifcation.observe { (new_trips) in
+            if new_trips != nil{
+                self.trips.removeAll()
+                self.trips = new_trips!
+                self.tableView.reloadData()
+            }
         }
         
         AuthManager.getConnectedUser { (user) in
@@ -23,25 +24,26 @@ class MyTripsTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        Logger.log(message: trips.count.description, event: .d)
+        return trips.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tripsCell", for: indexPath) as! TripsTableViewCell
         
+        let content = trips[indexPath.row]
         
-
+        cell.tripName.text = content.tripName
+        cell.descriptionText.text = content.tripDescription
+        
         return cell
     }
 

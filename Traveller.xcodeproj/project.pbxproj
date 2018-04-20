@@ -42,8 +42,6 @@
 		84F85C7A2067A9E4003E6652 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C792067A9E4003E6652 /* WelcomeViewController.swift */; };
 		84F85C7C2067B2EB003E6652 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C7B2067B2EB003E6652 /* SignupViewController.swift */; };
 		84F85C7E2067B829003E6652 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C7D2067B829003E6652 /* LoginViewController.swift */; };
-		9FD2ADA219A257F2522C35B5 /* Pods_Traveller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F66C3683D05E6D0E1B7FC98 /* Pods_Traveller.framework */; };
-		A96EB02019DB25E4300DB418 /* Pods_TravellerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CA9989E88B1FA7412B2696 /* Pods_TravellerUITests.framework */; };
 		AC21717E200E33280047BBF8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC21717D200E33280047BBF8 /* Auth.storyboard */; };
 		AC6CF6FB2055517D0095C0B5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CF6FA2055517D0095C0B5 /* Group.swift */; };
 		B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A27207FC4FA00B83A53 /* FirebaseUserAuth.swift */; };
@@ -129,8 +127,6 @@
 		84F85C7D2067B829003E6652 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		856531A0451EBCCE8DC6E703 /* Pods-TravellerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		890D3CA551821974E400867C /* Pods-TravellerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8F66C3683D05E6D0E1B7FC98 /* Pods_Traveller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traveller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		930E49C71BB763FC12678BE9 /* Pods_TravellerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravellerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC21717D200E33280047BBF8 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		AC6CF6FA2055517D0095C0B5 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AF51120EF5002DC2299BFC5C /* Pods-TravellerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +148,6 @@
 		C1CD94DA200E237500164EEF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C1EA0AC020555F62000E71A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C382E509764CF5FF340F7980 /* Pods-Traveller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.debug.xcconfig"; sourceTree = "<group>"; };
-		D1CA9989E88B1FA7412B2696 /* Pods_TravellerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravellerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -12,7 +12,7 @@ class FirebaseModel{
     static var databaseRef:DatabaseReference? = Database.database().reference()
     static let groupPath = "Groups/"
     static let userPath = "Users/"
-    static let tripPath = "Trip/"
+    static let tripPath = "Trips/"
     
     //path example "Users/{userId}"
     static func loadSingleObject(path: String, onComplete: @escaping ([String:Any]) -> Void, onFailure: @escaping (Error) -> Void) {
@@ -53,7 +53,11 @@ class FirebaseModel{
                 onComplete(nil)
             }
         }
-        
         ref?.observe(DataEventType.value, with: handler)
+    }
+    
+    static func removeData(path:String){
+        let ref = databaseRef?.child(path)
+        ref?.removeValue()
     }
 }

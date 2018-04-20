@@ -12,17 +12,17 @@ class Trip {
     
     var tripName: String
     var tripDescription: String?
-    var tripPath: [Position]?
+    var tripPath: [Position]
     
     convenience init(name: String) {
-        self.init(name: name, description: nil, path: nil)
+        self.init(name: name, description: nil, path: [])
     }
     
     convenience init(name: String, description: String?) {
-        self.init(name: name, description: description, path: nil)
+        self.init(name: name, description: description, path: [])
     }
     
-    init(name: String, description: String?, path: [Position]?) {
+    init(name: String, description: String?, path: [Position]) {
         tripName = name
         tripDescription = description
         tripPath = path
@@ -32,11 +32,7 @@ class Trip {
         tripName = fromJson["TripName"] as! String
         tripDescription = fromJson["TripDescription"] as? String
         
-        if fromJson["TripPath"] != nil {
-            tripPath = fromJson["TripPath"] as? [Position]
-        } else {
-            tripPath = nil
-        }
+        tripPath = fromJson["TripPath"] as! [Position]
     }
     
     func getName() -> String {
@@ -48,10 +44,13 @@ class Trip {
         json["TripName"] = tripName
         json["TripDescription"] = tripDescription
         
-        if tripPath != nil {
-            json["TripPath"] = tripPath
+        var positions = [String:Any]()
+        for i in 0...tripPath.count - 1{
+            positions[i.description] = tripPath[i].toJson()
         }
-        
+            
+        json["TripPath"] = positions
+
         return json
     }
 }

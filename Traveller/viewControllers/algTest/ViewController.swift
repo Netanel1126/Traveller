@@ -44,16 +44,16 @@ class ViewController: UIViewController {
     
     @IBAction func CheckAlgo(_ sender: UIButton) {
         var mapPositions = [Position]()
-        mapPositions.append(Position(id: 0, x: Double(text_X1.text!)!, y: Double(text_Y1.text!)!))
-        mapPositions.append(Position(id: 1, x: Double(text_X2.text!)!, y: Double(text_Y2.text!)!))
-        mapPositions.append(Position(id: 2, x: Double(text_X3.text!)!, y: Double(text_Y3.text!)!))
-        mapPositions.append(Position(id: 3, x: Double(text_X4.text!)!, y: Double(text_Y4.text!)!))
-        mapPositions.append(Position(id: 4, x: Double(text_X5.text!)!, y: Double(text_Y5.text!)!))
-        mapPositions.append(Position(id: 5, x: Double(text_X6.text!)!, y: Double(text_Y6.text!)!))
+        mapPositions.append(Position(id: 0, latitude: Double(text_X1.text!)!, longitude: Double(text_Y1.text!)!))
+        mapPositions.append(Position(id: 1, latitude: Double(text_X2.text!)!, longitude: Double(text_Y2.text!)!))
+        mapPositions.append(Position(id: 2, latitude: Double(text_X3.text!)!, longitude: Double(text_Y3.text!)!))
+        mapPositions.append(Position(id: 3, latitude: Double(text_X4.text!)!, longitude: Double(text_Y4.text!)!))
+        mapPositions.append(Position(id: 4, latitude: Double(text_X5.text!)!, longitude: Double(text_Y5.text!)!))
+        mapPositions.append(Position(id: 5, latitude: Double(text_X6.text!)!, longitude: Double(text_Y6.text!)!))
         
-        var guidePosition = Position(id: nil, x: Double(textGuide_X1.text!)!, y: Double(textGuide_Y1.text!)!)
-        var rearPosition = Position(id: nil, x: Double(textRear_X2.text!)!, y: Double(textRear_Y2.text!)!)
-        var myPosition = Position(id: nil, x: Double(textMyLoc_X3.text!)!, y: Double(textMyLoc_Y3.text!)!)
+        var guidePosition = Position(id: 1, latitude: Double(textGuide_X1.text!)!, longitude: Double(textGuide_Y1.text!)!)
+        var rearPosition = Position(id: 2, latitude: Double(textRear_X2.text!)!, longitude: Double(textRear_Y2.text!)!)
+        var myPosition = Position(id: 3, latitude: Double(textMyLoc_X3.text!)!, longitude: Double(textMyLoc_Y3.text!)!)
         
         var newGuidePosition = MinimumDistanceCalculator.getMinDistance(positions: mapPositions, stPos: guidePosition).1
         var newRearPosition = MinimumDistanceCalculator.getMinDistance(positions: mapPositions, stPos: rearPosition).1

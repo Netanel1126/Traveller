@@ -5,9 +5,9 @@ class MinimumDistanceCalculator {
     
     // Calculates the 2D distance between two positions on the map
     private static func distance(pos1:Position,pos2:Position)->Double {
-        var x1:Double=pos1.x!-pos2.x!
+        var x1:Double=pos1.latitude!-pos2.latitude!
         x1=pow(x1,2)
-        var x2=pos1.y!-pos2.y!
+        var x2=pos1.longitude!-pos2.longitude!
         x2=pow(x2,2)
         return sqrt(x1+x2)
     }
@@ -38,13 +38,13 @@ class MinimumDistanceCalculator {
     // 'guide' and 'rearguard' are positions that relates to actual positions on the map (not from GPS).
     static func getRelevantPath(map:[Position],guide:Position,rearguard:Position) -> [Position]{
         var positions = [Position]()
-        if(rearguard.id! < guide.id!){
-        for pos in rearguard.id!...guide.id!{
+        if(rearguard.id < guide.id){
+        for pos in rearguard.id...guide.id{
             positions.append(map[pos])
         }
         }
         else {
-            for pos in guide.id!...rearguard.id!{
+            for pos in guide.id...rearguard.id{
                 positions.append(map[pos])
             }
         }
