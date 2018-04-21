@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ModelNotificationBase<T>{
     var name:String?
@@ -38,6 +39,7 @@ class TravellerNotification {
 //    static let getAllTripsNotifcation = ModelNotificationBase<[Trip]>(name: "getAllTripsNotifcation")
     static let GetMapNotification = ModelNotificationBase<[Position]>(name: "GetMapNotification")
     static let PopupEndNotification = ModelNotificationBase<Bool>(name: "PopupEndNotification")
+    static let JoinGroupNotification = ModelNotificationBase<UIAlertController>(name: "JoinGroupNotification")
     
     //model notifications
     static let travellerUserNotification = ModelNotificationBase<Void>(name: "travellerUserDBNotification")

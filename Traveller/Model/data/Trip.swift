@@ -10,19 +10,23 @@ import Foundation
 
 class Trip {
     
+    var tripId:String
+    var ownerId:String
     var tripName: String
     var tripDescription: String?
     var tripPath: [Position]
     
     convenience init(name: String) {
-        self.init(name: name, description: nil, path: [])
+        self.init(tripId:"" ,ownerId:"" ,name: name, description: nil, path: [])
     }
     
     convenience init(name: String, description: String?) {
-        self.init(name: name, description: description, path: [])
+        self.init(tripId:"" ,ownerId:"" ,name: name, description: description, path: [])
     }
     
-    init(name: String, description: String?, path: [Position]) {
+    
+    init(tripId:String,ownerId:String, name: String, description: String?, path: [Position]) {
+        self.tripId = tripId
         tripName = name
         tripDescription = description
         tripPath = path

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PbR-fR-0sU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PbR-fR-0sU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -177,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="5228" y="781"/>
         </scene>
-        <!--My Groups-->
+        <!--All Trips-->
         <scene sceneID="cq3-LJ-nuc">
             <objects>
-                <tableViewController id="Pa3-lM-YcS" customClass="MyGroupsTableViewController" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Pa3-lM-YcS" customClass="AllTripsTableViewController" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aOm-gA-jQT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,25 +192,48 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupsCell" rowHeight="64" id="kdn-pM-lrR">
-                                <rect key="frame" x="0.0" y="84" width="375" height="64"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="allTripsCell" rowHeight="119" id="kdn-pM-lrR" customClass="AllTripsTableViewCell" customModule="Traveller" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="375" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kdn-pM-lrR" id="1KK-Yb-7S2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="118.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuP-Ci-at0">
-                                            <rect key="frame" x="5" y="11" width="68" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-kR-DoB">
+                                            <rect key="frame" x="28" y="20" width="216" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="My Group"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-ep-8N5">
-                                            <rect key="frame" x="119" y="11" width="45" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfy-ex-bfd">
+                                            <rect key="frame" x="28" y="66" width="216" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Delete"/>
-                                        </button>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="groupMemmberIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Wta-6g-zOQ">
+                                            <rect key="frame" x="282" y="20" width="70" height="74"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="74" id="lRL-sA-zw9"/>
+                                                <constraint firstAttribute="width" constant="70" id="xdc-tF-6c1"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Wta-6g-zOQ" secondAttribute="bottom" constant="14" id="bFQ-TX-XDN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Wta-6g-zOQ" secondAttribute="trailing" constant="7" id="hvt-Ak-b6O"/>
+                                        <constraint firstItem="Wta-6g-zOQ" firstAttribute="top" secondItem="1KK-Yb-7S2" secondAttribute="topMargin" constant="9" id="wJD-ta-BLS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="inGroupImg" destination="Wta-6g-zOQ" id="1Dq-86-qjt"/>
+                                    <outlet property="tripDscription" destination="kfy-ex-bfd" id="l79-YM-Ypn"/>
+                                    <outlet property="tripNameText" destination="0eG-kR-DoB" id="Svo-P6-cEu"/>
+                                    <outletCollection property="gestureRecognizers" destination="Vyl-xW-hg9" appends="YES" id="i3Y-Tp-lDx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -217,19 +241,25 @@
                             <outlet property="delegate" destination="Pa3-lM-YcS" id="pMu-nt-xPC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Groups" id="aCx-iO-2hd">
+                    <navigationItem key="navigationItem" title="All Trips" id="aCx-iO-2hd">
                         <barButtonItem key="rightBarButtonItem" title="+" id="86p-2a-T7j"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VT-Vb-7xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eaV-pV-Faj" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Vyl-xW-hg9">
+                    <connections>
+                        <action selector="joinGroup:" destination="eaV-pV-Faj" id="0AH-Hp-JBe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6117.6000000000004" y="1501.7991004497753"/>
         </scene>
-        <!--My Groups-->
+        <!--All trips-->
         <scene sceneID="73X-YL-DKO">
             <objects>
                 <navigationController id="hrQ-c4-mwV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Groups" id="HG2-kt-nox"/>
+                    <tabBarItem key="tabBarItem" title="All trips" id="HG2-kt-nox"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="doP-mH-UZM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -348,6 +378,7 @@
     </scenes>
     <resources>
         <image name="buttons" width="600" height="200"/>
+        <image name="groupMemmberIcon" width="357" height="430"/>
         <image name="search-circle-blue-512" width="512" height="512"/>
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>

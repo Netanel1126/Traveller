@@ -12,6 +12,7 @@
 		3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */; };
 		3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */; };
 		712520F4E5C1DFF345A5A51E /* Pods_TravellerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA97DE9A470DE1A3499C90B /* Pods_TravellerTests.framework */; };
+		8457BDA6208B730500ED24B5 /* AllTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */; };
 		8498ED602058344200728827 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498ED5F2058344200728827 /* CoreLocation.framework */; };
 		8498ED63205834C300728827 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498ED62205834C300728827 /* MapVC.swift */; };
 		849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54B202263A800EBC02D /* TourGuideUI.storyboard */; };
@@ -22,7 +23,7 @@
 		84AC8CCB1FFE23A800AB9BF9 /* TravellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CCA1FFE23A800AB9BF9 /* TravellerTests.swift */; };
 		84AC8CD61FFE23A800AB9BF9 /* TravellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CD51FFE23A800AB9BF9 /* TravellerUITests.swift */; };
 		84B336522078E66F00A236E1 /* MyTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B336512078E66F00A236E1 /* MyTripsTableViewController.swift */; };
-		84B336542078ED1F00A236E1 /* MyGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B336532078ED1F00A236E1 /* MyGroupsTableViewController.swift */; };
+		84B336542078ED1F00A236E1 /* AllTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B336532078ED1F00A236E1 /* AllTripsTableViewController.swift */; };
 		84BC9B52208519DD0012AFC8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC9B4F208519DC0012AFC8 /* MapViewController.swift */; };
 		84BC9B53208519DD0012AFC8 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC9B50208519DC0012AFC8 /* MyMapView.swift */; };
 		84BC9B54208519DD0012AFC8 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC9B51208519DD0012AFC8 /* TripsTableViewCell.swift */; };
@@ -96,6 +97,7 @@
 		3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AudioRecrdingTest.storyboard; sourceTree = "<group>"; };
 		58FCB9CAB13EDB20CB716E51 /* Pods-Traveller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.release.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.release.xcconfig"; sourceTree = "<group>"; };
 		63B4743243C33654A82EA760 /* Pods_Traveller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traveller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTripsTableViewCell.swift; sourceTree = "<group>"; };
 		8498ED5F2058344200728827 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8498ED62205834C300728827 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		849BD54B202263A800EBC02D /* TourGuideUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourGuideUI.storyboard; sourceTree = "<group>"; };
@@ -112,7 +114,7 @@
 		84AC8CD51FFE23A800AB9BF9 /* TravellerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerUITests.swift; sourceTree = "<group>"; };
 		84AC8CD71FFE23A800AB9BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B336512078E66F00A236E1 /* MyTripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsTableViewController.swift; sourceTree = "<group>"; };
-		84B336532078ED1F00A236E1 /* MyGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewController.swift; sourceTree = "<group>"; };
+		84B336532078ED1F00A236E1 /* AllTripsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTripsTableViewController.swift; sourceTree = "<group>"; };
 		84BC9B4F208519DC0012AFC8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		84BC9B50208519DC0012AFC8 /* MyMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		84BC9B51208519DD0012AFC8 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
@@ -400,9 +402,10 @@
 				84BC9B4F208519DC0012AFC8 /* MapViewController.swift */,
 				84BC9B50208519DC0012AFC8 /* MyMapView.swift */,
 				84BC9B51208519DD0012AFC8 /* TripsTableViewCell.swift */,
-				84B336532078ED1F00A236E1 /* MyGroupsTableViewController.swift */,
+				84B336532078ED1F00A236E1 /* AllTripsTableViewController.swift */,
 				84B336512078E66F00A236E1 /* MyTripsTableViewController.swift */,
 				84CB907A2077904400D15EC9 /* CreateTripViewController.swift */,
+				8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				84CB907B2077904400D15EC9 /* CreateTripViewController.swift in Sources */,
 				B0F3CD392087CBE00056B59C /* MessageListener.swift in Sources */,
 				B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */,
+				8457BDA6208B730500ED24B5 /* AllTripsTableViewCell.swift in Sources */,
 				B0387A37207FCFE500B83A53 /* ImageFirebaseStorage.swift in Sources */,
 				84BC9B53208519DD0012AFC8 /* MyMapView.swift in Sources */,
 				84F85C7E2067B829003E6652 /* LoginViewController.swift in Sources */,
@@ -785,7 +789,7 @@
 				3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */,
 				8498ED63205834C300728827 /* MapVC.swift in Sources */,
 				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
-				84B336542078ED1F00A236E1 /* MyGroupsTableViewController.swift in Sources */,
+				84B336542078ED1F00A236E1 /* AllTripsTableViewController.swift in Sources */,
 				84CB9079207785BF00D15EC9 /* Trip.swift in Sources */,
 				B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,
