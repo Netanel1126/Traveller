@@ -15,7 +15,7 @@ class MapAlerts{
             AuthManager.getConnectedUser { (user) in
                 if(user != nil){
                     let tripId = UUID().uuidString
-                    let trip = Trip(tripId: tripId, name: tripName, description: tripDesc, path: map)
+                    let trip = Trip(tripId: tripId, ownerId: (user?.id)!, name: tripName, description: tripDesc, path: map)
                     TripModel.instance.storeTrip(trip: trip) {
                         error in
                         if error != nil {
