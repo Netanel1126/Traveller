@@ -8,13 +8,21 @@ class TripsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
+    //save delete for the end because we need to update other devicces
+//    @IBAction func removeTrip(_ sender: UIButton) {
+//        AuthManager.getConnectedUser { (user) in
+//            if user != nil{
+//                TripModel.removeTrip(tripName: self.tripName.text!, tripCreatorID: (user?.id)!)
+//                Logger.log(message: "\(self.tripName.text!) Was Removed", event: .d)
+//                TripModel.getAllTrips(tripCreatorID: (user?.id)!)
+//            }
+//        }
+//    }
 }

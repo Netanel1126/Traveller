@@ -2,15 +2,16 @@ import Foundation
 
 class Group {
     var ownerId: String
+    //Should be same as TripId
     var groupId: String
     var groupName: String
     var guideIdList: [String]
     var travellerIdList: [String]
     var imageUrl: String
     
-    init(ownerId: String, groupId: String? = UUID().uuidString, groupName: String, guideIdList: [String]? = [String](), travellerIdList: [String]? = [String](), imageUrl: String? = "") {
+    init(groupId: String, ownerId: String, groupName: String, guideIdList: [String]? = [String](), travellerIdList: [String]? = [String](), imageUrl: String? = "") {
         self.ownerId = ownerId
-        self.groupId = groupId!
+        self.groupId = groupId
         self.groupName = groupName
         self.guideIdList = guideIdList!
         self.travellerIdList = travellerIdList!

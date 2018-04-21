@@ -17,12 +17,11 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
             self.map = map
             var alert = MapAlerts.getEndDrawingAlert(map: map!, myMap: self.myMap, tripName: self.tripName!, tripDesc: self.tripDesc!)
             self.present(alert, animated: true, completion: nil)
-            self.drawLine()
         }
         
         TravellerNotification.PopupEndNotification.observe { (annser) in
             if(annser)!{
-                self.dismiss(animated: true, completion: nil)
+                self.navigationController?.popToRootViewController(animated: true)
             }
         }
     }
@@ -45,7 +44,6 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
                 MapAlerts.ChangeDrawingAlert(myMap: myMap, callback: { (alert) in
                     self.present(alert, animated: true, completion: nil)
                     self.map = self.myMap.myPath
-                    print("Map \(self.map)")
                 })
                 
             }else{
@@ -53,19 +51,6 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
             }
         }
         myMap.drawing = drawing
-    }
-    
-    func drawLine(){
-        var points = [CLLocationCoordinate2D]()
-        
-        for point in map!{
-            let point1 = CLLocationCoordinate2DMake(point.x!, point.y!)
-            points.append(point1)
-        }
-        
-        let polyline = MKPolyline(coordinates: points, count: points.count)
-        
-        myMap.add(polyline)
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer! {

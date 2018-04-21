@@ -24,8 +24,8 @@ class TripModel {
         }
     }
     
-    func getTrip(tripCreatorID: String,tripName:String, onSuccess: @escaping (Trip) -> Void, onFailure: @escaping (Error) -> Void){
-        let path = FirebaseModel.tripPath + tripCreatorID  + "/" + tripName
+    func getTrip(tripId: String, onSuccess: @escaping (Trip) -> Void, onFailure: @escaping (Error) -> Void){
+        let path = FirebaseModel.tripPath + tripId
         FirebaseModel.loadSingleObject(path: path, onComplete: { json in
             let trip = Trip(json: json)
             onSuccess(trip)
@@ -34,9 +34,9 @@ class TripModel {
         })
     }
     
-    func storeTrip(tripCreatorID: String,tripName:String,trip: Trip, onComplete: @escaping (Error?) -> Void){
+    func storeTrip(trip: Trip, onComplete: @escaping (Error?) -> Void){
         let json = trip.toJson()
-        let path = FirebaseModel.tripPath + tripCreatorID  + "/" + tripName
+        let path = FirebaseModel.tripPath + trip.tripId
         
         FirebaseModel.storeObject(path: path, json: json) { error in
             onComplete(error)

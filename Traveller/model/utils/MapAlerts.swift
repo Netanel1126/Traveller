@@ -7,28 +7,20 @@ class MapAlerts{
         
         let action1 = UIAlertAction(title: "Apply", style: .default){
             (action) in
-            print(map)
             myMap.drawing = false
             myMap.isScrollEnabled = true
-            
-            // Creating and saving the corresponding group in Firebase Database
-            // GroupModel class is inside model/db
-            
-            /*Why?????
+
+            // Saving the trip in Firebase Database
+            // TripModel class is inside model/db
             AuthManager.getConnectedUser { (user) in
                 if(user != nil){
-                    let newGroup = Group(ownerId: (user?.id)!, groupName: "Group for " + newTrip.getName())
-                    GroupModel.storeGroup(group: newGroup) { (error) in
-                        print(error!)
-                    }
-                }*/
-                
-                // Saving the trip in Firebase Database
-                // TripModel class is inside model/db
-            AuthManager.getConnectedUser { (user) in
-                if(user != nil){
-                    TripModel.instance.storeTrip(tripCreatorID: (user!.id), tripName: tripName, trip: Trip(name: tripName, description: tripDesc ,path: map)) { (error) in
-                        Logger.log(message: (error?.localizedDescription)! , event: .e)
+                    let tripId = UUID().uuidString
+                    let trip = Trip(tripId: tripId, name: tripName, description: tripDesc, path: map)
+                    TripModel.instance.storeTrip(trip: trip) {
+                        error in
+                        if error != nil {
+                            Logger.log(message: (error?.localizedDescription)! , event: .e)
+                        }
                     }
                 }
             }

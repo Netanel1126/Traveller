@@ -7,13 +7,13 @@ class MyTripsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AuthManager.getConnectedUser { user in
-            self.data = TripModel.instance.data
-            self.dataObserver = TravellerNotification.tripNotification.observe { _ in
-                self.data = TripModel.instance.data
-                self.tableView.reloadData()
-            }
-        }
+//        AuthManager.getConnectedUser { user in
+//            self.data = TripModel.instance.data
+//            self.dataObserver = TravellerNotification.tripNotification.observe { _ in
+//                self.data = TripModel.instance.data
+//                self.tableView.reloadData()
+//            }
+//        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

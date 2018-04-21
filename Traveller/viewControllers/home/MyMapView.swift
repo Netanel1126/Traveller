@@ -8,7 +8,8 @@ class MyMapView: MKMapView {
     var path:UIBezierPath!
     var touchPoint:CGPoint!
     var startingPoint:CGPoint!
-    var shapeLayer = CAShapeLayer()
+    var shapeLayers = [CAShapeLayer]()
+    var polyline:MKPolyline?
     var myPath = [Position]()
     var i = 0
     var drawing = false
@@ -38,12 +39,7 @@ class MyMapView: MKMapView {
             
             let locCoord = self.convert(touchPoint, toCoordinateFrom: self)
             
-            print("S: \(locCoord)")
-            
-            print(locCoord.latitude)
-            
-            myPath.append(Position(id: i, x: locCoord.latitude, y: locCoord.latitude))
-            print("X: \(myPath[0].x)")
+            myPath.append(Position(id: i, x: locCoord.longitude, y: locCoord.latitude))
             i += 1
             
             // create path originating from the starting point to the next point the user reached
@@ -53,7 +49,6 @@ class MyMapView: MKMapView {
             
             // setting the startingPoint to the previous touchpoint
             // this updates while the user draws
-            print(touchPoint)
             startingPoint = touchPoint
             
             drawShapeLayer() // draws the actual line shapes
@@ -63,13 +58,12 @@ class MyMapView: MKMapView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("End , \(myPath)")
         endPopUp()
     }
     
     func drawShapeLayer() {
         
-        shapeLayer = CAShapeLayer()
+        var shapeLayer = CAShapeLayer()
         // the shape layer is used to draw along the already created path
         shapeLayer.path = path.cgPath
         
@@ -80,14 +74,25 @@ class MyMapView: MKMapView {
         
         // adding the shapelayer to the vies layer and forcing a redraw
         self.layer.addSublayer(shapeLayer)
+        self.shapeLayers.append(shapeLayer)
         self.setNeedsDisplay()
         
     }
     
     func clearCanvas() {
         path.removeAllPoints()
-        shapeLayer.removeFromSuperlayer()
+        
+        for shapeLayer in self.shapeLayers{
+            shapeLayer.removeFromSuperlayer()
+        }
+        
         myPath.removeAll()
+        
+        if polyline != nil{
+            self.remove(polyline!)
+        }
+        
+        i = 0
         self.setNeedsDisplay()
     }
     
@@ -95,6 +100,20 @@ class MyMapView: MKMapView {
         if(drawing && myPath.isEmpty == false){
             TravellerNotification.GetMapNotification.post(data: myPath)
         }
+    }
+    
+    func drawLine(){
+        var points = [CLLocationCoordinate2D]()
+        
+        for point in myPath{
+            let point1 = CLLocationCoordinate2DMake(point.y, point.x)
+            points.append(point1)
+        }
+        
+        polyline = MKPolyline(coordinates: points, count: points.count)
+        
+        self.add(polyline!)
+        self.setNeedsDisplay()
     }
 }
 
