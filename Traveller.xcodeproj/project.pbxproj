@@ -52,6 +52,9 @@
 		B0387A3B207FE63F00B83A53 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0387A3A207FE63F00B83A53 /* Home.storyboard */; };
 		B03883DC20869CF800D1F3F8 /* SendPacketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DA20869CF800D1F3F8 /* SendPacketBuilder.swift */; };
 		B03883DD20869CF800D1F3F8 /* TSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DB20869CF800D1F3F8 /* TSocket.swift */; };
+		B05EF98C208BB9BF000997FC /* RTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF98B208BB9BF000997FC /* RTMap.swift */; };
+		B05EF98F208BB9F0000997FC /* RTMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05EF98E208BB9F0000997FC /* RTMap.xib */; };
+		B05EF992208BBB23000997FC /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF991208BBB23000997FC /* NibLoader.swift */; };
 		B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */; };
 		B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD312087A0AA0056B59C /* ServerModel.swift */; };
 		B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD332087A19A0056B59C /* ServerConfig.swift */; };
@@ -147,6 +150,9 @@
 		B0387A3A207FE63F00B83A53 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B03883DA20869CF800D1F3F8 /* SendPacketBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPacketBuilder.swift; sourceTree = "<group>"; };
 		B03883DB20869CF800D1F3F8 /* TSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSocket.swift; sourceTree = "<group>"; };
+		B05EF98B208BB9BF000997FC /* RTMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMap.swift; sourceTree = "<group>"; };
+		B05EF98E208BB9F0000997FC /* RTMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RTMap.xib; sourceTree = "<group>"; };
+		B05EF991208BBB23000997FC /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
 		B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0F3CD312087A0AA0056B59C /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		B0F3CD332087A19A0056B59C /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 		84AC8CB41FFE23A800AB9BF9 /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
+				B05EF990208BBB07000997FC /* extensions */,
 				B0387A3C207FE78500B83A53 /* viewControllers */,
 				84F85C7820679CC0003E6652 /* Storyboards */,
 				309FD34C2055203500447472 /* model */,
@@ -295,6 +302,7 @@
 		84F85C7820679CC0003E6652 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B05EF98D208BB9C8000997FC /* nibs */,
 				84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */,
 				AC21717D200E33280047BBF8 /* Auth.storyboard */,
 				B0387A3A207FE63F00B83A53 /* Home.storyboard */,
@@ -357,6 +365,7 @@
 		B0387A3C207FE78500B83A53 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B05EF98A208BB9A6000997FC /* nibs */,
 				3659E84F20624DA100E116FB /* AudioRecorderViewController.swift */,
 				B0387A42207FE91E00B83A53 /* guide */,
 				B0387A41207FE91500B83A53 /* traveller */,
@@ -441,6 +450,30 @@
 			);
 			name = network;
 			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		B05EF98A208BB9A6000997FC /* nibs */ = {
+			isa = PBXGroup;
+			children = (
+				B05EF98B208BB9BF000997FC /* RTMap.swift */,
+			);
+			path = nibs;
+			sourceTree = "<group>";
+		};
+		B05EF98D208BB9C8000997FC /* nibs */ = {
+			isa = PBXGroup;
+			children = (
+				B05EF98E208BB9F0000997FC /* RTMap.xib */,
+			);
+			path = nibs;
+			sourceTree = "<group>";
+		};
+		B05EF990208BBB07000997FC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B05EF991208BBB23000997FC /* NibLoader.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		B0F3CD372087CBC40056B59C /* networkListenners */ = {
@@ -574,6 +607,7 @@
 				AC21717E200E33280047BBF8 /* Auth.storyboard in Resources */,
 				C10D72FD2068D5D1005818A5 /* SideMenu.storyboard in Resources */,
 				3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */,
+				B05EF98F208BB9F0000997FC /* RTMap.xib in Resources */,
 				C1CD94DB200E237500164EEF /* Main.storyboard in Resources */,
 				B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */,
 				849BD54F20226D8800EBC02D /* Assets.xcassets in Resources */,
@@ -778,6 +812,7 @@
 				84BC9B53208519DD0012AFC8 /* MyMapView.swift in Sources */,
 				84F85C7E2067B829003E6652 /* LoginViewController.swift in Sources */,
 				84F85C7C2067B2EB003E6652 /* SignupViewController.swift in Sources */,
+				B05EF98C208BB9BF000997FC /* RTMap.swift in Sources */,
 				84BC9B5C20851DC70012AFC8 /* Algo.swift in Sources */,
 				84F85C7A2067A9E4003E6652 /* WelcomeViewController.swift in Sources */,
 				B03883DC20869CF800D1F3F8 /* SendPacketBuilder.swift in Sources */,
@@ -788,6 +823,7 @@
 				B0F7BC5B208133FD00DCFD3D /* FirebaseConverter.swift in Sources */,
 				3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */,
 				8498ED63205834C300728827 /* MapVC.swift in Sources */,
+				B05EF992208BBB23000997FC /* NibLoader.swift in Sources */,
 				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
 				84B336542078ED1F00A236E1 /* AllTripsTableViewController.swift in Sources */,
 				84CB9079207785BF00D15EC9 /* Trip.swift in Sources */,
