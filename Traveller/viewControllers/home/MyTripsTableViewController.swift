@@ -10,7 +10,7 @@ class MyTripsTableViewController: UITableViewController {
         AuthManager.getConnectedUser { user in
             self.data = TripModel.instance.data
             self.dataObserver = TravellerNotification.tripNotification.observe { _ in
-                self.data = TripModel.instance.data.filter { $0.ownerId == user?.id }
+                self.data = TripModel.instance.data.filter { $0.owners.contains((user?.id)!) }
                 self.tableView.reloadData()
             }
         }
@@ -23,8 +23,8 @@ class MyTripsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tripsCell", for: indexPath) as! TripsTableViewCell
         let index = indexPath.row
-        cell.tripName.text = data[index].tripName
-        cell.descriptionText.text = data[index].tripDescription
+        cell.tripName.text = data[index].name
+        cell.descriptionText.text = data[index].description
         return cell
     }
 }

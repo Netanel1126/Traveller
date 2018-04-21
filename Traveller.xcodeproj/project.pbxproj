@@ -220,8 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				84BC9B5920851DC60012AFC8 /* alg */,
-				AC6CF6FA2055517D0095C0B5 /* Group.swift */,
 				3065D47D20552E2E0057EA94 /* TravellerUser.swift */,
+				AC6CF6FA2055517D0095C0B5 /* Group.swift */,
 				30EC2C5D2006198D0065FA2A /* Position.swift */,
 				84CB9078207785BF00D15EC9 /* Trip.swift */,
 			);

@@ -10,51 +10,35 @@ import Foundation
 
 class Trip {
     
-    var tripId:String
-    var ownerId:String
-    var tripName: String
-    var tripDescription: String?
-    var tripPath: [Position]
+    var id:String
+    var owners:[String]
+    var name: String
+    var description: String
+    var path: [Position]
     
-    convenience init(name: String) {
-        self.init(tripId:"" ,ownerId:"" ,name: name, description: nil, path: [])
+    init(id:String,owners:[String], name: String, description: String, path: [Position]) {
+        self.id = id
+        self.owners = owners
+        self.name = name
+        self.description = description
+        self.path = path
     }
     
-    convenience init(name: String, description: String?) {
-        self.init(tripId:"" ,ownerId:"" ,name: name, description: description, path: [])
-    }
-    
-    
-    init(tripId:String,ownerId:String, name: String, description: String?, path: [Position]) {
-        self.tripId = tripId
-        tripName = name
-        tripDescription = description
-        tripPath = path
-    }
-    
-    init(fromJson: [String:Any]) {
-        tripName = fromJson["TripName"] as! String
-        tripDescription = fromJson["TripDescription"] as? String
-        
-        tripPath = fromJson["TripPath"] as! [Position]
-    }
-    
-    func getName() -> String {
-        return self.tripName
+    init(json: [String:Any]) {
+        id = json["id"] as! String
+        owners = FirebaseConverter.decodeToStringArray(str: json["owners"] as! String)
+        name = json["name"] as! String
+        description = json["description"] as! String
+        path = FirebaseConverter.decodeTripPath(str: json["path"] as! String)
     }
     
     func toJson() -> [String:Any] {
         var json = [String:Any]()
-        json["TripName"] = tripName
-        json["TripDescription"] = tripDescription
-        
-        var positions = [String:Any]()
-        for i in 0...tripPath.count - 1{
-            positions[i.description] = tripPath[i].toJson()
-        }
-            
-        json["TripPath"] = positions
-
+        json["id"] = id
+        json["owners"] = owners
+        json["name"] = name
+        json["description"] = description
+        json["path"] = FirebaseConverter.encodeTripPath(path: path) 
         return json
     }
 }

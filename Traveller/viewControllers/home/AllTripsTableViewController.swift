@@ -35,9 +35,9 @@ class AllTripsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "allTripsCell", for: indexPath) as! AllTripsTableViewCell
         
-        cell.tripId = allTrips[indexPath.row].tripId
-        cell.tripNameText.text = allTrips[indexPath.row].tripName
-        cell.tripDscription.text = allTrips[indexPath.row].tripDescription
+        cell.tripId = allTrips[indexPath.row].id
+        cell.tripNameText.text = allTrips[indexPath.row].name
+        cell.tripDscription.text = allTrips[indexPath.row].description
         
         return cell
     }
