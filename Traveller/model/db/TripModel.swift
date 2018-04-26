@@ -19,12 +19,16 @@ class TripModel {
     private func obseveDatabase() {
         let path = FirebaseModel.tripPath
         FirebaseModel.loadAllDataAndObserve(path: path) { jsons in
-            jsons.forEach {self.data.append(Trip.init(json: $0))}
+            jsons.forEach { let newTrip = Trip.init(json: $0)
+                self.data = self.data.filter {$0.id != newTrip.id}
+                self.data.append(newTrip)
+            }
             TravellerNotification.tripNotification.post(data: ())
         }
     }
     
-    func getTrip(tripId: String, onSuccess: @escaping (Trip) -> Void, onFailure: @escaping (Error) -> Void){
+    //YOU SHOULDNT USE
+    private func getTrip(tripId: String, onSuccess: @escaping (Trip) -> Void, onFailure: @escaping (Error) -> Void){
         let path = FirebaseModel.tripPath + tripId
         FirebaseModel.loadSingleObject(path: path, onComplete: { json in
             let trip = Trip(json: json)
@@ -36,7 +40,7 @@ class TripModel {
     
     func storeTrip(trip: Trip, onComplete: @escaping (Error?) -> Void){
         let json = trip.toJson()
-        let path = FirebaseModel.tripPath + trip.tripId
+        let path = FirebaseModel.tripPath + trip.id
         
         FirebaseModel.storeObject(path: path, json: json) { error in
             onComplete(error)

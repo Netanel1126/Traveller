@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerA: UIViewController {
     @IBOutlet weak var text_X1: UITextField!
     @IBOutlet weak var text_X2: UITextField!
     @IBOutlet weak var text_X3: UITextField!

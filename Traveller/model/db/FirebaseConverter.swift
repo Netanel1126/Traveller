@@ -10,8 +10,8 @@ import Foundation
 class FirebaseConverter {
     static func encodeStringArray(array: [String]) -> String{
         var str = ""
-        array.forEach {str.append($0)}
-        return str
+        array.forEach {str.append("\($0),")}
+        return String(str.dropLast())
     }
     
     static func decodeToStringArray(str: String) -> [String] {

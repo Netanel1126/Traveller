@@ -37,9 +37,7 @@ class TravellerNotification {
 //    static let AuthenticationNotification = ModelNotificationBase<String>(name: "AuthenticationNotification")
     
 //    static let getAllTripsNotifcation = ModelNotificationBase<[Trip]>(name: "getAllTripsNotifcation")
-    static let GetMapNotification = ModelNotificationBase<[Position]>(name: "GetMapNotification")
-    static let PopupEndNotification = ModelNotificationBase<Bool>(name: "PopupEndNotification")
-    static let JoinGroupNotification = ModelNotificationBase<UIAlertController>(name: "JoinGroupNotification")
+    static let GetMapNotification = ModelNotificationBase<[Position]>(name: "GetMapNotification") //Map draw
     
     //model notifications
     static let travellerUserNotification = ModelNotificationBase<Void>(name: "travellerUserDBNotification")

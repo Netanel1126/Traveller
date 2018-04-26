@@ -1,18 +1,25 @@
 import UIKit
 class MyTripsTableViewController: UITableViewController {
     
-    var dataObserver: Any?
     var data = [Trip]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AuthManager.getConnectedUser { user in
+        if let user = DefaultUser.getUser() {
             self.data = TripModel.instance.data
-            self.dataObserver = TravellerNotification.tripNotification.observe { _ in
-                self.data = TripModel.instance.data.filter { $0.owners.contains((user?.id)!) }
+            _ = TravellerNotification.tripNotification.observe { _ in
+                self.data = TripModel.instance.data.filter { $0.owners.contains(user.id) }
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let user = DefaultUser.getUser() {
+            let allData = TripModel.instance.data
+            data = allData.filter {$0.owners.contains(user.id)}
+            self.tableView.reloadData()
         }
     }
 
@@ -23,8 +30,24 @@ class MyTripsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tripsCell", for: indexPath) as! TripsTableViewCell
         let index = indexPath.row
+        cell.tripID = data[index].id
         cell.tripName.text = data[index].name
         cell.descriptionText.text = data[index].description
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! TripsTableViewCell
+        let id = cell.tripID
+        performSegue(withIdentifier: "enterTripSegue", sender: id)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "enterTripSegue" {
+            let tripId = sender as! String
+            let des = segue.destination as! GuideTabBarController
+            des.tripId = tripId
+        }
+    }
+    
 }

@@ -18,4 +18,8 @@ class FieldValidation {
         let passwordRegex = ".{8}"
         return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self)
     }
+    
+    static func isLegalName(str: String) -> Bool {
+        return str.count > 3 && str.count < 20
+    }
 }

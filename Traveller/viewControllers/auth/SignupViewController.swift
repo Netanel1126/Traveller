@@ -45,7 +45,7 @@ class SignupViewController: UIViewController ,UIImagePickerControllerDelegate, U
             let imageName = "profile_\(String(describing: fNameText.text))_\(String(describing: lnameText.text))_\(UUID().uuidString)"
             ImageFirebaseStorage.storeImage(image: userIMG.image!, name: imageName) {
                 imageUrl in
-                let signupStruct = TravellerUser.SignUpStruct(email: self.emailText.text!, password: self.passwordText.text!, firstName: self.fNameText.text!, lastName: self.lnameText.text!, phone: self.phoneNumText.text!, imgUrl: imageUrl!)
+                let signupStruct = TravellerUser.SignUpStruct(email: self.emailText.text!, password: self.passwordText.text!, firstName: self.fNameText.text!, lastName: self.lnameText.text!, phone: self.phoneNumText.text!, imgUrl: imageUrl)
                 AuthManager.signUp(userStruct: signupStruct, onComplete: {
                     user in
                     self.onComplete!(user)
@@ -58,6 +58,10 @@ class SignupViewController: UIViewController ,UIImagePickerControllerDelegate, U
     }
     
     func verifyFields() -> Bool {
+        let user = TravellerUserModel.instance.data.filter {$0.firstName == fNameText.text && $0.lastName == lnameText.text}.first
+        if user != nil {
+            return false
+        }
         //TODO:: Implement (create class which check every field)
         return true
     }

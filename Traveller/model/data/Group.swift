@@ -1,7 +1,6 @@
 import Foundation
 
 class Group {
-    var ownerId: String
     //Should be same as TripId
     var groupId: String
     var groupName: String
@@ -9,8 +8,7 @@ class Group {
     var travellerIdList: [String]
     var imageUrl: String
     
-    init(groupId: String, ownerId: String, groupName: String, guideIdList: [String]? = [String](), travellerIdList: [String]? = [String](), imageUrl: String? = "") {
-        self.ownerId = ownerId
+    init(groupId: String, groupName: String, guideIdList: [String]? = [String](), travellerIdList: [String]? = [String](), imageUrl: String? = "") {
         self.groupId = groupId
         self.groupName = groupName
         self.guideIdList = guideIdList!
@@ -19,7 +17,6 @@ class Group {
     }
     
     init(json: [String:Any]){
-        self.ownerId = json["ownerId"] as! String
         self.groupId = json["groupId"] as! String
         self.groupName = json["groupName"] as! String
         
@@ -34,7 +31,6 @@ class Group {
     
     func toJson() -> [String:Any] {
         var json = [String:Any]()
-        json["ownerId"] = ownerId
         json["groupId"] = groupId
         json["groupName"] = groupName
         json["guideIdList"] = FirebaseConverter.encodeStringArray(array: guideIdList)

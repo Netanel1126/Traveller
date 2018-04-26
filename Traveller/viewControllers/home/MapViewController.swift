@@ -1,36 +1,29 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate {
+class MapViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var myMap: MyMapView!
     var map:[Position]?
-    var tripName:String?
-    var tripDesc :String?
+    var onCompleteDelegate: (([Position])->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myMap.delegate = self
-        
-        TravellerNotification.GetMapNotification.observe { (map) in
+        _ = TravellerNotification.GetMapNotification.observe { (map) in
             self.map = map
-            var alert = MapAlerts.getEndDrawingAlert(map: map!, myMap: self.myMap, tripName: self.tripName!, tripDesc: self.tripDesc!)
+            let alert = MapAlerts.getEndDrawingAlert() { result in
+                if result {
+                    self.onCompleteDelegate!(map!)
+                    self.navigationController?.popViewController(animated: true)
+                } else {
+                    self.myMap.clearCanvas()
+                }
+            }
             self.present(alert, animated: true, completion: nil)
         }
-        
-        TravellerNotification.PopupEndNotification.observe { (annser) in
-            if(annser)!{
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-        }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     @IBAction func startToDraw(_ sender: Any) {
         var drawing:Bool
         
@@ -39,30 +32,9 @@ class MapViewController: UIViewController,MKMapViewDelegate,UISearchBarDelegate 
             myMap.isScrollEnabled = true
         }else{
             drawing = true
-            
-            if(map != nil){
-                MapAlerts.ChangeDrawingAlert(myMap: myMap, callback: { (alert) in
-                    self.present(alert, animated: true, completion: nil)
-                    self.map = self.myMap.myPath
-                })
-                
-            }else{
                 myMap.isScrollEnabled = false
-            }
         }
         myMap.drawing = drawing
-    }
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer! {
-        if(overlay is MKPolyline){
-            let polylineRender = MKPolylineRenderer(overlay: overlay)
-            polylineRender.strokeColor = UIColor.blue.withAlphaComponent(0.5)
-            polylineRender.lineWidth = 5
-            
-            return polylineRender
-        }
-        
-        return nil
     }
     
     @IBAction func searchButton(_ sender: Any) {

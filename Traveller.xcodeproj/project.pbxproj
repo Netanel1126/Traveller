@@ -18,7 +18,7 @@
 		849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54B202263A800EBC02D /* TourGuideUI.storyboard */; };
 		849BD54F20226D8800EBC02D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54E20226D8800EBC02D /* Assets.xcassets */; };
 		84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */; };
-		84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */; };
+		84AC8CB81FFE23A800AB9BF9 /* ViewControllerA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CB71FFE23A800AB9BF9 /* ViewControllerA.swift */; };
 		84AC8CC01FFE23A800AB9BF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AC8CBE1FFE23A800AB9BF9 /* LaunchScreen.storyboard */; };
 		84AC8CCB1FFE23A800AB9BF9 /* TravellerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CCA1FFE23A800AB9BF9 /* TravellerTests.swift */; };
 		84AC8CD61FFE23A800AB9BF9 /* TravellerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC8CD51FFE23A800AB9BF9 /* TravellerUITests.swift */; };
@@ -44,6 +44,8 @@
 		84F85C7E2067B829003E6652 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F85C7D2067B829003E6652 /* LoginViewController.swift */; };
 		AC21717E200E33280047BBF8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC21717D200E33280047BBF8 /* Auth.storyboard */; };
 		AC6CF6FB2055517D0095C0B5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CF6FA2055517D0095C0B5 /* Group.swift */; };
+		B02DFF1920926B79007631F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DFF1820926B79007631F0 /* ViewController.swift */; };
+		B02DFF1B2092815C007631F0 /* GuideTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DFF1A2092815C007631F0 /* GuideTabBarController.swift */; };
 		B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A27207FC4FA00B83A53 /* FirebaseUserAuth.swift */; };
 		B0387A2C207FC4FA00B83A53 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A29207FC4FA00B83A53 /* AuthManager.swift */; };
 		B0387A2F207FC5A200B83A53 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A2E207FC5A200B83A53 /* Logger.swift */; };
@@ -55,7 +57,12 @@
 		B05EF98C208BB9BF000997FC /* RTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF98B208BB9BF000997FC /* RTMap.swift */; };
 		B05EF98F208BB9F0000997FC /* RTMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05EF98E208BB9F0000997FC /* RTMap.xib */; };
 		B05EF992208BBB23000997FC /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF991208BBB23000997FC /* NibLoader.swift */; };
+		B05EF994208BC4DC000997FC /* DefaultUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF993208BC4DC000997FC /* DefaultUser.swift */; };
+		B05EF996208BC9CC000997FC /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF995208BC9CC000997FC /* Alerts.swift */; };
+		B05EF99A208BD23F000997FC /* SearchTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF999208BD23F000997FC /* SearchTestViewController.swift */; };
 		B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */; };
+		B0C0C7DA20908C5A007A8C1F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7D920908C5A007A8C1F /* RoundButton.swift */; };
+		B0C0C7DC20908C6B007A8C1F /* TDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7DB20908C6B007A8C1F /* TDButton.swift */; };
 		B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD312087A0AA0056B59C /* ServerModel.swift */; };
 		B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD332087A19A0056B59C /* ServerConfig.swift */; };
 		B0F3CD362087BF530056B59C /* ServerResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD352087BF530056B59C /* ServerResponses.swift */; };
@@ -107,7 +114,7 @@
 		849BD54E20226D8800EBC02D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84AC8CB21FFE23A800AB9BF9 /* Traveller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AC8CB51FFE23A800AB9BF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84AC8CB71FFE23A800AB9BF9 /* ViewControllerA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerA.swift; sourceTree = "<group>"; };
 		84AC8CBF1FFE23A800AB9BF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84AC8CC11FFE23A800AB9BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84AC8CC61FFE23A800AB9BF9 /* TravellerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravellerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +147,8 @@
 		AC21717D200E33280047BBF8 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		AC6CF6FA2055517D0095C0B5 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		AF51120EF5002DC2299BFC5C /* Pods-TravellerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravellerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B02DFF1820926B79007631F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B02DFF1A2092815C007631F0 /* GuideTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideTabBarController.swift; sourceTree = "<group>"; };
 		B0387A27207FC4FA00B83A53 /* FirebaseUserAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseUserAuth.swift; path = "Traveller/model/auth\\/FirebaseUserAuth.swift"; sourceTree = SOURCE_ROOT; };
 		B0387A28207FC4FA00B83A53 /* TravellerUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TravellerUserModel.swift; path = Traveller/model/db/TravellerUserModel.swift; sourceTree = SOURCE_ROOT; };
 		B0387A29207FC4FA00B83A53 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManager.swift; path = "Traveller/model/auth\\/AuthManager.swift"; sourceTree = SOURCE_ROOT; };
@@ -153,7 +162,12 @@
 		B05EF98B208BB9BF000997FC /* RTMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMap.swift; sourceTree = "<group>"; };
 		B05EF98E208BB9F0000997FC /* RTMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RTMap.xib; sourceTree = "<group>"; };
 		B05EF991208BBB23000997FC /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
+		B05EF993208BC4DC000997FC /* DefaultUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUser.swift; sourceTree = "<group>"; };
+		B05EF995208BC9CC000997FC /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		B05EF999208BD23F000997FC /* SearchTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTestViewController.swift; sourceTree = "<group>"; };
 		B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0C0C7D920908C5A007A8C1F /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		B0C0C7DB20908C6B007A8C1F /* TDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDButton.swift; sourceTree = "<group>"; };
 		B0F3CD312087A0AA0056B59C /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		B0F3CD332087A19A0056B59C /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		B0F3CD352087BF530056B59C /* ServerResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponses.swift; sourceTree = "<group>"; };
@@ -259,6 +273,7 @@
 		84AC8CB41FFE23A800AB9BF9 /* Traveller */ = {
 			isa = PBXGroup;
 			children = (
+				B0C0C7D720908BCF007A8C1F /* views */,
 				B05EF990208BBB07000997FC /* extensions */,
 				B0387A3C207FE78500B83A53 /* viewControllers */,
 				84F85C7820679CC0003E6652 /* Storyboards */,
@@ -335,6 +350,7 @@
 				B0387A38207FD84300B83A53 /* FieldValidation.swift */,
 				B0387A2E207FC5A200B83A53 /* Logger.swift */,
 				B0387A31207FC6D100B83A53 /* NotificationModel.swift */,
+				B05EF993208BC4DC000997FC /* DefaultUser.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -373,6 +389,7 @@
 				B0387A3F207FE83F00B83A53 /* algTest */,
 				B0387A3E207FE80400B83A53 /* sidemenu */,
 				B0387A3D207FE78D00B83A53 /* auth */,
+				B02DFF1820926B79007631F0 /* ViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -400,7 +417,7 @@
 		B0387A3F207FE83F00B83A53 /* algTest */ = {
 			isa = PBXGroup;
 			children = (
-				84AC8CB71FFE23A800AB9BF9 /* ViewController.swift */,
+				84AC8CB71FFE23A800AB9BF9 /* ViewControllerA.swift */,
 			);
 			path = algTest;
 			sourceTree = "<group>";
@@ -415,6 +432,8 @@
 				84B336512078E66F00A236E1 /* MyTripsTableViewController.swift */,
 				84CB907A2077904400D15EC9 /* CreateTripViewController.swift */,
 				8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */,
+				B05EF995208BC9CC000997FC /* Alerts.swift */,
+				B05EF999208BD23F000997FC /* SearchTestViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -434,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				8498ED62205834C300728827 /* MapVC.swift */,
+				B02DFF1A2092815C007631F0 /* GuideTabBarController.swift */,
 			);
 			path = guide;
 			sourceTree = "<group>";
@@ -474,6 +494,24 @@
 				B05EF991208BBB23000997FC /* NibLoader.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		B0C0C7D720908BCF007A8C1F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B0C0C7D820908BEB007A8C1F /* TDButton */,
+			);
+			name = views;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B0C0C7D820908BEB007A8C1F /* TDButton */ = {
+			isa = PBXGroup;
+			children = (
+				B0C0C7D920908C5A007A8C1F /* RoundButton.swift */,
+				B0C0C7DB20908C6B007A8C1F /* TDButton.swift */,
+			);
+			path = TDButton;
 			sourceTree = "<group>";
 		};
 		B0F3CD372087CBC40056B59C /* networkListenners */ = {
@@ -722,6 +760,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Traveller/Pods-Traveller-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMReel/RAMReel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -730,6 +769,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMReel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -802,10 +842,12 @@
 				C1CD94D9200E1D4E00164EEF /* JoinGroupController.swift in Sources */,
 				84BC9B5720851A380012AFC8 /* TripModel.swift in Sources */,
 				84CB9077207770D500D15EC9 /* ContainerVC.swift in Sources */,
+				B02DFF1920926B79007631F0 /* ViewController.swift in Sources */,
 				C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */,
 				84BC9B5D20851DC70012AFC8 /* MinimumDistanceCalculator.swift in Sources */,
 				84CB907B2077904400D15EC9 /* CreateTripViewController.swift in Sources */,
 				B0F3CD392087CBE00056B59C /* MessageListener.swift in Sources */,
+				B05EF996208BC9CC000997FC /* Alerts.swift in Sources */,
 				B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */,
 				8457BDA6208B730500ED24B5 /* AllTripsTableViewCell.swift in Sources */,
 				B0387A37207FCFE500B83A53 /* ImageFirebaseStorage.swift in Sources */,
@@ -821,11 +863,15 @@
 				84E0AB261FFE53780093C30F /* UserLocatorViewController.swift in Sources */,
 				B03883DD20869CF800D1F3F8 /* TSocket.swift in Sources */,
 				B0F7BC5B208133FD00DCFD3D /* FirebaseConverter.swift in Sources */,
+				B05EF99A208BD23F000997FC /* SearchTestViewController.swift in Sources */,
+				B02DFF1B2092815C007631F0 /* GuideTabBarController.swift in Sources */,
+				B0C0C7DC20908C6B007A8C1F /* TDButton.swift in Sources */,
 				3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */,
 				8498ED63205834C300728827 /* MapVC.swift in Sources */,
 				B05EF992208BBB23000997FC /* NibLoader.swift in Sources */,
-				84AC8CB81FFE23A800AB9BF9 /* ViewController.swift in Sources */,
+				84AC8CB81FFE23A800AB9BF9 /* ViewControllerA.swift in Sources */,
 				84B336542078ED1F00A236E1 /* AllTripsTableViewController.swift in Sources */,
+				B05EF994208BC4DC000997FC /* DefaultUser.swift in Sources */,
 				84CB9079207785BF00D15EC9 /* Trip.swift in Sources */,
 				B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,
@@ -839,6 +885,7 @@
 				B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */,
 				84BC9B6020853DBC0012AFC8 /* TravellerUserModel.swift in Sources */,
 				B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */,
+				B0C0C7DA20908C5A007A8C1F /* RoundButton.swift in Sources */,
 				84CB9075207770D500D15EC9 /* MainVC.swift in Sources */,
 				84BC9B52208519DD0012AFC8 /* MapViewController.swift in Sources */,
 			);

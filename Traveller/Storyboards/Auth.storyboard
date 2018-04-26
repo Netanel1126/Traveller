@@ -92,6 +92,9 @@
                         <viewLayoutGuide key="safeArea" id="Ms2-Fs-2me"/>
                     </view>
                     <navigationItem key="navigationItem" title="Traveller" id="cd4-7Q-tLH"/>
+                    <connections>
+                        <segue destination="phr-V3-RIA" kind="presentation" identifier="homeSegue" id="4hm-I4-hLq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rCK-JI-80y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,6 +163,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rde-fU-MN8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3300" y="391.75412293853077"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Owq-LW-Pxy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="phr-V3-RIA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUA-ch-mpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2527" y="-517"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="E8F-PG-xOj">

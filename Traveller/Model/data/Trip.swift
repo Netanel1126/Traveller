@@ -35,7 +35,7 @@ class Trip {
     func toJson() -> [String:Any] {
         var json = [String:Any]()
         json["id"] = id
-        json["owners"] = owners
+        json["owners"] = FirebaseConverter.encodeStringArray(array: owners)
         json["name"] = name
         json["description"] = description
         json["path"] = FirebaseConverter.encodeTripPath(path: path) 
