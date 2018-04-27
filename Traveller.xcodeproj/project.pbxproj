@@ -61,6 +61,8 @@
 		B05EF996208BC9CC000997FC /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF995208BC9CC000997FC /* Alerts.swift */; };
 		B05EF99A208BD23F000997FC /* SearchTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF999208BD23F000997FC /* SearchTestViewController.swift */; };
 		B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */; };
+		B0A3681F209348F700A4571C /* MapAnnotationHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */; };
+		B0A36821209349EC00A4571C /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A36820209349EC00A4571C /* UserType.swift */; };
 		B0C0C7DA20908C5A007A8C1F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7D920908C5A007A8C1F /* RoundButton.swift */; };
 		B0C0C7DC20908C6B007A8C1F /* TDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7DB20908C6B007A8C1F /* TDButton.swift */; };
 		B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD312087A0AA0056B59C /* ServerModel.swift */; };
@@ -166,6 +168,8 @@
 		B05EF995208BC9CC000997FC /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		B05EF999208BD23F000997FC /* SearchTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTestViewController.swift; sourceTree = "<group>"; };
 		B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationHolder.swift; sourceTree = "<group>"; };
+		B0A36820209349EC00A4571C /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		B0C0C7D920908C5A007A8C1F /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B0C0C7DB20908C6B007A8C1F /* TDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDButton.swift; sourceTree = "<group>"; };
 		B0F3CD312087A0AA0056B59C /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				AC6CF6FA2055517D0095C0B5 /* Group.swift */,
 				30EC2C5D2006198D0065FA2A /* Position.swift */,
 				84CB9078207785BF00D15EC9 /* Trip.swift */,
+				B0A36820209349EC00A4571C /* UserType.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				B05EF98B208BB9BF000997FC /* RTMap.swift */,
+				B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */,
 			);
 			path = nibs;
 			sourceTree = "<group>";
@@ -836,6 +842,7 @@
 			files = (
 				84BC9B54208519DD0012AFC8 /* TripsTableViewCell.swift in Sources */,
 				84BC9B5F208539F70012AFC8 /* MapAlerts.swift in Sources */,
+				B0A36821209349EC00A4571C /* UserType.swift in Sources */,
 				B0F3CD362087BF530056B59C /* ServerResponses.swift in Sources */,
 				B0387A2F207FC5A200B83A53 /* Logger.swift in Sources */,
 				C1CD94D5200E03E600164EEF /* GroupTableViewController.swift in Sources */,
@@ -869,6 +876,7 @@
 				3659E85020624DA100E116FB /* AudioRecorderViewController.swift in Sources */,
 				8498ED63205834C300728827 /* MapVC.swift in Sources */,
 				B05EF992208BBB23000997FC /* NibLoader.swift in Sources */,
+				B0A3681F209348F700A4571C /* MapAnnotationHolder.swift in Sources */,
 				84AC8CB81FFE23A800AB9BF9 /* ViewControllerA.swift in Sources */,
 				84B336542078ED1F00A236E1 /* AllTripsTableViewController.swift in Sources */,
 				B05EF994208BC4DC000997FC /* DefaultUser.swift in Sources */,

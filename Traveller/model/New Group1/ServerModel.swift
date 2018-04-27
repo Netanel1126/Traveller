@@ -31,8 +31,10 @@ class ServerModel {
         })
     }
     
-    func connectServer() {
+    func connectServer(gid: String, uid: String) {
         socket.connect()
+        let identityPackage = PacketBuilder.identityPacket(gid: gid, uid: uid)
+       send(message: identityPackage)
     }
     
     func stopServer() {
