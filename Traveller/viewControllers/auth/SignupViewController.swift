@@ -1,7 +1,6 @@
 import UIKit
 
 class SignupViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var fNameText: UITextField!
     @IBOutlet weak var lnameText: UITextField!
@@ -15,16 +14,25 @@ class SignupViewController: UIViewController ,UIImagePickerControllerDelegate, U
             }
         }
     }
-    var onComplete: ((TravellerUser) -> Void)?
     
+    
+var onComplete: ((TravellerUser) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //configure image gesture
         let imageTap = UITapGestureRecognizer(target: self, action: #selector(chooseImageFromGallery(tapGestureRecognizer:)))
         userIMG.isUserInteractionEnabled = true
         userIMG.addGestureRecognizer(imageTap)
     }
-    
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     @objc func chooseImageFromGallery(tapGestureRecognizer: UITapGestureRecognizer)
     {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
