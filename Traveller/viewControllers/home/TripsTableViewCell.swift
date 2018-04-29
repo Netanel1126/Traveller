@@ -15,6 +15,8 @@ class TripsTableViewCell: UITableViewCell {
 
     }
 
+    
+    
     //save delete for the end because we need to update other devicces
 //    @IBAction func removeTrip(_ sender: UIButton) {
 //        AuthManager.getConnectedUser { (user) in

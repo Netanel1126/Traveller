@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PbR-fR-0sU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PbR-fR-0sU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +13,9 @@
     <customFonts key="customFonts">
         <array key="Assistant-Regular.ttf">
             <string>Assistant-Regular</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
         </array>
     </customFonts>
     <scenes>
@@ -22,7 +25,7 @@
                 <viewControllerPlaceholder storyboardName="TourGuideUI" id="pQT-RF-AdF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmV-y2-K1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="-672"/>
+            <point key="canvasLocation" x="269" y="232"/>
         </scene>
         <!--My Trips-->
         <scene sceneID="A1b-Ks-srz">
@@ -283,6 +286,9 @@
                     <navigationItem key="navigationItem" title="All Trips" id="aCx-iO-2hd">
                         <barButtonItem key="rightBarButtonItem" title="+" id="86p-2a-T7j"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="pQT-RF-AdF" kind="show" identifier="enterGroupTripSegue" id="Gui-Lz-GQu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VT-Vb-7xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eaV-pV-Faj" userLabel="Exit" sceneMemberID="exit"/>
@@ -292,7 +298,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-471" y="508"/>
+            <point key="canvasLocation" x="-471" y="551"/>
         </scene>
         <!--All trips-->
         <scene sceneID="73X-YL-DKO">
@@ -457,4 +463,7 @@
         <image name="search-circle-blue-512" width="512" height="512"/>
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gui-Lz-GQu"/>
+    </inferredMetricsTieBreakers>
 </document>

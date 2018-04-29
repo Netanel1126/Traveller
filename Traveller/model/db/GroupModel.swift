@@ -21,10 +21,11 @@ class GroupModel {
         let path = FirebaseModel.groupPath
         FirebaseModel.loadAllDataAndObserve(path: path) { jsons in
             jsons.forEach { let newGroup = Group.init(json: $0)
-                self.data = self.data.filter {$0.groupId == newGroup.groupId}
+              //  self.data = self.data.filter {$0.groupId == newGroup.groupId}
                 self.data.append(newGroup)
             }
             TravellerNotification.groupNotification.post(data: ())
+            TravellerNotification.tripNotification.post(data: ())
         }
     }
     
@@ -48,8 +49,8 @@ class GroupModel {
     }
     
     func addUserToGroup(userId: String, groupId: String, onComplete: @escaping (Error?) -> Void) {
-        let group = data.filter {$0.groupId == groupId}.first
-        if (group?.travellerIdList.contains(userId))! {
+        let group = (data.filter {$0.groupId == groupId}.first)
+        if (group?.travellerIdList.contains(userId) == false) {
             group?.travellerIdList.append(userId)
         }
         storeGroup(group: group!, onComplete: onComplete)
