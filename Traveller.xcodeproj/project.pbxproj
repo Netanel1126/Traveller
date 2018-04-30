@@ -13,6 +13,7 @@
 		3659E8522062537600E116FB /* AudioRecrdingTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */; };
 		712520F4E5C1DFF345A5A51E /* Pods_TravellerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA97DE9A470DE1A3499C90B /* Pods_TravellerTests.framework */; };
 		8457BDA6208B730500ED24B5 /* AllTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */; };
+		845BC0812097AF70001D80D9 /* ErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BC0802097AF70001D80D9 /* ErrorAlerts.swift */; };
 		8498ED602058344200728827 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498ED5F2058344200728827 /* CoreLocation.framework */; };
 		8498ED63205834C300728827 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498ED62205834C300728827 /* MapVC.swift */; };
 		849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54B202263A800EBC02D /* TourGuideUI.storyboard */; };
@@ -110,6 +111,7 @@
 		58FCB9CAB13EDB20CB716E51 /* Pods-Traveller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traveller.release.xcconfig"; path = "Pods/Target Support Files/Pods-Traveller/Pods-Traveller.release.xcconfig"; sourceTree = "<group>"; };
 		63B4743243C33654A82EA760 /* Pods_Traveller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traveller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTripsTableViewCell.swift; sourceTree = "<group>"; };
+		845BC0802097AF70001D80D9 /* ErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorAlerts.swift; path = Traveller/Model/utils/ErrorAlerts.swift; sourceTree = SOURCE_ROOT; };
 		8498ED5F2058344200728827 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8498ED62205834C300728827 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		849BD54B202263A800EBC02D /* TourGuideUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourGuideUI.storyboard; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				B0387A2E207FC5A200B83A53 /* Logger.swift */,
 				B0387A31207FC6D100B83A53 /* NotificationModel.swift */,
 				B05EF993208BC4DC000997FC /* DefaultUser.swift */,
+				845BC0802097AF70001D80D9 /* ErrorAlerts.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -541,7 +544,6 @@
 				84AC8CAF1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CB01FFE23A800AB9BF9 /* Resources */,
 				CB02AA067A40E1496D0A204B /* [CP] Embed Pods Frameworks */,
-				F96013037EAFA36CD30DD268 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -560,8 +562,6 @@
 				84AC8CC21FFE23A800AB9BF9 /* Sources */,
 				84AC8CC31FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CC41FFE23A800AB9BF9 /* Resources */,
-				31069CCDA957536FC8065C13 /* [CP] Embed Pods Frameworks */,
-				F75A1BDD9D8F080F28CC8C38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -581,8 +581,6 @@
 				84AC8CCD1FFE23A800AB9BF9 /* Sources */,
 				84AC8CCE1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CCF1FFE23A800AB9BF9 /* Resources */,
-				2AA1B2BAD3A8E0071A142CC1 /* [CP] Embed Pods Frameworks */,
-				51700ADE93CAC631DA708B75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -694,51 +692,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2AA1B2BAD3A8E0071A142CC1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31069CCDA957536FC8065C13 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		51700ADE93CAC631DA708B75 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A8FEE6F11C64FCCEAB135494 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -803,36 +756,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F75A1BDD9D8F080F28CC8C38 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F96013037EAFA36CD30DD268 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Traveller/Pods-Traveller-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -841,6 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BC9B54208519DD0012AFC8 /* TripsTableViewCell.swift in Sources */,
+				845BC0812097AF70001D80D9 /* ErrorAlerts.swift in Sources */,
 				84BC9B5F208539F70012AFC8 /* MapAlerts.swift in Sources */,
 				B0A36821209349EC00A4571C /* UserType.swift in Sources */,
 				B0F3CD362087BF530056B59C /* ServerResponses.swift in Sources */,
