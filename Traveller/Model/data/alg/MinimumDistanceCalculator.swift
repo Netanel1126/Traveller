@@ -4,8 +4,8 @@ import Foundation
 class MinimumDistanceCalculator {
     
     // Calculates the 2D distance between two positions on the map
-    private static func distance(pos1:Position,pos2:Position)->Double {
-        var x1:Double=pos1.x-pos2.x
+     static func distance(pos1:Position,pos2:Position)->Double {
+        var x1:Double = pos1.x-pos2.x
         x1=pow(x1,2)
         var x2=pos1.y-pos2.y
         x2=pow(x2,2)

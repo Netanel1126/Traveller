@@ -46,7 +46,6 @@ class AllTripsTableViewController: UITableViewController {
             let cell = tableView.cellForRow(at: indexPath) as! AllTripsTableViewCell
             let id = cell.tripId
             performSegue(withIdentifier: "enterGroupTripSegue", sender: id)
-            
         } else {
             if let user = DefaultUser.getUser() {
                 let alert = Alerts.joinGroupAlert(onAccept: {

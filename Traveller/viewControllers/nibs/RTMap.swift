@@ -18,6 +18,7 @@ class RTMap: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             drawMap()
         }
     }
+    
     @IBOutlet var map: MKMapView!
     let manager = CLLocationManager()
     var annotationHolder: AnnotationHolder?
@@ -45,8 +46,7 @@ class RTMap: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             annotation.title = senderId?.firstName
             //            annotation.subtitle = ""
             var oldAnnotation: MKPointAnnotation?
-            if (self.trip?.owners.contains((senderId?.id)!))! {
-                
+            if (self.trip?.owners.contains((senderId?.id)!))! {                
                 oldAnnotation = self.annotationHolder?.addMember(type: .guide, uid: (senderId?.id)!, annotation: annotation)
             } else {
                 oldAnnotation = self.annotationHolder?.addMember(type: .traveler, uid: (senderId?.id)!, annotation: annotation)
