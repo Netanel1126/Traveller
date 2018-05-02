@@ -39,6 +39,12 @@ class MyMapView: MKMapView {
             
             let locCoord = self.convert(touchPoint, toCoordinateFrom: self)
             
+            if i > 0 {
+                var dis = MinimumDistanceCalculator.distance(pos1: Position(id: i, x: locCoord.longitude, y: locCoord.latitude), pos2: myPath[i-1])
+                if dis > 0.002{
+                    createNewPoint(pos1: Position(id: i, x: locCoord.longitude, y: locCoord.latitude), pos2: myPath[i-1])
+                }
+            }
             myPath.append(Position(id: i, x: locCoord.longitude, y: locCoord.latitude))
             i += 1
             
@@ -54,6 +60,21 @@ class MyMapView: MKMapView {
             drawShapeLayer() // draws the actual line shapes
         }else{
             super.touchesMoved(touches , with: event)
+        }
+    }
+    
+    func createNewPoint(pos1:Position,pos2:Position){
+        var newX = (pos1.x + pos2.x)/2
+        var newY = (pos1.y + pos2.y)/2;
+            var position = Position(id: i, x: newX, y: newY)
+        myPath.append(position)
+        i += 1
+        if MinimumDistanceCalculator.distance(pos1: pos1, pos2: position) > 0.002{
+            createNewPoint(pos1: pos1, pos2: position)
+        }
+        
+        if MinimumDistanceCalculator.distance(pos1: pos2, pos2: position) > 0.002{
+            createNewPoint(pos1: pos2, pos2: position)
         }
     }
     
@@ -81,17 +102,13 @@ class MyMapView: MKMapView {
     
     func clearCanvas() {
         path.removeAllPoints()
-        
         for shapeLayer in self.shapeLayers{
             shapeLayer.removeFromSuperlayer()
         }
-        
         myPath.removeAll()
-        
         if polyline != nil{
             self.remove(polyline!)
         }
-        
         i = 0
         self.setNeedsDisplay()
     }

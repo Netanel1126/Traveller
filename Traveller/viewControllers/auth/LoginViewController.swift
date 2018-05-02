@@ -21,32 +21,8 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // Validates that the inserted email has a '@' sign, doesn't have a '.' sign before '@' and doesn't have empty textboxes.
+    //TODO:: Implement using FieldValidation
     func isLegalFields() -> Bool{
-        let emailText : String = email.text!
-        let passwordText : String = password.text!
-        let startIndex = emailText.startIndex
-        var loopingIndex : String.Index
-        var offset = 0
-        var flag = false
-        
-        if emailText == "" || passwordText == "" { return false }
-        
-        while offset < emailText.count {
-            loopingIndex = emailText.index(startIndex, offsetBy: offset)
-            
-            if emailText[loopingIndex] == "@" {
-                if emailText[emailText.index(before: loopingIndex)] == "." { return false }
-                flag = true
-                break
-            }
-            
-            offset = offset + 1
-        }
-        
-        if !flag {
-            return false
-        }
         
         return true
     }
