@@ -29,15 +29,8 @@ class GroupModel {
         }
     }
     
-    //YOU SHOULDNT USE
-    private func getGroup(groupId: String, onSuccess: @escaping (Group) -> Void, onFailure: @escaping (Error) -> Void){
-        let path = FirebaseModel.groupPath + groupId
-        FirebaseModel.loadSingleObject(path: path, onComplete: { json in
-            let group = Group(json: json)
-            onSuccess(group)
-        }, onFailure: { error in
-            onFailure(error)
-        })
+    func getGroup(groupId: String) -> Group?{
+        return data.filter {$0.groupId == groupId}.first
     }
     
     func storeGroup(group: Group, onComplete: @escaping (Error?) -> Void){

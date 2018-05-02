@@ -54,6 +54,9 @@
                         <viewLayoutGuide key="safeArea" id="g5v-kf-jEP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tour Map" image="map_icon" id="c93-Pn-5XZ"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isGuide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xA-fE-AzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUF-4m-eMn">

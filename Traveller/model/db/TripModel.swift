@@ -27,15 +27,8 @@ class TripModel {
         }
     }
     
-    //YOU SHOULDNT USE
-    private func getTrip(tripId: String, onSuccess: @escaping (Trip) -> Void, onFailure: @escaping (Error) -> Void){
-        let path = FirebaseModel.tripPath + tripId
-        FirebaseModel.loadSingleObject(path: path, onComplete: { json in
-            let trip = Trip(json: json)
-            onSuccess(trip)
-        }, onFailure: { error in
-            onFailure(error)
-        })
+    func getTrip(tripId: String) -> Trip?{
+        return data.filter {$0.id == tripId}.first
     }
     
     func storeTrip(trip: Trip, onComplete: @escaping (Error?) -> Void){

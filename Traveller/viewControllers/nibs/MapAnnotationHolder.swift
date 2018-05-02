@@ -22,15 +22,13 @@ class AnnotationHolder {
     func addMember(type: UserType, uid: String, annotation: MKPointAnnotation) -> MKPointAnnotation? {
         
         if type == .traveler {
+            let previewAnnotation = self.members[uid]
             self.members[uid] = annotation
-            if let previewAnnotation = self.members[uid] {
-                return previewAnnotation
-            }
+            return previewAnnotation
         } else if type == .guide {
+            let previewAnnotation = self.guiders[uid]
             self.guiders[uid] = annotation
-            if let previewAnnotation = self.guiders[uid] {
-                return previewAnnotation
-            }
+            return previewAnnotation
         }
         return nil
     }

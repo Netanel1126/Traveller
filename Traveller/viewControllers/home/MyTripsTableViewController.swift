@@ -39,7 +39,11 @@ class MyTripsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TripsTableViewCell
         let id = cell.tripID
-        performSegue(withIdentifier: "enterTripSegue", sender: id)
+        if (TripModel.instance.getTrip(tripId: id!)?.owners.contains((DefaultUser.getUser()?.id)!))! {
+            performSegue(withIdentifier: "enterTripSegue", sender: id)
+        } else {
+            performSegue(withIdentifier: "enterAsGuestSegue", sender: id)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -40,14 +40,18 @@ class AllTripsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = tableView.cellForRow(at: indexPath) as! AllTripsTableViewCell
+        let user = DefaultUser.getUser()
         if row.inGroup {
             let cell = tableView.cellForRow(at: indexPath) as! AllTripsTableViewCell
             let id = cell.tripId
-            performSegue(withIdentifier: "enterGroupTripSegue", sender: id)
+            if (TripModel.instance.getTrip(tripId: id!)?.owners.contains((user?.id)!))!{
+                performSegue(withIdentifier: "enterAsGuestSegue", sender: id)
+            } else {
+                performSegue(withIdentifier: "enterTripSegue", sender: id)
+            }
         } else {
-            if let user = DefaultUser.getUser() {
                 let alert = Alerts.joinGroupAlert(onAccept: {
-                    GroupModel.instance.addUserToGroup(userId: user.id, groupId: row.tripId!){ error in
+                    GroupModel.instance.addUserToGroup(userId: (user?.id)!, groupId: row.tripId!){ error in
                         if error != nil {
                             //TODO:: Implement
                         }else{
@@ -58,12 +62,11 @@ class AllTripsTableViewController: UITableViewController {
                     
                 })
                 self.present(alert, animated: true, completion: nil)
-            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "enterGroupTripSegue"{
+        if segue.identifier == "enterTripSegue"{
             let tripId = sender as! String
             let des = segue.destination as! GuideTabBarController
             des.tripId = tripId
