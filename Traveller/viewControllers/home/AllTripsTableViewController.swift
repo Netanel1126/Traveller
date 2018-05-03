@@ -6,14 +6,11 @@ class AllTripsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         _ = TravellerNotification.tripNotification.observe { _ in
             self.allTrips = TripModel.instance.data
             self.tableView.reloadData()
         }
-        
         allTrips = TripModel.instance.data
-
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,11 +25,9 @@ class AllTripsTableViewController: UITableViewController {
         cell.tripDscription.text = allTrips[indexPath.row].description
         
         if let user = DefaultUser.getUser() {
-            guard let group = (GroupModel.instance.data.filter{$0.groupId == tripId}.first) else  {
-                return cell
-            }
-            if (group.guideIdList.contains{$0 == user.id}) || (group.travellerIdList.contains{$0 == user.id}) {
-                    cell.inGroup = true
+            guard let group = GroupModel.instance.getGroup(groupId: tripId) else { return cell }
+            if (group.guideIdList.contains{$0 == user.id}) || group.travellerIdList.contains{$0 == user.id}{
+                cell.inGroup = true
             }
         }
         return cell
@@ -44,11 +39,7 @@ class AllTripsTableViewController: UITableViewController {
         if row.inGroup {
             let cell = tableView.cellForRow(at: indexPath) as! AllTripsTableViewCell
             let id = cell.tripId
-            if (TripModel.instance.getTrip(tripId: id!)?.owners.contains((user?.id)!))!{
-                performSegue(withIdentifier: "enterAsGuestSegue", sender: id)
-            } else {
-                performSegue(withIdentifier: "enterTripSegue", sender: id)
-            }
+            performSegue(withIdentifier: "enterTripSegue", sender: id)
         } else {
                 let alert = Alerts.joinGroupAlert(onAccept: {
                     GroupModel.instance.addUserToGroup(userId: (user?.id)!, groupId: row.tripId!){ error in

@@ -8,14 +8,12 @@
 
 import UIKit
 class MapVC: UIViewController {
-    @IBInspectable var isGuide: Bool = false
     var mapView: RTMap?
     
     override func viewDidLoad() {
         mapView = .fromNib()
         view.loadView(view: mapView!)
         let tabbar = self.tabBarController as! GuideTabBarController
-        mapView?.isGuide = isGuide
         mapView?.tripId = tabbar.tripId
     }
 }

@@ -45,12 +45,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-KZ-m22">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-KZ-m22">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pza-KZ-m22" firstAttribute="leading" secondItem="g5v-kf-jEP" secondAttribute="leading" id="5lb-Ab-63o"/>
+                            <constraint firstAttribute="bottom" secondItem="Pza-KZ-m22" secondAttribute="bottom" id="fuu-ZF-4NQ"/>
+                            <constraint firstItem="Pza-KZ-m22" firstAttribute="top" secondItem="GX0-4I-6bd" secondAttribute="top" id="la5-OY-ORt"/>
+                            <constraint firstItem="Pza-KZ-m22" firstAttribute="trailing" secondItem="g5v-kf-jEP" secondAttribute="trailing" id="ljW-T3-FyQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g5v-kf-jEP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tour Map" image="map_icon" id="c93-Pn-5XZ"/>
@@ -59,14 +64,6 @@
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xA-fE-AzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUF-4m-eMn">
-                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="8ap-uO-m1b"/>
-                        <constraint firstAttribute="width" constant="50" id="Gah-JQ-qhC"/>
-                    </constraints>
-                    <state key="normal" title="Record" image="record_button-3"/>
-                </button>
             </objects>
             <point key="canvasLocation" x="822" y="-321"/>
         </scene>
@@ -177,7 +174,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fs8-rE-qZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733.75" y="10.56338028169014"/>
+            <point key="canvasLocation" x="2734" y="11"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="RSk-jO-JG0">
@@ -261,21 +258,6 @@
             </objects>
             <point key="canvasLocation" x="3705" y="10.56338028169014"/>
         </scene>
-        <!--MapVC-->
-        <scene sceneID="2gU-vu-In4">
-            <objects>
-                <viewController id="Rmq-pO-Gzb" customClass="MapVC" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YPd-fZ-067">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="kXB-Pa-lnL"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jji-3f-quQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3482" y="1552"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="loS-nd-j2O">
             <objects>
@@ -356,7 +338,6 @@
         <image name="chat_icon" width="28" height="28"/>
         <image name="map_icon" width="28" height="28"/>
         <image name="menu_icon" width="38" height="38"/>
-        <image name="record_button-3" width="72" height="72"/>
         <image name="statistics_icon" width="28" height="28"/>
     </resources>
 </document>

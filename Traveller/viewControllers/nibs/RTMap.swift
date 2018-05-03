@@ -16,7 +16,9 @@ class RTMap: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
             trip = TripModel.instance.getTrip(tripId: tripId!)
             startServer()
             drawMap()
-            if !isGuide {
+            
+            let user = DefaultUser.getUser()
+            if !(trip?.owners.contains((user?.id)!))! {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                     self.algThreadTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(RTMap.algCheck), userInfo: nil, repeats: true)
                 })
@@ -32,7 +34,7 @@ class RTMap: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         let guideApos = Position(id: 0, x: (guideA?.coordinate.longitude)!, y: (guideA?.coordinate.latitude)!)
         let guideBpos = Position(id: 0, x: (guideB?.coordinate.longitude)!, y: (guideB?.coordinate.latitude)!)
         let params = MinimumDistanceCalculator.AlgParams(map: (annotationHolder?.path)!, user: userPosition, guideA: guideApos, guideB: guideBpos)
-        let result = MinimumDistanceCalculator.isLegalPosition(params: params, maxDistance: 0.002)
+        let result = MinimumDistanceCalculator.isLegalPosition(params: params, maxDistance: 0.000000001)
         if !result {
             print("out of range!")
         }

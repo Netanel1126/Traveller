@@ -22,7 +22,7 @@
                 <viewControllerPlaceholder storyboardName="TravellerStoryBoard" id="28x-Ge-dR2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWe-00-k0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="160"/>
+            <point key="canvasLocation" x="-699" y="148"/>
         </scene>
         <!--TourGuideUI-->
         <scene sceneID="mCq-Pr-srT">
@@ -30,7 +30,7 @@
                 <viewControllerPlaceholder storyboardName="TourGuideUI" id="pQT-RF-AdF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmV-y2-K1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269" y="232"/>
+            <point key="canvasLocation" x="-142" y="148"/>
         </scene>
         <!--My Trips-->
         <scene sceneID="A1b-Ks-srz">
@@ -93,13 +93,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="28x-Ge-dR2" kind="show" identifier="enterAsGuestSegue" id="kVx-CA-sbV"/>
-                        <segue destination="pQT-RF-AdF" kind="show" identifier="enterTripSegue" id="eKA-px-F8G"/>
+                        <segue destination="28x-Ge-dR2" kind="presentation" identifier="enterAsGuestSegue" id="kVx-CA-sbV"/>
+                        <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="eKA-px-F8G"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEO-DF-SBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-471" y="-215"/>
+            <point key="canvasLocation" x="-471" y="-277"/>
         </scene>
         <!--Create New Trip-->
         <scene sceneID="C13-bQ-oDw">
@@ -294,7 +294,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="CBN-OE-teX"/>
-                        <segue destination="28x-Ge-dR2" kind="show" identifier="enterAsGuestSegue" id="WGs-sC-S4h"/>
+                        <segue destination="28x-Ge-dR2" kind="presentation" identifier="enterAsGuestSegue" id="WGs-sC-S4h"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VT-Vb-7xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -472,6 +472,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eKA-px-F8G"/>
-        <segue reference="WGs-sC-S4h"/>
+        <segue reference="kVx-CA-sbV"/>
     </inferredMetricsTieBreakers>
 </document>

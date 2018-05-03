@@ -98,7 +98,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
                 let region = MKCoordinateRegionMake(coordinate, span)
                 self.myMap.setRegion(region, animated: true)
             }
-            
         }
     }
 }
