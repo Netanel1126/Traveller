@@ -8,12 +8,12 @@
 
 import Foundation
 public class ServerConfig {
-    static let ip = "10.0.0.30"
+    static let ip = "192.168.172.1"
     static let port = 5555
 }
 
 public enum PackageType: String {
     case coordinate = "#COORDINATE"
     case message = "#MSG"
-    
+
 }

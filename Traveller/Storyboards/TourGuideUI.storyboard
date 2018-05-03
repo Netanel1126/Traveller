@@ -131,11 +131,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-PI-ZPK">
-                                            <rect key="frame" x="80" y="40" width="41" height="21"/>
+                                            <rect key="frame" x="80" y="40" width="30.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="veN-tC-Wj5"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -187,6 +187,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-Ap-3Mo">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-Ml-dwP">
                                 <rect key="frame" x="60" y="84" width="200" height="200"/>
                                 <constraints>
@@ -242,10 +245,14 @@
                         <constraints>
                             <constraint firstItem="gzC-kO-1ce" firstAttribute="leading" secondItem="XLO-Ml-dwP" secondAttribute="leading" id="49J-5p-4am"/>
                             <constraint firstItem="XLO-Ml-dwP" firstAttribute="centerX" secondItem="eLf-xr-iaj" secondAttribute="centerX" id="7KQ-J7-YFV"/>
+                            <constraint firstItem="WeC-Ap-3Mo" firstAttribute="top" secondItem="Efv-vW-yPz" secondAttribute="top" id="9Vw-9z-mED"/>
+                            <constraint firstItem="Efv-vW-yPz" firstAttribute="bottom" secondItem="WeC-Ap-3Mo" secondAttribute="bottom" id="EGl-ze-Pqn"/>
                             <constraint firstItem="eLf-xr-iaj" firstAttribute="top" secondItem="Efv-vW-yPz" secondAttribute="top" constant="108" id="H3L-oq-JWh"/>
                             <constraint firstItem="gzC-kO-1ce" firstAttribute="top" secondItem="XLO-Ml-dwP" secondAttribute="bottom" constant="14" id="HMP-ZQ-NYd"/>
+                            <constraint firstItem="WeC-Ap-3Mo" firstAttribute="leading" secondItem="Efv-vW-yPz" secondAttribute="leading" id="PZj-rT-MFh"/>
                             <constraint firstItem="XLO-Ml-dwP" firstAttribute="centerX" secondItem="0ZV-iv-HXN" secondAttribute="centerX" id="WwW-fv-4ib"/>
                             <constraint firstItem="XLO-Ml-dwP" firstAttribute="top" secondItem="Efv-vW-yPz" secondAttribute="top" constant="20" id="tLf-Zz-MjQ"/>
+                            <constraint firstItem="WeC-Ap-3Mo" firstAttribute="trailing" secondItem="Efv-vW-yPz" secondAttribute="trailing" id="xRH-FY-4GS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Efv-vW-yPz"/>
                     </view>
@@ -353,6 +360,7 @@
     </scenes>
     <resources>
         <image name="back_icon" width="28" height="28"/>
+        <image name="background" width="341" height="192"/>
         <image name="chat_icon" width="28" height="28"/>
         <image name="map_icon" width="28" height="28"/>
         <image name="menu_icon" width="38" height="38"/>

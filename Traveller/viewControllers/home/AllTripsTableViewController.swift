@@ -44,11 +44,11 @@ class AllTripsTableViewController: UITableViewController {
         if row.inGroup {
             let cell = tableView.cellForRow(at: indexPath) as! AllTripsTableViewCell
             let id = cell.tripId
-            if (TripModel.instance.getTrip(tripId: id!)?.owners.contains((user?.id)!))!{
-                performSegue(withIdentifier: "enterAsGuestSegue", sender: id)
-            } else {
+          //  if (TripModel.instance.getTrip(tripId: id!)?.owners.contains((user?.id)!))!{
+            //    performSegue(withIdentifier: "enterAsGuestSegue", sender: id)
+            //} else {
                 performSegue(withIdentifier: "enterTripSegue", sender: id)
-            }
+            //}
         } else {
                 let alert = Alerts.joinGroupAlert(onAccept: {
                     GroupModel.instance.addUserToGroup(userId: (user?.id)!, groupId: row.tripId!){ error in
