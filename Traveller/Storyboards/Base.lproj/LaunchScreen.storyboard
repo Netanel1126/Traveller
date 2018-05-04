@@ -18,23 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-LV-Ary">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro_background" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-LV-Ary">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="T-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="i4f-cC-cal">
-                                <rect key="frame" x="67" y="270" width="185" height="29"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cVb-LV-Ary" secondAttribute="bottom" id="6dc-53-8Vd"/>
                             <constraint firstItem="cVb-LV-Ary" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8f6-uH-1LZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i4f-cC-cal" secondAttribute="bottom" constant="269" id="dPp-7U-m5w"/>
                             <constraint firstItem="cVb-LV-Ary" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dsY-GJ-tgZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cVb-LV-Ary" secondAttribute="trailing" id="hsi-ee-ByU"/>
-                            <constraint firstItem="i4f-cC-cal" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="mF2-dx-4p8"/>
-                            <constraint firstItem="i4f-cC-cal" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="qJD-TA-nVV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i4f-cC-cal" secondAttribute="trailing" constant="68" id="t9V-cd-gwR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -45,7 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="T-Logo" width="250" height="121"/>
-        <image name="background" width="341" height="192"/>
+        <image name="intro_background" width="1329" height="800"/>
     </resources>
 </document>

@@ -19,27 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="53G-si-OY6">
-                                <rect key="frame" x="32" y="120" width="311" height="626"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="53G-si-OY6">
+                                <rect key="frame" x="32" y="120.33333333333333" width="311" height="200.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yl-p5-j6l">
-                                        <rect key="frame" x="98.666666666666657" y="0.0" width="114" height="138.66666666666666"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vintage-Map-©-Cookelma-Dreamstime-e1413826193524-1000x389" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-fC-q3w">
-                                        <rect key="frame" x="0.0" y="178.66666666666669" width="311" height="122"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="T-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-fC-q3w">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="122"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="DwW-fC-q3w" secondAttribute="height" multiplier="51:20" id="N6A-z9-Hgv"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="19P-Jf-vQJ">
-                                        <rect key="frame" x="0.0" y="340.66666666666669" width="311" height="38.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="162" width="311" height="38.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFO-of-iC8">
                                                 <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="38.333333333333336"/>
-                                                <color key="backgroundColor" red="0.078548027424477723" green="0.50688636549117216" blue="0.73546794041450769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.078548027419999999" green="0.50688636549999999" blue="0.73546794039999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gFO-of-iC8" secondAttribute="height" multiplier="107:34" id="0Yf-Yo-Le2"/>
                                                 </constraints>
@@ -69,12 +63,6 @@
                                             <constraint firstItem="3gO-0L-shP" firstAttribute="height" secondItem="gFO-of-iC8" secondAttribute="height" id="Vg7-RW-DnU"/>
                                         </constraints>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe-map-icon" translatesAutoresizingMaskIntoConstraints="NO" id="VHr-g4-sdD">
-                                        <rect key="frame" x="0.0" y="419" width="311" height="207"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="VHr-g4-sdD" secondAttribute="height" multiplier="3:2" id="RNb-QR-e0j"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="19P-Jf-vQJ" secondAttribute="trailing" id="8vp-Sz-1GM"/>
@@ -87,7 +75,6 @@
                             <constraint firstItem="53G-si-OY6" firstAttribute="leading" secondItem="Ms2-Fs-2me" secondAttribute="leading" constant="32" id="A5n-Rd-7fg"/>
                             <constraint firstItem="53G-si-OY6" firstAttribute="top" secondItem="Ms2-Fs-2me" secondAttribute="top" constant="32" id="GcN-ea-DW9"/>
                             <constraint firstItem="Ms2-Fs-2me" firstAttribute="trailing" secondItem="53G-si-OY6" secondAttribute="trailing" constant="32" id="r1f-1D-nsD"/>
-                            <constraint firstItem="Ms2-Fs-2me" firstAttribute="bottom" secondItem="53G-si-OY6" secondAttribute="bottom" constant="32" id="xba-ZI-HTD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ms2-Fs-2me"/>
                     </view>
@@ -157,6 +144,7 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="hoY-lI-27c" id="hQ7-zo-YmL"/>
+                        <outlet property="loginButton" destination="pNI-mQ-KJ2" id="xRv-4W-cn1"/>
                         <outlet property="password" destination="3ab-VA-WpK" id="WUr-eS-RCv"/>
                     </connections>
                 </viewController>
@@ -247,9 +235,6 @@
                                                 <state key="normal" title="Sign Up" backgroundImage="button">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="signup:" destination="MAe-4U-n4t" eventType="touchUpInside" id="p6b-QI-DEV"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -264,12 +249,14 @@
                         <viewLayoutGuide key="safeArea" id="ard-7B-Z0w"/>
                     </view>
                     <connections>
-                        <outlet property="emailText" destination="VpC-Co-CFc" id="iie-uM-vBj"/>
-                        <outlet property="fNameText" destination="4JZ-SW-Tmt" id="2ot-aQ-3kJ"/>
-                        <outlet property="lnameText" destination="DB8-zV-TE6" id="GKh-aM-rTD"/>
-                        <outlet property="passwordText" destination="gFm-ok-lod" id="pGE-UY-bTY"/>
-                        <outlet property="phoneNumText" destination="68U-ts-js4" id="MbS-pA-IwK"/>
-                        <outlet property="userIMG" destination="hX5-Ox-xl9" id="rg5-qF-EGt"/>
+                        <outlet property="email" destination="VpC-Co-CFc" id="L7e-yl-3Gk"/>
+                        <outlet property="firstName" destination="4JZ-SW-Tmt" id="jUk-qA-X4M"/>
+                        <outlet property="lastName" destination="DB8-zV-TE6" id="MHg-hf-HIu"/>
+                        <outlet property="password" destination="gFm-ok-lod" id="fyn-PE-hXi"/>
+                        <outlet property="phone" destination="68U-ts-js4" id="vwa-00-Fyj"/>
+                        <outlet property="profileImage" destination="hX5-Ox-xl9" id="70k-oJ-4ip"/>
+                        <outlet property="signupButton" destination="irY-3S-PKd" id="BcJ-Ko-eqH"/>
+                        <outlet property="verifyPassword" destination="QkF-49-dum" id="Isl-H1-OsA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiE-FR-5jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,9 +283,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Vintage-Map-©-Cookelma-Dreamstime-e1413826193524-1000x389" width="1000" height="389"/>
+        <image name="T-Logo" width="250" height="121"/>
         <image name="button" width="107" height="34"/>
-        <image name="globe-map-icon" width="600" height="400"/>
         <image name="user_default" width="475" height="443"/>
     </resources>
 </document>

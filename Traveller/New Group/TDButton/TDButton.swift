@@ -9,7 +9,6 @@ class TDButton: RoundButton {
     @IBInspectable var buttonColor: UIColor = UIColor.blue
     @IBInspectable var hoverColor: UIColor = UIColor.lightGray
     @IBInspectable var disableColor: UIColor = UIColor.lightGray
-    @IBInspectable var defaultBorderColor: UIColor = UIColor.clear
     @IBInspectable var clickBorderColor: UIColor = UIColor.clear
     @IBInspectable var disableBorderColor: UIColor = UIColor.clear
     
@@ -26,6 +25,7 @@ class TDButton: RoundButton {
     func configureButton() {
         addTarget(self, action: #selector(onClick(_:)), for: .touchDown)
         addTarget(self, action: #selector(onRelease(_:)), for: .touchUpInside)
+        backgroundColor = buttonColor
     }
     
     override var isEnabled: Bool {
@@ -41,7 +41,7 @@ class TDButton: RoundButton {
     
     @objc func onRelease(_: UIButton) {
         backgroundColor = buttonColor
-        borderColor = defaultBorderColor
+        borderColor = borderColor
     }
     
     @objc func onDisable(_: UIButton) {

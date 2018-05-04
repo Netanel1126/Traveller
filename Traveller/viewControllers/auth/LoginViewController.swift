@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
                 self.onComplete!(user)
             }, onFailure: { error in
                 ErrorAlerts.showPopupAlert(activator: self, title: "Authentication failed", message: error.localizedDescription, buttonAction: nil)
+                self.loginButton.isEnabled = true
             })
         } else {
             ErrorAlerts.showPopupAlert(activator: self, title: "Email or password is invalid", message: "", buttonAction: nil)
