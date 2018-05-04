@@ -23,7 +23,7 @@ class UsersListTableViewController: UITableViewController {
         if let user = DefaultUser.getUser() {
             self.usersList = TravellerUserModel.instance.data
             _ = TravellerNotification.travellerUserNotification.observe { _ in
-                var myTrip = TripModel.instance.data.filter {$0.id == self.tripId}.first
+                let myTrip = TripModel.instance.data.filter {$0.id == self.tripId}.first
                 self.usersList = TravellerUserModel.instance.data.filter{(myTrip?.owners.contains($0.id))!}
                 Logger.log(message: "test " +  self.usersList.description, event: .e)
                 self.tableView.reloadData()
@@ -62,9 +62,9 @@ class UsersListTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "userInfo"{
-            var des = segue.destination as! UserViewController
-            var i = sender as! String
-            var user = TravellerUserModel.instance.data.filter {$0.id == i}.first
+            let des = segue.destination as! UserViewController
+            let i = sender as! String
+            let user = TravellerUserModel.instance.data.filter {$0.id == i}.first
             des.Fullname = (user?.firstName)! + " " + (user?.lastName)!
             des.Email = (user?.email)!
             des.PhoneNumber = (user?.phoneNumber)!

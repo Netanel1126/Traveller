@@ -22,7 +22,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="53G-si-OY6">
                                 <rect key="frame" x="32" y="120" width="311" height="626"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yl-p5-j6l">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yl-p5-j6l">
                                         <rect key="frame" x="98.666666666666657" y="0.0" width="114" height="138.66666666666666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -157,7 +157,6 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="hoY-lI-27c" id="hQ7-zo-YmL"/>
-                        <outlet property="loginButton" destination="pNI-mQ-KJ2" id="CPJ-Z0-Ktx"/>
                         <outlet property="password" destination="3ab-VA-WpK" id="WUr-eS-RCv"/>
                     </connections>
                 </viewController>
@@ -265,14 +264,12 @@
                         <viewLayoutGuide key="safeArea" id="ard-7B-Z0w"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="VpC-Co-CFc" id="aAa-Nd-2jn"/>
-                        <outlet property="firstName" destination="4JZ-SW-Tmt" id="160-fa-5sx"/>
-                        <outlet property="lastName" destination="DB8-zV-TE6" id="cSN-EI-U1M"/>
-                        <outlet property="password" destination="gFm-ok-lod" id="Cr7-OK-hLj"/>
-                        <outlet property="phone" destination="68U-ts-js4" id="8tE-Bj-99f"/>
-                        <outlet property="profileImage" destination="hX5-Ox-xl9" id="KDr-Ua-aHc"/>
-                        <outlet property="signupButton" destination="irY-3S-PKd" id="VQm-pj-oo0"/>
-                        <outlet property="verifyPassword" destination="QkF-49-dum" id="O75-zH-kYv"/>
+                        <outlet property="emailText" destination="VpC-Co-CFc" id="iie-uM-vBj"/>
+                        <outlet property="fNameText" destination="4JZ-SW-Tmt" id="2ot-aQ-3kJ"/>
+                        <outlet property="lnameText" destination="DB8-zV-TE6" id="GKh-aM-rTD"/>
+                        <outlet property="passwordText" destination="gFm-ok-lod" id="pGE-UY-bTY"/>
+                        <outlet property="phoneNumText" destination="68U-ts-js4" id="MbS-pA-IwK"/>
+                        <outlet property="userIMG" destination="hX5-Ox-xl9" id="rg5-qF-EGt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiE-FR-5jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
