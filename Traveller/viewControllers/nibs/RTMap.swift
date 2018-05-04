@@ -34,22 +34,14 @@ class RTMap: UIView, CLLocationManagerDelegate, MKMapViewDelegate {
         let guideApos = Position(id: 0, x: (guideA?.coordinate.longitude)!, y: (guideA?.coordinate.latitude)!)
         let guideBpos = Position(id: 0, x: (guideB?.coordinate.longitude)!, y: (guideB?.coordinate.latitude)!)
         let params = MinimumDistanceCalculator.AlgParams(map: (annotationHolder?.path)!, user: userPosition, guideA: guideApos, guideB: guideBpos)
-        let result = MinimumDistanceCalculator.isLegalPosition(params: params, maxDistance: 0.000000001)
+        let result = MinimumDistanceCalculator.isLegalPosition(params: params, maxDistance: 0.002)
         if !result {
-            print("out of range!")
+            self.onOutOfRange!()
         }
     }
-    func bindAlgorithm() {
-        isRunning = true
-        DispatchQueue.global(qos:.userInteractive).async {
-            while self.isRunning {
-                
-                DispatchQueue.main.async {
-                    
-                }
-            }
-        }
-    }
+    
+    //to remove
+    var onOutOfRange: (() -> Void)?
     
     @IBOutlet var map: MKMapView!
     let manager = CLLocationManager()

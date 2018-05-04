@@ -212,6 +212,7 @@
         <!--My Trips-->
         <scene sceneID="A5f-qE-vq4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvD-q5-7e4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="jhs-J9-Aeb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Trips" id="Ete-lm-6kc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hy3-iz-3uk">
@@ -222,7 +223,6 @@
                         <segue destination="euB-pf-umv" kind="relationship" relationship="rootViewController" id="Hwp-zn-By4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dvD-q5-7e4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1361" y="-214"/>
         </scene>
@@ -280,7 +280,6 @@
                                     <outlet property="inGroupImg" destination="Wta-6g-zOQ" id="1Dq-86-qjt"/>
                                     <outlet property="tripDscription" destination="kfy-ex-bfd" id="l79-YM-Ypn"/>
                                     <outlet property="tripNameText" destination="0eG-kR-DoB" id="Svo-P6-cEu"/>
-                                    <outletCollection property="gestureRecognizers" destination="Vyl-xW-hg9" appends="YES" id="i3Y-Tp-lDx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -289,21 +288,13 @@
                             <outlet property="delegate" destination="Pa3-lM-YcS" id="pMu-nt-xPC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="All Trips" id="aCx-iO-2hd">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="86p-2a-T7j"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="All Trips" id="aCx-iO-2hd"/>
                     <connections>
                         <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="CBN-OE-teX"/>
                         <segue destination="28x-Ge-dR2" kind="presentation" identifier="enterAsGuestSegue" id="WGs-sC-S4h"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VT-Vb-7xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="eaV-pV-Faj" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="Vyl-xW-hg9">
-                    <connections>
-                        <action selector="joinGroup:" destination="eaV-pV-Faj" id="0AH-Hp-JBe"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-471" y="551"/>
         </scene>
@@ -471,7 +462,7 @@
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eKA-px-F8G"/>
-        <segue reference="kVx-CA-sbV"/>
+        <segue reference="CBN-OE-teX"/>
+        <segue reference="WGs-sC-S4h"/>
     </inferredMetricsTieBreakers>
 </document>

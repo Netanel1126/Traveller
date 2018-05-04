@@ -67,6 +67,7 @@
 		B0A36821209349EC00A4571C /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A36820209349EC00A4571C /* UserType.swift */; };
 		B0C0C7DA20908C5A007A8C1F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7D920908C5A007A8C1F /* RoundButton.swift */; };
 		B0C0C7DC20908C6B007A8C1F /* TDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7DB20908C6B007A8C1F /* TDButton.swift */; };
+		B0DAFB43209BA17000E1ED04 /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A38207FD84300B83A53 /* FieldValidation.swift */; };
 		B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD312087A0AA0056B59C /* ServerModel.swift */; };
 		B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD332087A19A0056B59C /* ServerConfig.swift */; };
 		B0F3CD362087BF530056B59C /* ServerResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD352087BF530056B59C /* ServerResponses.swift */; };
@@ -358,7 +359,6 @@
 			isa = PBXGroup;
 			children = (
 				84BC9B5E208539F60012AFC8 /* MapAlerts.swift */,
-				B0387A38207FD84300B83A53 /* FieldValidation.swift */,
 				B0387A2E207FC5A200B83A53 /* Logger.swift */,
 				B0387A31207FC6D100B83A53 /* NotificationModel.swift */,
 				B05EF993208BC4DC000997FC /* DefaultUser.swift */,
@@ -406,6 +406,7 @@
 		B0387A3D207FE78D00B83A53 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				B0387A38207FD84300B83A53 /* FieldValidation.swift */,
 				84F85C792067A9E4003E6652 /* WelcomeViewController.swift */,
 				84F85C7B2067B2EB003E6652 /* SignupViewController.swift */,
 				84F85C7D2067B829003E6652 /* LoginViewController.swift */,
@@ -535,6 +536,7 @@
 				84AC8CAF1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CB01FFE23A800AB9BF9 /* Resources */,
 				CB02AA067A40E1496D0A204B /* [CP] Embed Pods Frameworks */,
+				4DA69198C0C3D858D1184511 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -553,6 +555,8 @@
 				84AC8CC21FFE23A800AB9BF9 /* Sources */,
 				84AC8CC31FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CC41FFE23A800AB9BF9 /* Resources */,
+				9F50C3AA71820DEE59D5B4C4 /* [CP] Embed Pods Frameworks */,
+				A8813EB46C0DB28DC115247B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -572,6 +576,8 @@
 				84AC8CCD1FFE23A800AB9BF9 /* Sources */,
 				84AC8CCE1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CCF1FFE23A800AB9BF9 /* Resources */,
+				820C29E8519E923EF6ACB312 /* [CP] Embed Pods Frameworks */,
+				A9E33897EF12A1C909DCDB41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -682,6 +688,66 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4DA69198C0C3D858D1184511 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Traveller/Pods-Traveller-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		820C29E8519E923EF6ACB312 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F50C3AA71820DEE59D5B4C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8813EB46C0DB28DC115247B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A8FEE6F11C64FCCEAB135494 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -700,6 +766,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A9E33897EF12A1C909DCDB41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CB02AA067A40E1496D0A204B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,6 +792,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMReel/RAMReel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -720,6 +802,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMReel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -776,6 +859,7 @@
 				B05EF98C208BB9BF000997FC /* RTMap.swift in Sources */,
 				84BC9B5C20851DC70012AFC8 /* Algo.swift in Sources */,
 				84F85C7A2067A9E4003E6652 /* WelcomeViewController.swift in Sources */,
+				B0DAFB43209BA17000E1ED04 /* FieldValidation.swift in Sources */,
 				B03883DC20869CF800D1F3F8 /* SendPacketBuilder.swift in Sources */,
 				B0F3CD3B2087CE0B0056B59C /* CoordinateListener.swift in Sources */,
 				30EC2C5F2006198D0065FA2A /* Position.swift in Sources */,

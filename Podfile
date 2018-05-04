@@ -11,6 +11,8 @@ target 'Traveller' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'RAMReel'
+  pod 'Toast-Swift', '~> 3.0.1'
+
   target 'TravellerTests' do
     inherit! :search_paths
     # Pods for testing

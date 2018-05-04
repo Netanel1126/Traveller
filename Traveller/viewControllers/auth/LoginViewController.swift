@@ -3,6 +3,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var password: UITextField!
     var onComplete: ((TravellerUser) -> Void)?
     override func viewDidLoad() {
@@ -11,6 +12,7 @@ class LoginViewController: UIViewController {
    
     @IBAction func login(_ sender: UIButton) {
         if isLegalFields() {
+            loginButton.isEnabled = false
             AuthManager.signIn(email: email.text!, password: password.text!, onComplete: { user in
                 self.onComplete!(user)
             }, onFailure: { error in

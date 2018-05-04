@@ -30,13 +30,7 @@ class ModelNotificationBase<T>{
 }
 
 class TravellerNotification {
-//    static let ConnectedUser = ModelNotificationBase<TravellerUser>(name: "ConnectedUserNotificatio")
-//    static let NewUserNotification = ModelNotificationBase<String>(name : "NewUserNotification")
-//    static let LogInNotification = ModelNotificationBase<String>(name : "LogInNotification")
-//    static let LogOutNotification = ModelNotificationBase<Bool>(name : "LogOutNotification")
-//    static let AuthenticationNotification = ModelNotificationBase<String>(name: "AuthenticationNotification")
-    
-//    static let getAllTripsNotifcation = ModelNotificationBase<[Trip]>(name: "getAllTripsNotifcation")
+
     static let GetMapNotification = ModelNotificationBase<[Position]>(name: "GetMapNotification") //Map draw
     
     //model notifications

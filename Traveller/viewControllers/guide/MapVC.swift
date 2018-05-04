@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import Toast_Swift
 class MapVC: UIViewController {
     var mapView: RTMap?
     
     override func viewDidLoad() {
         mapView = .fromNib()
+
         view.loadView(view: mapView!)
         let tabbar = self.tabBarController as! GuideTabBarController
+        mapView?.onOutOfRange = {
+            self.view.makeToast("out of range", duration: 3.0, position: .bottom)
+        }
         mapView?.tripId = tabbar.tripId
     }
 }

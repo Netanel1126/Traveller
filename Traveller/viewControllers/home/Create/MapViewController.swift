@@ -22,6 +22,8 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             }
             self.present(alert, animated: true, completion: nil)
         }
+        
+
     }
 
     @IBAction func startToDraw(_ sender: Any) {
