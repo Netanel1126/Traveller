@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PbR-fR-0sU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PbR-fR-0sU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +13,9 @@
     <customFonts key="customFonts">
         <array key="Assistant-Regular.ttf">
             <string>Assistant-Regular</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
         </array>
     </customFonts>
     <scenes>
@@ -22,7 +25,7 @@
                 <viewControllerPlaceholder storyboardName="TravellerStoryBoard" id="28x-Ge-dR2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWe-00-k0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="160"/>
+            <point key="canvasLocation" x="709" y="346"/>
         </scene>
         <!--TourGuideUI-->
         <scene sceneID="mCq-Pr-srT">
@@ -30,7 +33,7 @@
                 <viewControllerPlaceholder storyboardName="TourGuideUI" id="pQT-RF-AdF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmV-y2-K1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269" y="232"/>
+            <point key="canvasLocation" x="211" y="364"/>
         </scene>
         <!--My Trips-->
         <scene sceneID="A1b-Ks-srz">
@@ -94,7 +97,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="28x-Ge-dR2" kind="show" identifier="enterAsGuestSegue" id="kVx-CA-sbV"/>
-                        <segue destination="pQT-RF-AdF" kind="show" identifier="enterTripSegue" id="eKA-px-F8G"/>
+                        <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="eKA-px-F8G"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEO-DF-SBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -471,7 +474,7 @@
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eKA-px-F8G"/>
-        <segue reference="WGs-sC-S4h"/>
+        <segue reference="CBN-OE-teX"/>
+        <segue reference="kVx-CA-sbV"/>
     </inferredMetricsTieBreakers>
 </document>

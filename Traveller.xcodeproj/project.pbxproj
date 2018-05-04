@@ -14,6 +14,8 @@
 		712520F4E5C1DFF345A5A51E /* Pods_TravellerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA97DE9A470DE1A3499C90B /* Pods_TravellerTests.framework */; };
 		8457BDA6208B730500ED24B5 /* AllTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */; };
 		845BC0812097AF70001D80D9 /* ErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BC0802097AF70001D80D9 /* ErrorAlerts.swift */; };
+		846D3B67209B1AD600733669 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D3B66209B1AD500733669 /* ChatCollectionViewCell.swift */; };
+		846D3B69209B1B4400733669 /* ChatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D3B68209B1B4400733669 /* ChatCollectionViewController.swift */; };
 		8498ED602058344200728827 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498ED5F2058344200728827 /* CoreLocation.framework */; };
 		8498ED63205834C300728827 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498ED62205834C300728827 /* MapVC.swift */; };
 		849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BD54B202263A800EBC02D /* TourGuideUI.storyboard */; };
@@ -115,6 +117,8 @@
 		63B4743243C33654A82EA760 /* Pods_Traveller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traveller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTripsTableViewCell.swift; sourceTree = "<group>"; };
 		845BC0802097AF70001D80D9 /* ErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorAlerts.swift; path = Traveller/Model/utils/ErrorAlerts.swift; sourceTree = SOURCE_ROOT; };
+		846D3B66209B1AD500733669 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		846D3B68209B1B4400733669 /* ChatCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewController.swift; sourceTree = "<group>"; };
 		8498ED5F2058344200728827 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8498ED62205834C300728827 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		849BD54B202263A800EBC02D /* TourGuideUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourGuideUI.storyboard; sourceTree = "<group>"; };
@@ -462,6 +466,8 @@
 				C1CD94D6200E098100164EEF /* GroupTabBarController.swift */,
 				AC20B6432096049A004CF5B6 /* UsersListTableViewController.swift */,
 				AC05FBD020962A6C00DDFCA5 /* UserViewController.swift */,
+				846D3B66209B1AD500733669 /* ChatCollectionViewCell.swift */,
+				846D3B68209B1B4400733669 /* ChatCollectionViewController.swift */,
 			);
 			path = traveller;
 			sourceTree = "<group>";
@@ -784,6 +790,7 @@
 				84BC9B5720851A380012AFC8 /* TripModel.swift in Sources */,
 				84CB9077207770D500D15EC9 /* ContainerVC.swift in Sources */,
 				B02DFF1920926B79007631F0 /* ViewController.swift in Sources */,
+				846D3B69209B1B4400733669 /* ChatCollectionViewController.swift in Sources */,
 				C1CD94D7200E098100164EEF /* GroupTabBarController.swift in Sources */,
 				84BC9B5D20851DC70012AFC8 /* MinimumDistanceCalculator.swift in Sources */,
 				84CB907B2077904400D15EC9 /* CreateTripViewController.swift in Sources */,
@@ -830,6 +837,7 @@
 				84BC9B6020853DBC0012AFC8 /* TravellerUserModel.swift in Sources */,
 				B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */,
 				B0C0C7DA20908C5A007A8C1F /* RoundButton.swift in Sources */,
+				846D3B67209B1AD600733669 /* ChatCollectionViewCell.swift in Sources */,
 				84CB9075207770D500D15EC9 /* MainVC.swift in Sources */,
 				84BC9B52208519DD0012AFC8 /* MapViewController.swift in Sources */,
 			);
@@ -991,11 +999,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3C854CZ2G2;
+				DEVELOPMENT_TEAM = WBNZCU68D2;
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-11243436.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-1126.Traveller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1008,11 +1016,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3C854CZ2G2;
+				DEVELOPMENT_TEAM = WBNZCU68D2;
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-11243436.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-1126.Traveller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
