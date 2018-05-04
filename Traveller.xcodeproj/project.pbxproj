@@ -65,7 +65,6 @@
 		B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */; };
 		B0A3681F209348F700A4571C /* MapAnnotationHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */; };
 		B0A36821209349EC00A4571C /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A36820209349EC00A4571C /* UserType.swift */; };
-		B0C0C7DA20908C5A007A8C1F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7D920908C5A007A8C1F /* RoundButton.swift */; };
 		B0C0C7DC20908C6B007A8C1F /* TDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0C7DB20908C6B007A8C1F /* TDButton.swift */; };
 		B0DAFB43209BA17000E1ED04 /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A38207FD84300B83A53 /* FieldValidation.swift */; };
 		B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD312087A0AA0056B59C /* ServerModel.swift */; };
@@ -171,7 +170,6 @@
 		B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationHolder.swift; sourceTree = "<group>"; };
 		B0A36820209349EC00A4571C /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
-		B0C0C7D920908C5A007A8C1F /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B0C0C7DB20908C6B007A8C1F /* TDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDButton.swift; sourceTree = "<group>"; };
 		B0F3CD312087A0AA0056B59C /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		B0F3CD332087A19A0056B59C /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
@@ -500,19 +498,10 @@
 		B0C0C7D720908BCF007A8C1F /* views */ = {
 			isa = PBXGroup;
 			children = (
-				B0C0C7D820908BEB007A8C1F /* TDButton */,
+				B0C0C7DB20908C6B007A8C1F /* TDButton.swift */,
 			);
 			name = views;
 			path = "New Group";
-			sourceTree = "<group>";
-		};
-		B0C0C7D820908BEB007A8C1F /* TDButton */ = {
-			isa = PBXGroup;
-			children = (
-				B0C0C7D920908C5A007A8C1F /* RoundButton.swift */,
-				B0C0C7DB20908C6B007A8C1F /* TDButton.swift */,
-			);
-			path = TDButton;
 			sourceTree = "<group>";
 		};
 		B0F3CD372087CBC40056B59C /* networkListenners */ = {
@@ -792,6 +781,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMReel/RAMReel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -802,6 +792,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMReel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -889,7 +880,6 @@
 				B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */,
 				84BC9B6020853DBC0012AFC8 /* TravellerUserModel.swift in Sources */,
 				B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */,
-				B0C0C7DA20908C5A007A8C1F /* RoundButton.swift in Sources */,
 				84CB9075207770D500D15EC9 /* MainVC.swift in Sources */,
 				84BC9B52208519DD0012AFC8 /* MapViewController.swift in Sources */,
 			);
@@ -1055,7 +1045,7 @@
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-11243436.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Traveller52.Traveller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1072,7 +1062,7 @@
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-11243436.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Traveller52.Traveller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -99,13 +99,20 @@
                             <outlet property="delegate" destination="euB-pf-umv" id="BJk-bE-LSA"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="My Trips" id="phV-gx-tkA">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="fvn-04-xIG">
+                        <barButtonItem key="leftBarButtonItem" image="logout_navigation" id="7lr-ap-dkS">
+                            <connections>
+                                <action selector="logoutTapped:" destination="euB-pf-umv" id="AKt-jj-BNI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fvn-04-xIG">
                             <connections>
                                 <segue destination="H2I-LI-Eb3" kind="show" id="i83-lK-mDy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="28x-Ge-dR2" kind="show" identifier="enterAsGuestSegue" id="kVx-CA-sbV"/>
                         <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="eKA-px-F8G"/>
@@ -437,11 +444,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UzL-J6-FAJ" customClass="MyMapView" customModule="Traveller" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="411"/>
                                 <gestureRecognizers/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2R-18-esG">
-                                <rect key="frame" x="31" y="418" width="61" height="55"/>
+                                <rect key="frame" x="31" y="374" width="61" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="IgT-jj-eHk"/>
                                     <constraint firstAttribute="width" constant="61" id="QQC-ck-kJS"/>
@@ -559,11 +566,12 @@
         <image name="icons8-add-user-male-100" width="100" height="100"/>
         <image name="icons8-map-editing-100" width="100" height="100"/>
         <image name="icons8-pittsburgh-map-100" width="100" height="100"/>
+        <image name="logout_navigation" width="23" height="23"/>
         <image name="search-circle-blue-512" width="512" height="512"/>
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CBN-OE-teX"/>
-        <segue reference="WGs-sC-S4h"/>
+        <segue reference="eKA-px-F8G"/>
+        <segue reference="kVx-CA-sbV"/>
     </inferredMetricsTieBreakers>
 </document>

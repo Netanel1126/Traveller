@@ -2,12 +2,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var backStackBackground: UIView!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var password: UITextField!
     var onComplete: ((TravellerUser) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
+        backStackBackground.layer.cornerRadius = 15
     }
    
     @IBAction func login(_ sender: UIButton) {
@@ -28,9 +30,5 @@ class LoginViewController: UIViewController {
     func isLegalFields() -> Bool{
         
         return true
-    }
-    
-    @IBAction func forgetPassword(_ sender: Any) {
-        
     }
 }

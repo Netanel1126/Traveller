@@ -5,6 +5,10 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        contentContainer.layer.borderColor = UIColor.white.cgColor
+//        contentContainer.layer.borderWidth = 2
+//        contentContainer.layer.cornerRadius = 18
         if let user = DefaultUser.getUser() {
             toDashboard(user: user)
         }

@@ -58,5 +58,9 @@ class MyTripsTableViewController: UITableViewController {
                 des.tripId = tripId
             }
         }
-        
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+            DefaultUser.setUser(user: nil)
+            dismiss(animated: true, completion: nil)
+    }
 }

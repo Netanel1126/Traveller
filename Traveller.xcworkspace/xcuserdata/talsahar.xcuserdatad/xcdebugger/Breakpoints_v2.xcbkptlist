@@ -9,22 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Traveller/viewControllers/auth/WelcomeViewController.swift"
-            timestampString = "547074050.9672821"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Traveller/model/New Group1/ServerResponses.swift"
             timestampString = "547068617.235604"
             startingColumnNumber = "9223372036854775807"
@@ -328,7 +312,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/auth/SignupViewController.swift"
-            timestampString = "547074050.967544"
+            timestampString = "547165557.163651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -647,7 +631,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547068318.866171"
+            timestampString = "547165557.16387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -663,7 +647,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547068318.866228"
+            timestampString = "547165557.163927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "8"
@@ -679,7 +663,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547068318.866274"
+            timestampString = "547165557.163977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -695,7 +679,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547068318.86632"
+            timestampString = "547165557.164021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -775,7 +759,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547068318.866396"
+            timestampString = "547165557.164098"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
@@ -931,11 +915,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/auth/WelcomeViewController.swift"
-            timestampString = "547074050.968464"
+            timestampString = "547165557.164229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -947,11 +931,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/auth/WelcomeViewController.swift"
-            timestampString = "547074050.968536"
+            timestampString = "547165557.164286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -979,12 +963,12 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/nibs/RTMap.swift"
-                  timestampString = "547073999.836853"
+                  timestampString = "547161560.888383"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "1381">
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1254">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -994,12 +978,12 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/nibs/RTMap.swift"
-                  timestampString = "547073999.83924"
+                  timestampString = "547161560.890011"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "4999">
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "4565">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1043,7 +1027,7 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/model/db/TravellerUserModel.swift"
-                  timestampString = "547073999.848719"
+                  timestampString = "547161560.898273"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1058,7 +1042,7 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/model/db/TravellerUserModel.swift"
-                  timestampString = "547073999.850509"
+                  timestampString = "547161560.900141"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -1066,6 +1050,22 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Traveller/New Group/TDButton/TDButton.swift"
+            timestampString = "547157931.094146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
