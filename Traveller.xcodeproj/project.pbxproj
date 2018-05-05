@@ -56,6 +56,9 @@
 		B0387A3B207FE63F00B83A53 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0387A3A207FE63F00B83A53 /* Home.storyboard */; };
 		B03883DC20869CF800D1F3F8 /* SendPacketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DA20869CF800D1F3F8 /* SendPacketBuilder.swift */; };
 		B03883DD20869CF800D1F3F8 /* TSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03883DB20869CF800D1F3F8 /* TSocket.swift */; };
+		B03CC707209DCBC2008F3FF0 /* Popups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03CC706209DCBC2008F3FF0 /* Popups.storyboard */; };
+		B03CC70A209DCE54008F3FF0 /* ErrorPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03CC709209DCE54008F3FF0 /* ErrorPopupViewController.swift */; };
+		B03CC70C209DE1F8008F3FF0 /* NavigationBar+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03CC70B209DE1F8008F3FF0 /* NavigationBar+Style.swift */; };
 		B05EF98C208BB9BF000997FC /* RTMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF98B208BB9BF000997FC /* RTMap.swift */; };
 		B05EF98F208BB9F0000997FC /* RTMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05EF98E208BB9F0000997FC /* RTMap.xib */; };
 		B05EF992208BBB23000997FC /* NibLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF991208BBB23000997FC /* NibLoader.swift */; };
@@ -161,6 +164,9 @@
 		B0387A3A207FE63F00B83A53 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B03883DA20869CF800D1F3F8 /* SendPacketBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendPacketBuilder.swift; sourceTree = "<group>"; };
 		B03883DB20869CF800D1F3F8 /* TSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSocket.swift; sourceTree = "<group>"; };
+		B03CC706209DCBC2008F3FF0 /* Popups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popups.storyboard; sourceTree = "<group>"; };
+		B03CC709209DCE54008F3FF0 /* ErrorPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopupViewController.swift; sourceTree = "<group>"; };
+		B03CC70B209DE1F8008F3FF0 /* NavigationBar+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Style.swift"; sourceTree = "<group>"; };
 		B05EF98B208BB9BF000997FC /* RTMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMap.swift; sourceTree = "<group>"; };
 		B05EF98E208BB9F0000997FC /* RTMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RTMap.xib; sourceTree = "<group>"; };
 		B05EF991208BBB23000997FC /* NibLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoader.swift; sourceTree = "<group>"; };
@@ -325,6 +331,7 @@
 				3659E8512062537600E116FB /* AudioRecrdingTest.storyboard */,
 				C10D72FC2068D5D1005818A5 /* SideMenu.storyboard */,
 				C1CD94DA200E237500164EEF /* Main.storyboard */,
+				B03CC706209DCBC2008F3FF0 /* Popups.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -391,6 +398,7 @@
 		B0387A3C207FE78500B83A53 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B03CC708209DCBEF008F3FF0 /* popups */,
 				B05EF98A208BB9A6000997FC /* nibs */,
 				B0387A42207FE91E00B83A53 /* guide */,
 				B0387A41207FE91500B83A53 /* traveller */,
@@ -469,6 +477,14 @@
 			path = "New Group1";
 			sourceTree = "<group>";
 		};
+		B03CC708209DCBEF008F3FF0 /* popups */ = {
+			isa = PBXGroup;
+			children = (
+				B03CC709209DCE54008F3FF0 /* ErrorPopupViewController.swift */,
+			);
+			path = popups;
+			sourceTree = "<group>";
+		};
 		B05EF98A208BB9A6000997FC /* nibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +507,7 @@
 			children = (
 				B02DFF1820926B79007631F0 /* ViewController.swift */,
 				B05EF991208BBB23000997FC /* NibLoader.swift */,
+				B03CC70B209DE1F8008F3FF0 /* NavigationBar+Style.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -638,6 +655,7 @@
 				C1CD94DB200E237500164EEF /* Main.storyboard in Resources */,
 				B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */,
 				849BD54F20226D8800EBC02D /* Assets.xcassets in Resources */,
+				B03CC707209DCBC2008F3FF0 /* Popups.storyboard in Resources */,
 				849BD54C202263A800EBC02D /* TourGuideUI.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -874,6 +892,7 @@
 				84CB9076207770D500D15EC9 /* SideMenuVC.swift in Sources */,
 				B0387A2C207FC4FA00B83A53 /* AuthManager.swift in Sources */,
 				84B336522078E66F00A236E1 /* MyTripsTableViewController.swift in Sources */,
+				B03CC70C209DE1F8008F3FF0 /* NavigationBar+Style.swift in Sources */,
 				B0F7BC5D2081380200DCFD3D /* GroupModel.swift in Sources */,
 				84AC8CB61FFE23A800AB9BF9 /* AppDelegate.swift in Sources */,
 				AC6CF6FB2055517D0095C0B5 /* Group.swift in Sources */,
@@ -881,6 +900,7 @@
 				84BC9B6020853DBC0012AFC8 /* TravellerUserModel.swift in Sources */,
 				B0387A2A207FC4FA00B83A53 /* FirebaseUserAuth.swift in Sources */,
 				84CB9075207770D500D15EC9 /* MainVC.swift in Sources */,
+				B03CC70A209DCE54008F3FF0 /* ErrorPopupViewController.swift in Sources */,
 				84BC9B52208519DD0012AFC8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

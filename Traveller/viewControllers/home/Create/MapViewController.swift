@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UISearchBarDelegate {
+class MapViewController: ViewController, UISearchBarDelegate {
     
     @IBOutlet weak var myMap: MyMapView!
     var map:[Position]?

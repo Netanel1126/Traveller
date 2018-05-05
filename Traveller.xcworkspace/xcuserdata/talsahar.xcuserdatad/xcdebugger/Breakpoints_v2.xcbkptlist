@@ -312,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/auth/SignupViewController.swift"
-            timestampString = "547165557.163651"
+            timestampString = "547218654.895642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "signup(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -631,7 +631,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547165557.16387"
+            timestampString = "547218654.8958679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -647,7 +647,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547165557.163927"
+            timestampString = "547218654.895914"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "8"
@@ -663,7 +663,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547165557.163977"
+            timestampString = "547218654.895955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -679,7 +679,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547165557.164021"
+            timestampString = "547218654.895992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -759,7 +759,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/home/MyTripsTableViewController.swift"
-            timestampString = "547165557.164098"
+            timestampString = "547218654.896062"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
@@ -915,11 +915,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/auth/WelcomeViewController.swift"
-            timestampString = "547165557.164229"
+            timestampString = "547218654.896176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -931,11 +931,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Traveller/viewControllers/auth/WelcomeViewController.swift"
-            timestampString = "547165557.164286"
+            timestampString = "547218654.896217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -963,7 +963,7 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/nibs/RTMap.swift"
-                  timestampString = "547161560.888383"
+                  timestampString = "547215986.707142"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "76"
@@ -978,7 +978,7 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/nibs/RTMap.swift"
-                  timestampString = "547161560.890011"
+                  timestampString = "547215986.708868"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "76"
@@ -1027,7 +1027,7 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/model/db/TravellerUserModel.swift"
-                  timestampString = "547161560.898273"
+                  timestampString = "547215986.719117"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -1042,7 +1042,7 @@
                   moduleName = "Traveller"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/model/db/TravellerUserModel.swift"
-                  timestampString = "547161560.900141"
+                  timestampString = "547215986.720763"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -1065,6 +1065,100 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Traveller/viewControllers/auth/SignupViewController.swift"
+            timestampString = "547218654.896313"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "SignupViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Traveller.SignupViewController.email.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "Traveller"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/auth/SignupViewController.swift"
+                  timestampString = "547215986.726496"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Traveller.SignupViewController.email.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "Traveller"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/auth/SignupViewController.swift"
+                  timestampString = "547215986.728761"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Traveller.SignupViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Traveller.SignupViewController"
+                  moduleName = "Traveller"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/auth/SignupViewController.swift"
+                  timestampString = "547215986.730951"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "638">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Traveller.SignupViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;Traveller.SignupViewController&gt;"
+                  moduleName = "Traveller"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talsahar/Documents/Traveller/Traveller/viewControllers/auth/SignupViewController.swift"
+                  timestampString = "547215986.732999"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "550">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Traveller/viewControllers/popups/ErrorPopupViewController.swift"
+            timestampString = "547218654.896355"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

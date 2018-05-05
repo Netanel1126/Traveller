@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class AudioRecorderViewController: UIViewController, AVAudioRecorderDelegate, UITableViewDelegate, UITableViewDataSource {
+class AudioRecorderViewController: ViewController, AVAudioRecorderDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!

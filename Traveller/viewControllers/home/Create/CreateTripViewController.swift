@@ -8,7 +8,7 @@
 
 import UIKit
 import RAMReel
-class CreateTripViewController: UIViewController {
+class CreateTripViewController: ViewController {
     
     @IBOutlet weak var tripNameTextField: UITextField!
     @IBOutlet weak var tripDescTextField: UITextField!
@@ -33,20 +33,22 @@ class CreateTripViewController: UIViewController {
         performSegue(withIdentifier: "toMap", sender: nil)
     }
     
+    //TODO:: IMPLEMENT
     func isVerified() -> Bool {
-        if (tripNameTextField.text?.isEmpty)! {
-            showAlert(title: "Enter trip name")
-            return false
-        } else if (tripDescTextField.text?.isEmpty)! {
-            showAlert(title: "Enter trip description")
-            return false
-        } else if guide == nil {
-            showAlert(title: "Add another guide")
-            return false
-        } else if tripMap == nil {
-            showAlert(title: "Draw map")
-            return false
-        }
+//        if (tripNameTextField.text?.isEmpty)! {
+//            
+//            showAlert(title: "Enter trip name")
+//            return false
+//        } else if (tripDescTextField.text?.isEmpty)! {
+//            showAlert(title: "Enter trip description")
+//            return false
+//        } else if guide == nil {
+//            showAlert(title: "Add another guide")
+//            return false
+//        } else if tripMap == nil {
+//            showAlert(title: "Draw map")
+//            return false
+//        }
         return true
     }
     

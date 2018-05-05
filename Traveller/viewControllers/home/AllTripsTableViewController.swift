@@ -3,9 +3,10 @@ import UIKit
 class AllTripsTableViewController: UITableViewController {
     
     var allTrips = [Trip]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBarStyle()
         _ = TravellerNotification.tripNotification.observe { _ in
             self.allTrips = TripModel.instance.data
             self.tableView.reloadData()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+class UserViewController: ViewController {
 
     @IBOutlet weak var imageurl: UIImageView!
     @IBOutlet weak var fullname: UILabel!

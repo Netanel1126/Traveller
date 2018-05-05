@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContainerVC : UIViewController {
+class ContainerVC : ViewController {
     
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
     var sideMenuOpen = false

@@ -32,7 +32,7 @@ class TDButton: UIButton {
     override func awakeFromNib() {
         backgroundColor = buttonDefaultColor
         layer.borderColor = borderColor.cgColor
-        layer.cornerRadius = frame.height / 2
+        layer.cornerRadius = frame.height / 10
         layer.borderWidth = 1
         self.isEnabled = Bool(isEnabled)
     }

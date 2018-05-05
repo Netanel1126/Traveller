@@ -17,7 +17,7 @@ class UsersListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavigationBarStyle()
         let tabbar = self.tabBarController as! GuideTabBarController
         tripId = tabbar.tripId
         if let user = DefaultUser.getUser() {

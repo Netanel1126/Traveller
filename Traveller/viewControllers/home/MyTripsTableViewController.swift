@@ -5,7 +5,7 @@ class MyTripsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavigationBarStyle()
         if let user = DefaultUser.getUser() {
             self.data = TripModel.instance.data
             _ = TravellerNotification.tripNotification.observe { _ in
@@ -58,9 +58,4 @@ class MyTripsTableViewController: UITableViewController {
                 des.tripId = tripId
             }
         }
-    
-    @IBAction func logoutTapped(_ sender: Any) {
-            DefaultUser.setUser(user: nil)
-            dismiss(animated: true, completion: nil)
-    }
 }

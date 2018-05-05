@@ -8,7 +8,7 @@
 
 import UIKit
 import Toast_Swift
-class MapVC: UIViewController {
+class MapVC: ViewController {
     var mapView: RTMap?
     
     override func viewDidLoad() {

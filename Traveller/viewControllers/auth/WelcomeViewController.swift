@@ -1,11 +1,13 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: ViewController {
     
+    @IBOutlet weak var stackviewBackground: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        stackviewBackground.layer.cornerRadius = 15
+
 //        contentContainer.layer.borderColor = UIColor.white.cgColor
 //        contentContainer.layer.borderWidth = 2
 //        contentContainer.layer.cornerRadius = 18
@@ -33,4 +35,9 @@ class WelcomeViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func unwindToAuth(segue:UIStoryboardSegue) {
+        DefaultUser.setUser(user: nil)
+    }
+
 }

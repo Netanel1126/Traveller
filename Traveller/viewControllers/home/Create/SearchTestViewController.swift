@@ -9,7 +9,7 @@
 import UIKit
 import RAMReel
 @available(iOS 8.2, *)
-class SearchViewController: UIViewController {
+class SearchViewController: ViewController {
     var dataSource: SimplePrefixQueryDataSource!
     var ramReel: RAMReel<RAMCell, RAMTextField, SimplePrefixQueryDataSource>!
     

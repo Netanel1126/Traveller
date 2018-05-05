@@ -1,14 +1,16 @@
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: ViewController {
 
-    @IBOutlet weak var backStackBackground: UIView!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet var backStackBackground: UIView!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var password: UITextField!
     var onComplete: ((TravellerUser) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Login"
         backStackBackground.layer.cornerRadius = 15
     }
    
@@ -18,17 +20,24 @@ class LoginViewController: UIViewController {
             AuthManager.signIn(email: email.text!, password: password.text!, onComplete: { user in
                 self.onComplete!(user)
             }, onFailure: { error in
-                ErrorAlerts.showPopupAlert(activator: self, title: "Authentication failed", message: error.localizedDescription, buttonAction: nil)
-                self.loginButton.isEnabled = true
+                let errorPopup = ErrorPopupViewController.newInstance(msg: error.localizedDescription, onComplete: { self.loginButton.isEnabled = true })
+                self.present(errorPopup, animated: true, completion: nil)
             })
-        } else {
-            ErrorAlerts.showPopupAlert(activator: self, title: "Email or password is invalid", message: "", buttonAction: nil)
         }
     }
     
-    //TODO:: Implement using FieldValidation
     func isLegalFields() -> Bool{
+        if !FieldValidation.isLegalEmail(str: email.text!) {
+            let errorPopup = ErrorPopupViewController.newInstance(msg: "Illegal email address", onComplete: { self.loginButton.isEnabled = true })
+            self.present(errorPopup, animated: true, completion: nil)
+            return false
+        }
         
+        if !FieldValidation.isValidPassword(str: password.text!) {
+            let errorPopup = ErrorPopupViewController.newInstance(msg: "Illegal password", onComplete: { self.loginButton.isEnabled = true })
+            self.present(errorPopup, animated: true, completion: nil)
+            return false
+        }
         return true
     }
 }

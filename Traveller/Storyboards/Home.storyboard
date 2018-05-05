@@ -103,7 +103,7 @@
                     <navigationItem key="navigationItem" title="My Trips" id="phV-gx-tkA">
                         <barButtonItem key="leftBarButtonItem" image="logout_navigation" id="7lr-ap-dkS">
                             <connections>
-                                <action selector="logoutTapped:" destination="euB-pf-umv" id="AKt-jj-BNI"/>
+                                <segue destination="He2-i6-Tma" kind="unwind" unwindAction="unwindToAuthWithSegue:" id="vh6-Eh-zUg"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fvn-04-xIG">
@@ -119,6 +119,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEO-DF-SBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="He2-i6-Tma" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-472.5" y="-215.49295774647888"/>
         </scene>

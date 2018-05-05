@@ -14,12 +14,16 @@ public class FieldValidation {
         return emailTest.evaluate(with: str)
     }
     
-    static func isValidPassword() -> Bool {
-        let passwordRegex = ".{8}"
-        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self)
+    static func isLegalName(str: String) -> Bool {
+        return str.count > 1
     }
     
-    static func isLegalName(str: String) -> Bool {
-        return str.count > 3 && str.count < 20
+    static func isValidPassword(str: String) -> Bool {
+        let passwordRegex = ".{6}"
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: str)
+    }
+    
+    static func isValidPhone(str: String) -> Bool {
+       return !CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: str))
     }
 }
