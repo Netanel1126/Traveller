@@ -6,7 +6,7 @@ class AllTripsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         _ = TravellerNotification.tripNotification.observe { _ in
             self.allTrips = TripModel.instance.data
             self.tableView.reloadData()

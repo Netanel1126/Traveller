@@ -5,7 +5,7 @@ class MyTripsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "background.png"))
         if let user = DefaultUser.getUser() {
             self.data = TripModel.instance.data
             _ = TravellerNotification.tripNotification.observe { _ in
