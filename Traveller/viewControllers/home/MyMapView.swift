@@ -40,7 +40,7 @@ class MyMapView: MKMapView {
             let locCoord = self.convert(touchPoint, toCoordinateFrom: self)
             
             if i > 0 {
-                var dis = MinimumDistanceCalculator.distance(pos1: Position(id: i, x: locCoord.longitude, y: locCoord.latitude), pos2: myPath[i-1])
+                let dis = MinimumDistanceCalculator.distance(pos1: Position(id: i, x: locCoord.longitude, y: locCoord.latitude), pos2: myPath[i-1])
                 if dis > 0.002{
                     createNewPoint(pos1: Position(id: i, x: locCoord.longitude, y: locCoord.latitude), pos2: myPath[i-1])
                 }
@@ -64,9 +64,9 @@ class MyMapView: MKMapView {
     }
     
     func createNewPoint(pos1:Position,pos2:Position){
-        var newX = (pos1.x + pos2.x)/2
-        var newY = (pos1.y + pos2.y)/2;
-            var position = Position(id: i, x: newX, y: newY)
+        let newX = (pos1.x + pos2.x)/2
+        let newY = (pos1.y + pos2.y)/2;
+            let position = Position(id: i, x: newX, y: newY)
         myPath.append(position)
         i += 1
         if MinimumDistanceCalculator.distance(pos1: pos1, pos2: position) > 0.002{
@@ -84,7 +84,7 @@ class MyMapView: MKMapView {
     
     func drawShapeLayer() {
         
-        var shapeLayer = CAShapeLayer()
+        let shapeLayer = CAShapeLayer()
         // the shape layer is used to draw along the already created path
         shapeLayer.path = path.cgPath
         
