@@ -1,7 +1,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UISearchBarDelegate {
+class MapViewController: ViewController, UISearchBarDelegate {
     
     @IBOutlet weak var myMap: MyMapView!
     var map:[Position]?
@@ -22,6 +22,8 @@ class MapViewController: UIViewController, UISearchBarDelegate {
             }
             self.present(alert, animated: true, completion: nil)
         }
+        
+
     }
 
     @IBAction func startToDraw(_ sender: Any) {
@@ -98,7 +100,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
                 let region = MKCoordinateRegionMake(coordinate, span)
                 self.myMap.setRegion(region, animated: true)
             }
-            
         }
     }
 }

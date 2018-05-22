@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Assistant-Regular.ttf">
+            <string>Assistant-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Error Popup View Controller-->
+        <scene sceneID="N6H-D7-hMb">
+            <objects>
+                <viewController storyboardIdentifier="ErrorPopupViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="mih-Qj-ALq" customClass="ErrorPopupViewController" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OH6-fd-pZC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzD-h0-NK7">
+                                <rect key="frame" x="37.5" y="210" width="300" height="267"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-iC-DWI">
+                                        <rect key="frame" x="16" y="20" width="268" height="227"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pwf-HW-91y">
+                                                <rect key="frame" x="84" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="5gb-VU-glD"/>
+                                                    <constraint firstAttribute="width" constant="100" id="mmc-ln-IOi"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjd-nr-9vI">
+                                                <rect key="frame" x="16.5" y="100" width="235" height="82"/>
+                                                <fontDescription key="fontDescription" name="Assistant-Regular" family="Assistant" pointSize="17"/>
+                                                <color key="textColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-S3-gqV" customClass="TDButton" customModule="Traveller" customModuleProvider="target">
+                                                <rect key="frame" x="0.5" y="182" width="267" height="45"/>
+                                                <color key="backgroundColor" red="0.91581839320000002" green="0.2143874466" blue="0.21494761109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="aKo-M9-nPW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <color key="tintColor" red="0.94875019790000004" green="0.95264691109999999" blue="0.97327417140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Confirm">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonDefaultColor">
+                                                        <color key="value" red="0.91581839323043823" green="0.214387446641922" blue="0.21494761109352112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="hoverColor">
+                                                        <color key="value" red="0.71808534860610962" green="0.014541923999786377" blue="0.016073565930128098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="confirmTapped:" destination="mih-Qj-ALq" eventType="touchUpInside" id="h0a-3n-L69"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ecI-S3-gqV" firstAttribute="leading" secondItem="Fuo-iC-DWI" secondAttribute="leading" id="BB7-FA-HAN"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kjd-nr-9vI" secondAttribute="trailing" constant="16" id="BCc-Re-QCm"/>
+                                            <constraint firstAttribute="trailing" secondItem="ecI-S3-gqV" secondAttribute="trailing" id="unA-Hg-8oo"/>
+                                            <constraint firstItem="Kjd-nr-9vI" firstAttribute="leading" secondItem="Fuo-iC-DWI" secondAttribute="leading" constant="16" id="z7i-H5-srn"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Fuo-iC-DWI" firstAttribute="height" secondItem="yzD-h0-NK7" secondAttribute="height" multiplier="0.85" id="5lI-WJ-KCZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fuo-iC-DWI" secondAttribute="trailing" constant="16" id="AQ4-88-lT4"/>
+                                    <constraint firstItem="Fuo-iC-DWI" firstAttribute="leading" secondItem="yzD-h0-NK7" secondAttribute="leading" constant="16" id="CkK-Ae-Z2V"/>
+                                    <constraint firstItem="Fuo-iC-DWI" firstAttribute="centerY" secondItem="yzD-h0-NK7" secondAttribute="centerY" id="LLS-Yy-KJ3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1450980392" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yzD-h0-NK7" firstAttribute="centerY" secondItem="PN6-ye-Cw6" secondAttribute="centerY" id="7Ec-RF-72g"/>
+                            <constraint firstItem="yzD-h0-NK7" firstAttribute="centerX" secondItem="PN6-ye-Cw6" secondAttribute="centerX" id="b93-Yk-1jy"/>
+                            <constraint firstItem="yzD-h0-NK7" firstAttribute="width" secondItem="OH6-fd-pZC" secondAttribute="width" multiplier="0.8" id="k4t-73-MaO"/>
+                            <constraint firstItem="yzD-h0-NK7" firstAttribute="height" secondItem="OH6-fd-pZC" secondAttribute="height" multiplier="0.4" id="nxV-xm-tva"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PN6-ye-Cw6"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorMsg" destination="Kjd-nr-9vI" id="58i-Rv-eJ4"/>
+                        <outlet property="popupView" destination="yzD-h0-NK7" id="o1x-1W-o1J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTG-bl-b4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514" y="-660"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="error_logo" width="500" height="500"/>
+    </resources>
+</document>

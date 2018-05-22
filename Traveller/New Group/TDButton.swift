@@ -5,15 +5,15 @@
 
 import Foundation
 import UIKit
-class TDButton: RoundButton {
-    @IBInspectable var buttonColor: UIColor = UIColor.blue
+class TDButton: UIButton {
+    @IBInspectable var buttonDefaultColor: UIColor = UIColor.blue
     @IBInspectable var hoverColor: UIColor = UIColor.lightGray
     @IBInspectable var disableColor: UIColor = UIColor.lightGray
-    @IBInspectable var defaultBorderColor: UIColor = UIColor.clear
+    @IBInspectable var borderColor: UIColor = UIColor.clear
     @IBInspectable var clickBorderColor: UIColor = UIColor.clear
     @IBInspectable var disableBorderColor: UIColor = UIColor.clear
-    
-    required init(frame: CGRect) {
+
+    required override init(frame: CGRect) {
         super.init(frame: frame)
         configureButton()
     }
@@ -26,6 +26,15 @@ class TDButton: RoundButton {
     func configureButton() {
         addTarget(self, action: #selector(onClick(_:)), for: .touchDown)
         addTarget(self, action: #selector(onRelease(_:)), for: .touchUpInside)
+        addTarget(self, action: #selector(onRelease(_:)), for: .touchDragExit)
+    }
+    
+    override func awakeFromNib() {
+        backgroundColor = buttonDefaultColor
+        layer.borderColor = borderColor.cgColor
+        layer.cornerRadius = frame.height / 10
+        layer.borderWidth = 1
+        self.isEnabled = Bool(isEnabled)
     }
     
     override var isEnabled: Bool {
@@ -36,16 +45,16 @@ class TDButton: RoundButton {
     
     @objc func onClick(_: UIButton) {
         backgroundColor = hoverColor
-        borderColor = clickBorderColor
+        layer.borderColor = clickBorderColor.cgColor
     }
     
     @objc func onRelease(_: UIButton) {
-        backgroundColor = buttonColor
-        borderColor = defaultBorderColor
+        backgroundColor = buttonDefaultColor
+        layer.borderColor = borderColor.cgColor
     }
     
     @objc func onDisable(_: UIButton) {
         backgroundColor = disableColor
-        borderColor = disableBorderColor
+        layer.borderColor = disableBorderColor.cgColor
     }
 }

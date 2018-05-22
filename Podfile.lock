@@ -51,6 +51,8 @@ PODS:
   - nanopb/encode (0.3.8)
   - RAMReel (3.0.0)
   - SwiftSocket (2.0.2)
+  - TextFieldEffects (1.4.0)
+  - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -58,6 +60,8 @@ DEPENDENCIES:
   - Firebase/Storage
   - RAMReel
   - SwiftSocket
+  - TextFieldEffects
+  - Toast-Swift (~> 3.0.1)
 
 SPEC CHECKSUMS:
   Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
@@ -73,7 +77,9 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   RAMReel: a123d736773901a9a3d2ef559c176a50c338b5de
   SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: f858e0a64dca77db27e0cc9a067e49ccae06c2d7
+PODFILE CHECKSUM: 282e6280a3cb0226ab6571f23be2e0bd254f56e0
 
 COCOAPODS: 1.4.0

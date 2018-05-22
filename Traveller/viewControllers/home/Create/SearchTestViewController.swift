@@ -9,7 +9,7 @@
 import UIKit
 import RAMReel
 @available(iOS 8.2, *)
-class SearchViewController: UIViewController {
+class SearchViewController: ViewController {
     var dataSource: SimplePrefixQueryDataSource!
     var ramReel: RAMReel<RAMCell, RAMTextField, SimplePrefixQueryDataSource>!
     
@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = DefaultUser.getUser()
-        let data = TravellerUserModel.instance.data.filter { user?.id == $0.id }.map {($0.firstName + " " + $0.lastName).lowercased()}
+        let data = TravellerUserModel.instance.data.filter { user?.id != $0.id }.map {($0.firstName + " " + $0.lastName).lowercased()}
         dataSource = SimplePrefixQueryDataSource(data)
         
         ramReel = RAMReel(frame: view.bounds, dataSource: dataSource, placeholder: "Start by typing…", attemptToDodgeKeyboard: true) {
