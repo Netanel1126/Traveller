@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XI7-YI-Mgo">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,7 +17,7 @@
             <objects>
                 <viewController id="X5a-4I-lfz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kac-IW-QGW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYJ-Y1-Ic3">
@@ -41,19 +41,14 @@
         <scene sceneID="wQI-09-azW">
             <objects>
                 <viewController id="hMs-MY-G2U" customClass="MapVC" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GX0-4I-6bd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-KZ-m22">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="g5v-kf-jEP"/>
-                    </view>
                     <tabBarItem key="tabBarItem" title="Tour Map" image="map_icon" id="c93-Pn-5XZ"/>
+                    <navigationItem key="navigationItem" title="Tour Map" id="cQr-VK-vwD">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="back_icon" id="Z9C-QN-Ng6">
+                            <connections>
+                                <action selector="BackToTrip:" destination="hMs-MY-G2U" id="3ew-Jl-ME8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isGuide" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -68,7 +63,24 @@
                     <state key="normal" title="Record" image="record_button-3"/>
                 </button>
             </objects>
-            <point key="canvasLocation" x="690" y="-636"/>
+            <point key="canvasLocation" x="1735" y="-821"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="vzc-Mu-lCL">
+            <objects>
+                <navigationController id="Kvz-29-Ozc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gHM-Xr-uZ9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6ob-U6-YFg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hMs-MY-G2U" kind="relationship" relationship="rootViewController" id="aZ4-dp-hkU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIo-8h-CXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-822"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UKJ-7H-aJG">
@@ -113,7 +125,7 @@
             <objects>
                 <tableViewController id="Wpn-VQ-XJM" customClass="UsersListTableViewController" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yvw-hQ-0qh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -121,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIk-NX-mIr" id="Nc0-qF-nGn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qJ-Xd-sQV">
@@ -131,7 +143,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-PI-ZPK">
-                                            <rect key="frame" x="80" y="40" width="30.666666666666671" height="21"/>
+                                            <rect key="frame" x="80" y="40" width="30.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="veN-tC-Wj5"/>
                                             </constraints>
@@ -184,14 +196,14 @@
             <objects>
                 <viewController id="ORg-UP-NVa" customClass="UserViewController" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ZV-iv-HXN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-Ap-3Mo">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-Ml-dwP">
-                                <rect key="frame" x="87.666666666666686" y="108" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="84" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Gld-py-Uyw"/>
                                     <constraint firstAttribute="height" constant="200" id="HLv-ei-tbk"/>
@@ -199,10 +211,10 @@
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eLf-xr-iaj">
-                                <rect key="frame" x="169.66666666666666" y="196" width="37" height="37"/>
+                                <rect key="frame" x="169.5" y="172" width="37" height="37"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-kO-1ce">
-                                <rect key="frame" x="87.666666666666686" y="322" width="200" height="120"/>
+                                <rect key="frame" x="87.5" y="298" width="200" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ok-er-DfS">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
@@ -273,7 +285,7 @@
             <objects>
                 <viewController id="Rmq-pO-Gzb" customClass="MapVC" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YPd-fZ-067">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kXB-Pa-lnL"/>
@@ -288,7 +300,7 @@
             <objects>
                 <navigationController id="6lm-z1-Qe9" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Tf-Wi-7ig">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
@@ -310,7 +322,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hMs-MY-G2U" kind="relationship" relationship="viewControllers" id="ibS-HV-lAN"/>
+                        <segue destination="Kvz-29-Ozc" kind="relationship" relationship="viewControllers" id="bkA-NK-Ve8"/>
                         <segue destination="rfa-Wn-Q7C" kind="relationship" relationship="viewControllers" id="fHg-kK-Ps3"/>
                         <segue destination="Nf9-Ox-hO1" kind="relationship" relationship="viewControllers" id="6lv-sC-CIq"/>
                     </connections>
@@ -326,7 +338,7 @@
                     <tabBarItem key="tabBarItem" title="Users" image="statistics_icon" id="rdh-H0-KaO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oIx-hW-APY">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -345,7 +357,7 @@
                     <tabBarItem key="tabBarItem" title="Chat" image="chat_icon" id="tUA-nL-yId"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oRe-Ps-bNU">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -360,7 +372,7 @@
     </scenes>
     <resources>
         <image name="back_icon" width="28" height="28"/>
-        <image name="background" width="341" height="192"/>
+        <image name="background" width="512" height="288"/>
         <image name="chat_icon" width="28" height="28"/>
         <image name="map_icon" width="28" height="28"/>
         <image name="menu_icon" width="38" height="38"/>

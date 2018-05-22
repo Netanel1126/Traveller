@@ -255,7 +255,7 @@
         <scene sceneID="A5f-qE-vq4">
             <objects>
                 <navigationController id="jhs-J9-Aeb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Trips" selectedImage="back_icon" id="Ete-lm-6kc"/>
+                    <tabBarItem key="tabBarItem" title="My Trips" image="icons8-world-map-24" id="Ete-lm-6kc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hy3-iz-3uk">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -371,7 +371,7 @@
         <scene sceneID="73X-YL-DKO">
             <objects>
                 <navigationController id="hrQ-c4-mwV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All trips" id="HG2-kt-nox"/>
+                    <tabBarItem key="tabBarItem" title="All trips" image="icons8-globe-24" id="HG2-kt-nox"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="doP-mH-UZM">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -526,13 +526,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back_icon" width="28" height="28"/>
         <image name="background" width="512" height="288"/>
         <image name="button" width="107" height="34"/>
         <image name="groupMemmberIcon" width="357" height="430"/>
         <image name="icons8-add-user-male-100" width="100" height="100"/>
+        <image name="icons8-globe-24" width="24" height="24"/>
         <image name="icons8-map-editing-100" width="100" height="100"/>
         <image name="icons8-pittsburgh-map-100" width="100" height="100"/>
+        <image name="icons8-world-map-24" width="24" height="24"/>
         <image name="search-circle-blue-512" width="512" height="512"/>
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>

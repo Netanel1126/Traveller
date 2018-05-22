@@ -55,6 +55,7 @@ class UsersListTableViewController: UITableViewController {
         return cell
     }
     
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         img = userImages[indexPath.row]
         self.performSegue(withIdentifier: "userInfo", sender: self.usersList[indexPath.row].id)
