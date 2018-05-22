@@ -6,13 +6,13 @@ class  Algo {
     
     func locator(pointA:Location,pointB:Location) -> Float {
         
-        var newLocatin = Location()
+        let newLocatin = Location()
         newLocatin.x = pointA.x
         newLocatin.y = pointB.y
         print("\(newLocatin.x) \(newLocatin.y)")
         
-        var a = abs(pointA.y - newLocatin.y)
-        var b = abs(pointB.x - newLocatin.x)
+        let a = abs(pointA.y - newLocatin.y)
+        let b = abs(pointB.x - newLocatin.x)
         
         print("A : \(a) B : \(b)")
         let c = powf(powf(a,2) + powf(b, 2),1/2)

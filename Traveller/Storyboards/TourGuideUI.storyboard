@@ -41,9 +41,9 @@
         <scene sceneID="wQI-09-azW">
             <objects>
                 <viewController id="hMs-MY-G2U" customClass="MapVC" customModule="Traveller" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tour Map" image="map_icon" id="c93-Pn-5XZ"/>
+                    <tabBarItem key="tabBarItem" title="Tour Map" image="icons8-marker-24" id="c93-Pn-5XZ"/>
                     <navigationItem key="navigationItem" title="Tour Map" id="cQr-VK-vwD">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="back_icon" id="Z9C-QN-Ng6">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-back-48" id="Z9C-QN-Ng6">
                             <connections>
                                 <action selector="BackToTrip:" destination="hMs-MY-G2U" id="3ew-Jl-ME8"/>
                             </connections>
@@ -65,11 +65,11 @@
             </objects>
             <point key="canvasLocation" x="1735" y="-821"/>
         </scene>
-        <!--Item-->
+        <!--Tour Map-->
         <scene sceneID="vzc-Mu-lCL">
             <objects>
                 <navigationController id="Kvz-29-Ozc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gHM-Xr-uZ9"/>
+                    <tabBarItem key="tabBarItem" title="Tour Map" image="icons8-marker-24" id="gHM-Xr-uZ9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6ob-U6-YFg">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -335,7 +335,7 @@
         <scene sceneID="vqi-u7-mNs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nf9-Ox-hO1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Users" image="statistics_icon" id="rdh-H0-KaO"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="icons8-administrator-male-26" id="rdh-H0-KaO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oIx-hW-APY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -354,7 +354,7 @@
         <scene sceneID="7Zf-cp-oI1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rfa-Wn-Q7C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="chat_icon" id="tUA-nL-yId"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="icons8-collaboration-26" id="tUA-nL-yId"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oRe-Ps-bNU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -373,10 +373,11 @@
     <resources>
         <image name="back_icon" width="28" height="28"/>
         <image name="background" width="512" height="288"/>
-        <image name="chat_icon" width="28" height="28"/>
-        <image name="map_icon" width="28" height="28"/>
+        <image name="icons8-administrator-male-26" width="26" height="26"/>
+        <image name="icons8-back-48" width="48" height="48"/>
+        <image name="icons8-collaboration-26" width="26" height="26"/>
+        <image name="icons8-marker-24" width="24" height="24"/>
         <image name="menu_icon" width="38" height="38"/>
         <image name="record_button-3" width="72" height="72"/>
-        <image name="statistics_icon" width="28" height="28"/>
     </resources>
 </document>
