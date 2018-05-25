@@ -45,7 +45,7 @@ class AllTripsTableViewController: UITableViewController {
                 let alert = Alerts.joinGroupAlert(onAccept: {
                     GroupModel.instance.addUserToGroup(userId: (user?.id)!, groupId: row.tripId!){ error in
                         if error != nil {
-                            //TODO:: Implement
+                            ErrorAlerts.showPopupAlert(activator: self, title: (error?.localizedDescription)!, message: "", buttonAction: nil)
                         }else{
                             self.tableView.reloadData()
                         }
