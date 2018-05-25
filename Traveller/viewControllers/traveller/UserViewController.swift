@@ -19,7 +19,7 @@ class UserViewController: ViewController {
     var Fullname: String?
     var Email: String?
     var PhoneNumber: String?
-    var ImageUrl : String?
+    var Image : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +28,13 @@ class UserViewController: ViewController {
         fullname.text = Fullname
         email.text = Email
         phoneNumber.text = PhoneNumber
-        }
+    }
 
     func addImg(){
-    ImageFirebaseStorage.loadImage(url: ImageUrl!) { (img) in
-            self.imageurl.image = img
-            self.imageurl.isHidden = false
-            self.spinner.isHidden = true
+        self.imageurl.image = Image
+        self.imageurl.isHidden = false
+        self.spinner.isHidden = true
         Logger.log(message: self.Fullname! + " Img was add", event: .d)
-        }
     }
     
     @IBAction func backToUserList(_ sender: UIButton) {

@@ -14,22 +14,20 @@ class UsersListTableViewController: UITableViewController {
     var img: UIImage?
     var usersList = [TravellerUser]()
     var tripId:String?
+    var users:TripUsers?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarStyle()
         let tabbar = self.tabBarController as! GuideTabBarController
         tripId = tabbar.tripId
-        if let user = DefaultUser.getUser() {
-            self.usersList = TravellerUserModel.instance.data
-            _ = TravellerNotification.travellerUserNotification.observe { _ in
-                let myTrip = TripModel.instance.data.filter {$0.id == self.tripId}.first
-                self.usersList = TravellerUserModel.instance.data.filter{(myTrip?.owners.contains($0.id))!}
-                Logger.log(message: "test " +  self.usersList.description, event: .e)
-                self.tableView.reloadData()
-            }
+        users = TripUsers(groupId: tripId!)
+        self.usersList = (users?.users)!
+        
+        TravellerNotification.tripUsersNotification.observe { (_) in
+            self.usersList = (self.users?.users)!
+            self.tableView.reloadData()
         }
-        self.usersList = TravellerUserModel.instance.data
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,19 +42,14 @@ class UsersListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersList", for: indexPath) as! UsersListTableViewCell
         let index = indexPath.row
-        cell.fullName.text = usersList[index].firstName + " " + usersList[index].lastName
-        cell.email.text = usersList[index].email
-        // NEED TO CHANGE
-        ImageFirebaseStorage.loadImage(url: usersList[index].imgUrl) { (img) in
-            cell.imageURL.image = img
-            self.userImages.append(img!)
-        }
-        
+        var user = usersList[index]
+        cell.fullName.text = user.firstName + " " + user.lastName
+        cell.email.text = user.email
+        cell.imageURL.image = users?.usersImages[user.id]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        img = userImages[indexPath.row]
         self.performSegue(withIdentifier: "userInfo", sender: self.usersList[indexPath.row].id)
     }
     
@@ -68,7 +61,7 @@ class UsersListTableViewController: UITableViewController {
             des.Fullname = (user?.firstName)! + " " + (user?.lastName)!
             des.Email = (user?.email)!
             des.PhoneNumber = (user?.phoneNumber)!
-            des.ImageUrl = (user?.imgUrl)!
+            des.Image = users?.usersImages[(user?.id)!]
         }
     }
 }
