@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "logout_navigation.png",
+      "filename" : "icons8-exit-25.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icons8-exit-50.png",
       "scale" : "2x"
     },
     {

@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XI7-YI-Mgo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XI7-YI-Mgo">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Chats-->
         <scene sceneID="a42-lp-0J4">
@@ -50,7 +45,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYE-Ej-IaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2721" y="824"/>
+            <point key="canvasLocation" x="2629" y="824"/>
         </scene>
         <!--Tour Map-->
         <scene sceneID="wQI-09-azW">
@@ -73,14 +68,38 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g5v-kf-jEP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tour Map" image="map_icon" id="c93-Pn-5XZ"/>
+                    <tabBarItem key="tabBarItem" title="Tour Map" image="icons8-marker-24" id="c93-Pn-5XZ"/>
+                    <navigationItem key="navigationItem" title="Tour Map" id="irk-k5-uW1">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icons8-back-48" id="ZKy-UJ-jGk">
+                            <connections>
+                                <action selector="BackToTrip:" destination="hMs-MY-G2U" id="aNX-7x-32R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isGuide" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xA-fE-AzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="-321"/>
+            <point key="canvasLocation" x="1734" y="-917"/>
+        </scene>
+        <!--Tour Map-->
+        <scene sceneID="ryT-r6-1bJ">
+            <objects>
+                <navigationController id="igI-K1-DAo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tour Map" image="icons8-marker-24" id="ynv-eK-6TA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0vW-Ue-lpm">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hMs-MY-G2U" kind="relationship" relationship="rootViewController" id="DsO-OO-1vl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4l-fm-8FC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="-918"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UKJ-7H-aJG">
@@ -189,7 +208,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fs8-rE-qZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734" y="11"/>
+            <point key="canvasLocation" x="1733" y="26"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="RSk-jO-JG0">
@@ -278,14 +297,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SxA-7u-mnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3705" y="10.56338028169014"/>
+            <point key="canvasLocation" x="2629" y="26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="loS-nd-j2O">
             <objects>
                 <navigationController id="6lm-z1-Qe9" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Tf-Wi-7ig">
-                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
@@ -307,7 +326,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hMs-MY-G2U" kind="relationship" relationship="viewControllers" id="ibS-HV-lAN"/>
+                        <segue destination="igI-K1-DAo" kind="relationship" relationship="viewControllers" id="5wy-DQ-d36"/>
                         <segue destination="rfa-Wn-Q7C" kind="relationship" relationship="viewControllers" id="fHg-kK-Ps3"/>
                         <segue destination="Nf9-Ox-hO1" kind="relationship" relationship="viewControllers" id="6lv-sC-CIq"/>
                     </connections>
@@ -320,10 +339,10 @@
         <scene sceneID="vqi-u7-mNs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nf9-Ox-hO1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Users" image="statistics_icon" id="rdh-H0-KaO"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="icons8-administrator-male-26" id="rdh-H0-KaO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oIx-hW-APY">
-                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -333,16 +352,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsX-sY-ePP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.25" y="10.56338028169014"/>
+            <point key="canvasLocation" x="767" y="26"/>
         </scene>
         <!--Chat-->
         <scene sceneID="7Zf-cp-oI1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rfa-Wn-Q7C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="chat_icon" id="tUA-nL-yId"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="icons8-collaboration-26" id="tUA-nL-yId"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oRe-Ps-bNU">
-                        <rect key="frame" x="0.0" y="20" width="320" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -352,15 +371,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oze-Rb-6J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734.375" y="823.94366197183103"/>
+            <point key="canvasLocation" x="1733" y="824"/>
         </scene>
     </scenes>
     <resources>
         <image name="back_icon" width="28" height="28"/>
-        <image name="background" width="341" height="192"/>
-        <image name="chat_icon" width="28" height="28"/>
-        <image name="map_icon" width="28" height="28"/>
+        <image name="background" width="512" height="288"/>
+        <image name="icons8-administrator-male-26" width="26" height="26"/>
+        <image name="icons8-back-48" width="24" height="24"/>
+        <image name="icons8-collaboration-26" width="26" height="26"/>
+        <image name="icons8-marker-24" width="24" height="24"/>
         <image name="menu_icon" width="38" height="38"/>
-        <image name="statistics_icon" width="28" height="28"/>
     </resources>
 </document>

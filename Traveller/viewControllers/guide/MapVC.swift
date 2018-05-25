@@ -21,4 +21,8 @@ class MapVC: ViewController {
         }
         mapView?.tripId = tabbar.tripId
     }
+
+    @IBAction func BackToTrip(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
