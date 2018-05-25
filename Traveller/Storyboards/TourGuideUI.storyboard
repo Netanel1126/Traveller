@@ -299,19 +299,6 @@
             </objects>
             <point key="canvasLocation" x="2629" y="26"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="loS-nd-j2O">
-            <objects>
-                <navigationController id="6lm-z1-Qe9" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Tf-Wi-7ig">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QtO-Pn-C5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2025" y="602"/>
-        </scene>
         <!--Search Here-->
         <scene sceneID="15b-Dd-RWx">
             <objects>
