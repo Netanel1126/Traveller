@@ -37,6 +37,7 @@ class TravellerNotification {
     static let travellerUserNotification = ModelNotificationBase<Void>(name: "travellerUserDBNotification")
     static let tripNotification = ModelNotificationBase<Void>(name: "tripNotification")
     static let groupNotification = ModelNotificationBase<Void>(name: "groupNotification")
+    static let tripUsersNotification = ModelNotificationBase<Void>(name: "tripUsersNotification")
     //server
     static let serverChatNotification = ModelNotificationBase<MessageResponse>(name: "serverChatNotification")
     static let localChatNotification = ModelNotificationBase<Void>(name: "localChatNotification")
