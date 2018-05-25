@@ -65,6 +65,7 @@
 		B05EF994208BC4DC000997FC /* DefaultUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF993208BC4DC000997FC /* DefaultUser.swift */; };
 		B05EF996208BC9CC000997FC /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF995208BC9CC000997FC /* Alerts.swift */; };
 		B05EF99A208BD23F000997FC /* SearchTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF999208BD23F000997FC /* SearchTestViewController.swift */; };
+		B07DC22C20B882B50071AC3B /* TripUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07DC22B20B882B50071AC3B /* TripUsers.swift */; };
 		B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */; };
 		B0A3681F209348F700A4571C /* MapAnnotationHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */; };
 		B0A36821209349EC00A4571C /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A36820209349EC00A4571C /* UserType.swift */; };
@@ -173,6 +174,7 @@
 		B05EF993208BC4DC000997FC /* DefaultUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUser.swift; sourceTree = "<group>"; };
 		B05EF995208BC9CC000997FC /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		B05EF999208BD23F000997FC /* SearchTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTestViewController.swift; sourceTree = "<group>"; };
+		B07DC22B20B882B50071AC3B /* TripUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripUsers.swift; path = Traveller/model/TripUsers.swift; sourceTree = SOURCE_ROOT; };
 		B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationHolder.swift; sourceTree = "<group>"; };
 		B0A36820209349EC00A4571C /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 			children = (
 				84BC9B5E208539F60012AFC8 /* MapAlerts.swift */,
 				B0387A2E207FC5A200B83A53 /* Logger.swift */,
+				B07DC22B20B882B50071AC3B /* TripUsers.swift */,
 				B0387A31207FC6D100B83A53 /* NotificationModel.swift */,
 				B05EF993208BC4DC000997FC /* DefaultUser.swift */,
 				845BC0802097AF70001D80D9 /* ErrorAlerts.swift */,
@@ -542,6 +545,7 @@
 				84AC8CAF1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CB01FFE23A800AB9BF9 /* Resources */,
 				CB02AA067A40E1496D0A204B /* [CP] Embed Pods Frameworks */,
+				A51185202A0D41946DDC555C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -560,6 +564,8 @@
 				84AC8CC21FFE23A800AB9BF9 /* Sources */,
 				84AC8CC31FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CC41FFE23A800AB9BF9 /* Resources */,
+				123F922347F1655323CD8C7A /* [CP] Embed Pods Frameworks */,
+				6BBA953574CB056590A7EF34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -579,6 +585,8 @@
 				84AC8CCD1FFE23A800AB9BF9 /* Sources */,
 				84AC8CCE1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CCF1FFE23A800AB9BF9 /* Resources */,
+				A62A1CD8E37C11ADFC8CDF88 /* [CP] Embed Pods Frameworks */,
+				002F9DC9B9FC3CC256C73E48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -672,6 +680,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		002F9DC9B9FC3CC256C73E48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		031792D55A85ED4D27BF0CD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -688,6 +711,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		123F922347F1655323CD8C7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BBA953574CB056590A7EF34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A51185202A0D41946DDC555C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Traveller/Pods-Traveller-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62A1CD8E37C11ADFC8CDF88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A8FEE6F11C64FCCEAB135494 /* [CP] Check Pods Manifest.lock */ = {
@@ -808,6 +891,7 @@
 				AC20B6422096043A004CF5B6 /* UsersListTableViewCell.swift in Sources */,
 				3065D47E20552E2E0057EA94 /* TravellerUser.swift in Sources */,
 				AC20B6442096049A004CF5B6 /* UsersListTableViewController.swift in Sources */,
+				B07DC22C20B882B50071AC3B /* TripUsers.swift in Sources */,
 				84BC9B5820851A380012AFC8 /* FirebaseModel.swift in Sources */,
 				84CB9076207770D500D15EC9 /* SideMenuVC.swift in Sources */,
 				B0387A2C207FC4FA00B83A53 /* AuthManager.swift in Sources */,

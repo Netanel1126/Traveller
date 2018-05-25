@@ -16,14 +16,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--TravellerStoryBoard-->
-        <scene sceneID="8rG-Wc-TtM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TravellerStoryBoard" id="28x-Ge-dR2" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eWe-00-k0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="269" y="367"/>
-        </scene>
         <!--TourGuideUI-->
         <scene sceneID="mCq-Pr-srT">
             <objects>
@@ -114,7 +106,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="28x-Ge-dR2" kind="show" identifier="enterAsGuestSegue" id="kVx-CA-sbV"/>
                         <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="eKA-px-F8G"/>
                     </connections>
                 </tableViewController>
@@ -132,10 +123,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="a3w-0s-Q8g">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="411"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-XN-Ww7">
-                                <rect key="frame" x="13" y="103" width="281.5" height="140"/>
+                                <rect key="frame" x="13" y="103" width="281.5" height="96"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0d-oP-UoU">
                                         <rect key="frame" x="0.0" y="0.0" width="281.5" height="30"/>
@@ -160,16 +151,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y32-y9-AHR">
-                                        <rect key="frame" x="0.0" y="55" width="281.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="55" width="281.5" height="16"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atT-I0-cg9">
-                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMO-ab-lZW">
-                                                <rect key="frame" x="92.5" y="0.0" width="189" height="30"/>
+                                                <rect key="frame" x="92.5" y="0.0" width="189" height="16"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9UC-Mk-VrM"/>
@@ -182,7 +173,7 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yc7-zh-gSf">
-                                        <rect key="frame" x="0.0" y="110" width="281.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="96" width="281.5" height="0.0"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -193,7 +184,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plh-bB-Mdj">
-                                <rect key="frame" x="110" y="437" width="100" height="34"/>
+                                <rect key="frame" x="110" y="393" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="g16-bl-bhz"/>
                                     <constraint firstAttribute="width" constant="100" id="vpC-Yz-Ui7"/>
@@ -213,7 +204,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8h-6t-c1J">
-                                <rect key="frame" x="144" y="356" width="69" height="30"/>
+                                <rect key="frame" x="144" y="312" width="69" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="69" id="IB2-ms-Bit"/>
                                     <constraint firstAttribute="height" constant="30" id="LiQ-3N-DxT"/>
@@ -224,14 +215,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-map-editing-100" translatesAutoresizingMaskIntoConstraints="NO" id="QoI-j7-KCY">
-                                <rect key="frame" x="47" y="334" width="75" height="75"/>
+                                <rect key="frame" x="47" y="290" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="DAf-vP-f16"/>
                                     <constraint firstAttribute="width" constant="75" id="fVZ-Tn-XKR"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpK-eC-Y13">
-                                <rect key="frame" x="144" y="273" width="160" height="30"/>
+                                <rect key="frame" x="144" y="229" width="160" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="MZD-38-cK5"/>
                                 </constraints>
@@ -241,7 +232,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-add-user-male-100" translatesAutoresizingMaskIntoConstraints="NO" id="CV1-Rf-Obj">
-                                <rect key="frame" x="47" y="254" width="75" height="75"/>
+                                <rect key="frame" x="47" y="210" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="U5I-Vb-zms"/>
                                     <constraint firstAttribute="height" constant="75" id="gks-Oh-lQM"/>
@@ -388,7 +379,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="CBN-OE-teX"/>
-                        <segue destination="28x-Ge-dR2" kind="show" identifier="enterAsGuestSegue" id="WGs-sC-S4h"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VT-Vb-7xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -572,7 +562,6 @@
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eKA-px-F8G"/>
-        <segue reference="kVx-CA-sbV"/>
+        <segue reference="CBN-OE-teX"/>
     </inferredMetricsTieBreakers>
 </document>
