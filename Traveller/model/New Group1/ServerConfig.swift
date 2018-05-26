@@ -15,5 +15,6 @@ public class ServerConfig {
 public enum PackageType: String {
     case coordinate = "#COORDINATE"
     case message = "#MSG"
+    case outofrange = "#OutOfRange"
     
 }

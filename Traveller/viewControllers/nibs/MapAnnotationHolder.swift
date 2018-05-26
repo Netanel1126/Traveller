@@ -12,7 +12,7 @@ class AnnotationHolder {
     
     var members = [String: MKPointAnnotation]()
     var guiders = [String: MKPointAnnotation]()
-    var path: [Position]?
+    var path: [Position]
     
     init(path: [Position]) {
         self.path = path

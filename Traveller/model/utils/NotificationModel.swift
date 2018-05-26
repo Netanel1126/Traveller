@@ -39,6 +39,7 @@ class TravellerNotification {
     static let groupNotification = ModelNotificationBase<Void>(name: "groupNotification")
     static let tripUsersNotification = ModelNotificationBase<Void>(name: "tripUsersNotification")
     //server
+    static let serverOutofrangeNotification = ModelNotificationBase<OutOfRangeResponse>(name: "serverOutofrangeNotification")
     static let serverChatNotification = ModelNotificationBase<MessageResponse>(name: "serverChatNotification")
     static let localChatNotification = ModelNotificationBase<Void>(name: "localChatNotification")
     static let serverCoordinateNotification = ModelNotificationBase<CoordinateResponse>(name: "serverCoordinateNotification")

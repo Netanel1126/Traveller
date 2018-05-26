@@ -8,6 +8,15 @@
 
 import Foundation
 protocol ServerResponse{}
+
+public struct OutOfRangeResponse: ServerResponse {
+    let uid: String
+    
+    init(uid: String) {
+        self.uid = uid
+    }
+}
+
 public struct MessageResponse: ServerResponse {
     let uid: String
     let message: String
@@ -42,6 +51,9 @@ public struct CoordinateResponse: ServerResponse {
                     msg.append(splitted[i])
                 }
                 return MessageResponse(uid: splitted[1], message: msg)
+            }
+            else if splitted[0] == PackageType.outofrange.rawValue {
+                return OutOfRangeResponse(uid: splitted[1])
             } else {
                 Logger.log(message: "Unknown package received: \(message)", event: .e)
                 return nil

@@ -13,8 +13,8 @@ target 'Traveller' do
   pod 'RAMReel'
   pod 'TextFieldEffects'
   pod 'Toast-Swift', '~> 3.0.1'
-
-  target 'TravellerTests' do
+   
+ target 'TravellerTests' do
     inherit! :search_paths
     # Pods for testing
   end

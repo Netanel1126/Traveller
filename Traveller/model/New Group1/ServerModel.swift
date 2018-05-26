@@ -14,15 +14,17 @@ class ServerModel {
     
     private init() {
         socket = TSocket(address: ServerConfig.ip, port: Int32(ServerConfig.port), messageDelegate: {
-                message in
+            message in
             let msgs = message.components(separatedBy: "\n")
             msgs.forEach {message in
-                if message.contains("#COORDINATE") || message.contains("#MESSAGE") {
+                if message.contains("#COORDINATE") || message.contains("#MESSAGE") || message.contains("#OutOfRange") {
                     guard let response = ServerResponseBuilder.buildResponse(message: message) else { return }
                     if response is CoordinateResponse {
                         TravellerNotification.serverCoordinateNotification.post(data: (response as! CoordinateResponse))
                     } else if response is MessageResponse {
                         TravellerNotification.serverChatNotification.post(data: (response as! MessageResponse))
+                    } else if response is OutOfRangeResponse {
+                        TravellerNotification.serverOutofrangeNotification.post(data: (response as! OutOfRangeResponse))
                     } else {
                         Logger.log(message: "unknown response: \(message)", event: .e)
                     }
@@ -31,18 +33,28 @@ class ServerModel {
         })
     }
     
-    func connectServer(gid: String, uid: String) {
-        socket.connect()
+    func connectServer(gid: String, uid: String) -> Bool {
+        if let error = socket.connect() {
+            Logger.log(message: error.localizedDescription, event: .e)
+            return false
+        }
         let identityPackage = PacketBuilder.identityPacket(gid: gid, uid: uid)
-       send(message: identityPackage)
+        return send(message: identityPackage)
     }
     
-    func stopServer() {
-        socket.stopServer()
+    func stopServer() -> Bool {
+        if let error = socket.stopServer() {
+            Logger.log(message: error.localizedDescription, event: .e)
+            return false
+        }
+        return true
     }
     
-    func send(message: String) {
-        socket.send(message: message)
+    func send(message: String) -> Bool {
+        if let error = socket.send(message: message) {
+            Logger.log(message: error.localizedDescription, event: .e)
+            return false
+        }
+        return true
     }
-    
 }

@@ -19,8 +19,8 @@
         <!--TourGuideUI-->
         <scene sceneID="mCq-Pr-srT">
             <objects>
-                <viewControllerPlaceholder storyboardName="TourGuideUI" id="pQT-RF-AdF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmV-y2-K1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="TourGuideUI" id="pQT-RF-AdF" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="245" y="220"/>
         </scene>
@@ -164,7 +164,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOS-Ke-K5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2204" y="115"/>
+            <point key="canvasLocation" x="-2703" y="118"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ZQt-3J-9pi">
@@ -373,7 +373,7 @@
                         <barButtonItem key="rightBarButtonItem" image="icons8-plus-math-filled-28" id="XgJ-MX-E7J"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="pQT-RF-AdF" kind="presentation" id="a6W-5f-5yP"/>
+                        <segue destination="pQT-RF-AdF" kind="presentation" identifier="enterTripSegue" id="a6W-5f-5yP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="la9-5R-apW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -514,7 +514,7 @@
                         <outlet property="chosenGuideTitle" destination="CfY-Jm-YgQ" id="AYb-xu-cQj"/>
                         <outlet property="tripDescTextField" destination="eFA-b6-Y2X" id="vGC-n2-ftd"/>
                         <outlet property="tripNameTextField" destination="oTj-Tg-6Id" id="D9r-Jh-80D"/>
-                        <segue destination="PTe-Vb-RIh" kind="show" id="rSD-Kl-EWw"/>
+                        <segue destination="PTe-Vb-RIh" kind="show" identifier="toMap" id="rSD-Kl-EWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Gb-Ip-u4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -537,6 +537,6 @@
         <image name="write-circle-blue-512" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eKA-px-F8G"/>
+        <segue reference="a6W-5f-5yP"/>
     </inferredMetricsTieBreakers>
 </document>

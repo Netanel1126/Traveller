@@ -19,8 +19,7 @@ public class FieldValidation {
     }
     
     static func isValidPassword(str: String) -> Bool {
-        let passwordRegex = ".{6}"
-        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: str)
+        return str.count > 5
     }
     
     static func isValidPhone(str: String) -> Bool {

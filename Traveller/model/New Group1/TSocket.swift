@@ -16,12 +16,11 @@ class TSocket {
     var messageDelegate: ((String) -> Void)
     
     init(address: String, port: Int32, messageDelegate: @escaping (String) -> Void) {
-         client = TCPClient(address: address, port: port)
+        client = TCPClient(address: address, port: port)
         self.messageDelegate = messageDelegate
     }
     
     func startReading() {
-        isRunning = true
         DispatchQueue.global(qos: .userInitiated).async {
             while self.isRunning {
                 guard let response = self.client.read(1024*10, timeout: 1000000) else { return }
@@ -39,31 +38,35 @@ class TSocket {
         }
     }
     
-    func stopServer() {
+    func stopServer() -> Error? {
         if isRunning {
-            send(message: PacketBuilder.closeReq())
+            return send(message: PacketBuilder.closeReq())
         }
+        Logger.log(message: "Trying to stop unrunning server", event: .e)
+        return nil
     }
     
-    func send(message: String) {
+    func send(message: String) -> Error? {
         switch client.send(string: message) {
-        case .success:
-            break
         case .failure(let error):
             Logger.log(message: "package send failed: \(error.localizedDescription)", event: .e)
+            return error
+        default: return nil
         }
     }
     
-    func connect() {
+    func connect() -> Error? {
         if !isRunning {
             switch client.connect(timeout: 10) {
             case .success:
                 Logger.log(message: "connection with sever has been established", event: .i)
+                isRunning = true
                 startReading()
-                break
             case .failure(let error):
                 Logger.log(message: "connection with sever has been failed: \(error.localizedDescription)", event: .e)
+                return error
             }
         }
+        return nil
     }
 }

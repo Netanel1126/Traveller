@@ -29,4 +29,8 @@ class PacketBuilder {
     static func closeAck() -> String {
         return "#BBOK\n"
     }
+    
+    static func outOfRange() -> String {
+        return "#OutOfRange\n"
+    }
 }
