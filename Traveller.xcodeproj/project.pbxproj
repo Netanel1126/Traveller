@@ -63,13 +63,13 @@
 		B05EF99A208BD23F000997FC /* SearchTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EF999208BD23F000997FC /* SearchTestViewController.swift */; };
 		B07DC22C20B882B50071AC3B /* TripUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07DC22B20B882B50071AC3B /* TripUsers.swift */; };
 		B08AE41120B8C5FA00C352C1 /* AllTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AE40E20B8C5F900C352C1 /* AllTripsTableViewController.swift */; };
-		B08AE41520B8C63D00C352C1 /* MyTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08AE41420B8C63D00C352C1 /* MyTripsTableViewController.swift */; };
 		B097B050208B55F000911BF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */; };
 		B0A3681F209348F700A4571C /* MapAnnotationHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */; };
 		B0A36821209349EC00A4571C /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A36820209349EC00A4571C /* UserType.swift */; };
 		B0C394E020B974A900E30E36 /* TDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C394DF20B974A900E30E36 /* TDButton.swift */; };
 		B0C394EF20B9772A00E30E36 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C394ED20B9772A00E30E36 /* ChatCollectionViewCell.swift */; };
 		B0C394F020B9772A00E30E36 /* ChatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C394EE20B9772A00E30E36 /* ChatCollectionViewController.swift */; };
+		B0C394F220B97A6200E30E36 /* MyTripsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C394F120B97A6200E30E36 /* MyTripsTableViewController.swift */; };
 		B0DAFB43209BA17000E1ED04 /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0387A38207FD84300B83A53 /* FieldValidation.swift */; };
 		B0F3CD322087A0AA0056B59C /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD312087A0AA0056B59C /* ServerModel.swift */; };
 		B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F3CD332087A19A0056B59C /* ServerConfig.swift */; };
@@ -172,13 +172,13 @@
 		B05EF999208BD23F000997FC /* SearchTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTestViewController.swift; sourceTree = "<group>"; };
 		B07DC22B20B882B50071AC3B /* TripUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripUsers.swift; path = Traveller/model/TripUsers.swift; sourceTree = SOURCE_ROOT; };
 		B08AE40E20B8C5F900C352C1 /* AllTripsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllTripsTableViewController.swift; path = Create/AllTripsTableViewController.swift; sourceTree = "<group>"; };
-		B08AE41420B8C63D00C352C1 /* MyTripsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTripsTableViewController.swift; path = "../../../../Traveller copy/Traveller/viewControllers/home/MyTripsTableViewController.swift"; sourceTree = "<group>"; };
 		B097B04F208B55EF00911BF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0A3681E209348F700A4571C /* MapAnnotationHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationHolder.swift; sourceTree = "<group>"; };
 		B0A36820209349EC00A4571C /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		B0C394DF20B974A900E30E36 /* TDButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDButton.swift; sourceTree = "<group>"; };
 		B0C394ED20B9772A00E30E36 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0C394EE20B9772A00E30E36 /* ChatCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewController.swift; sourceTree = "<group>"; };
+		B0C394F120B97A6200E30E36 /* MyTripsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTripsTableViewController.swift; path = Traveller/viewControllers/home/MyTripsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		B0F3CD312087A0AA0056B59C /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		B0F3CD332087A19A0056B59C /* ServerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfig.swift; sourceTree = "<group>"; };
 		B0F3CD352087BF530056B59C /* ServerResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponses.swift; sourceTree = "<group>"; };
@@ -439,9 +439,9 @@
 			children = (
 				B00C7988209B949900763A55 /* Create */,
 				84BC9B51208519DD0012AFC8 /* TripsTableViewCell.swift */,
+				B0C394F120B97A6200E30E36 /* MyTripsTableViewController.swift */,
 				8457BDA5208B730500ED24B5 /* AllTripsTableViewCell.swift */,
 				B08AE40E20B8C5F900C352C1 /* AllTripsTableViewController.swift */,
-				B08AE41420B8C63D00C352C1 /* MyTripsTableViewController.swift */,
 				B05EF995208BC9CC000997FC /* Alerts.swift */,
 			);
 			path = home;
@@ -859,6 +859,7 @@
 				B02DFF1920926B79007631F0 /* ViewController.swift in Sources */,
 				84BC9B5D20851DC70012AFC8 /* MinimumDistanceCalculator.swift in Sources */,
 				84CB907B2077904400D15EC9 /* CreateTripViewController.swift in Sources */,
+				B0C394F220B97A6200E30E36 /* MyTripsTableViewController.swift in Sources */,
 				B0F3CD392087CBE00056B59C /* MessageListener.swift in Sources */,
 				B05EF996208BC9CC000997FC /* Alerts.swift in Sources */,
 				B0387A32207FC6D100B83A53 /* NotificationModel.swift in Sources */,
@@ -886,7 +887,6 @@
 				B0A3681F209348F700A4571C /* MapAnnotationHolder.swift in Sources */,
 				B0C394EF20B9772A00E30E36 /* ChatCollectionViewCell.swift in Sources */,
 				B05EF994208BC4DC000997FC /* DefaultUser.swift in Sources */,
-				B08AE41520B8C63D00C352C1 /* MyTripsTableViewController.swift in Sources */,
 				84CB9079207785BF00D15EC9 /* Trip.swift in Sources */,
 				B0F3CD342087A19A0056B59C /* ServerConfig.swift in Sources */,
 				AC20B6422096043A004CF5B6 /* UsersListTableViewCell.swift in Sources */,
