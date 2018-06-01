@@ -6,23 +6,18 @@ class MyTripsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarStyle()
-        if let user = DefaultUser.getUser() {
-            self.data = TripModel.instance.data
+        
+        let filter = { (trip: Trip) -> Bool in
+            guard let group = GroupModel.instance.getGroup(groupId: trip.id) else {return false}
+            guard let user = DefaultUser.getUser() else {return false}
+            return group.travellerIdList.contains(user.id) || trip.owners.contains(user.id)
+        }
+        
+            self.data = TripModel.instance.data.filter(filter)
             _ = TravellerNotification.tripNotification.observe { _ in
-                self.data = TripModel.instance.data.filter {
-                    if $0.owners.contains(user.id) {
-                        return true
-                    } else {
-                        if let isTraveler = GroupModel.instance.getGroup(groupId: $0.id)?.travellerIdList.contains(user.id) {
-                            return isTraveler
-                        } else {
-                            return false
-                        }
-                    }
-                }
+                self.data = TripModel.instance.data.filter(filter)
                 self.tableView.reloadData()
             }
-        }
     }
        
         
