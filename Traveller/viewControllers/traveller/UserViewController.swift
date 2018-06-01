@@ -10,11 +10,11 @@ import UIKit
 
 class UserViewController: ViewController {
 
+    @IBOutlet weak var borderView: UIView!
     @IBOutlet weak var imageurl: UIImageView!
     @IBOutlet weak var fullname: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var Fullname: String?
     var Email: String?
@@ -23,25 +23,18 @@ class UserViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addImg()
-        spinner.startAnimating()
+        borderView.layer.cornerRadius = 10
+        self.imageurl.image = Image
         fullname.text = Fullname
         email.text = Email
         phoneNumber.text = PhoneNumber
     }
 
-    func addImg(){
-        self.imageurl.image = Image
-        self.imageurl.isHidden = false
-        self.spinner.isHidden = true
-        Logger.log(message: self.Fullname! + " Img was add", event: .d)
+    @IBAction func callTappede(_ sender: Any) {
+        if let phoneNumber = phoneNumber.text {
+            guard let number = URL(string: "tel://" + phoneNumber) else { return }
+            UIApplication.shared.open(number)
+        }
     }
     
-    @IBAction func backToUserList(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

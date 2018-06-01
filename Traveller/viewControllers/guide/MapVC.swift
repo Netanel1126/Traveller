@@ -12,6 +12,10 @@ import CoreLocation
 import MapKit
 import Toast_Swift
 
+class CustomPointAnnotation: MKPointAnnotation {
+    var pinCustomImageName:String!
+}
+
 class MapVC: ViewController {
     @IBOutlet var map: MKMapView!
     let locationManager = CLLocationManager()
@@ -20,6 +24,8 @@ class MapVC: ViewController {
     var isRunning = false
     var myLocation: CLLocationCoordinate2D?
     var algThreadTimer: Timer?
+    var sendLocationTimer: Timer?
+
     var isGuide = false
     var coordinateObserver: Any?
     var outOfRangeObserver: Any?
@@ -27,9 +33,14 @@ class MapVC: ViewController {
     
     
     override func viewDidLoad() {
-        guard let trip = trip else { Logger.log(message: "no trip found", event: .e); dismiss(); return}
+        guard let trip = trip else {
+            Logger.log(message: "no trip found", event: .e)
+        dismiss()
+            return
+        }
         
-        if !ServerModel.instance.connectServer(gid: trip.id, uid: user.id) { dismiss() }
+        if !ServerModel.instance.connectServer(gid: trip.id, uid: user.id) { Logger.log(message: "error connecting server", event: .e)
+            dismiss() }
         
         bindLocation()
         
@@ -37,7 +48,7 @@ class MapVC: ViewController {
             annotationHolder = AnnotationHolder(path: path)
         } else {
             Logger.log(message: "Couldnt claculate path", event: .e)
-            dismiss()
+            self.dismiss()
         }
 
         //run algorithm if a regular member
@@ -47,7 +58,6 @@ class MapVC: ViewController {
             })
         } else {// bind out of range notifications
             outOfRangeObserver = TravellerNotification.serverOutofrangeNotification.observe() { res in
-                //todo:: replace with popup
                 let client = TravellerUserModel.instance.data.filter{ $0.id == res?.uid}.first
                 self.view.makeToast("\(String(describing: client?.firstName)) \(String(describing: client?.lastName)) is out of range ", duration: 1.0, position: .bottom)
             }
@@ -111,25 +121,34 @@ class MapVC: ViewController {
         _ = ServerModel.instance.stopServer()
         dismiss(animated: true, completion: nil)
     }
+    @objc func sendLocation() {
+        guard let location = self.myLocation else {return}
+        if !ServerModel.instance.send(message: PacketBuilder.coordinatePacket(coordinate: location)) {
+            self.dismiss()
+        }
+    }
 }
 
 //My location
 extension MapVC: CLLocationManagerDelegate {
-    
+   
     func bindLocation() {
         locationManager.delegate = self
         //   manager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            self.sendLocationTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.sendLocation), userInfo: nil, repeats: true)
+        })
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let span: MKCoordinateSpan = MKCoordinateSpanMake(0.05,0.05)
         myLocation = location.coordinate
-        if !ServerModel.instance.send(message: PacketBuilder.coordinatePacket(coordinate: myLocation!)) {
-            dismiss()
-        }
+//        if !ServerModel.instance.send(message: PacketBuilder.coordinatePacket(coordinate: myLocation!)) {
+//            dismiss()
+//        }
         let region = MKCoordinateRegion(center: myLocation!, span: span)
         map.setRegion(region, animated: true)
         map.showsUserLocation = true

@@ -13,19 +13,23 @@ class UsersListTableViewCell: UITableViewCell {
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var imageURL: UIImageView!
-    
+    var phone: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-       self.imageURL.translatesAutoresizingMaskIntoConstraints = false
-       self.imageURL.layer.cornerRadius = 16
+        //circled image
+        imageURL.layer.borderWidth = 1
+        imageURL.layer.masksToBounds = false
+        imageURL.layer.borderColor = UIColor.gray.cgColor
+        imageURL.layer.cornerRadius = imageURL.frame.height/2
+        imageURL.clipsToBounds = true
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBAction func callTapped(_ sender: Any) {
+        if let phone = phone {
+            guard let number = URL(string: "tel://" + phone) else { return }
+            UIApplication.shared.open(number)
+        }
     }
-
+    
 }

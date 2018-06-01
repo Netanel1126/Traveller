@@ -57,6 +57,6 @@ extension UIViewController {
     
     func showAlert(title: String, onComplete: (() -> ())? = nil) {
         let popup = ErrorPopupViewController.newInstance(msg: title, onComplete: onComplete)
-        navigationController?.showDetailViewController(popup, sender: nil)
+        navigationController?.show(popup, sender: nil)
     }
 }

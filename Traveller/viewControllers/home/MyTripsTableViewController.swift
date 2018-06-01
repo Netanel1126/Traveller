@@ -37,8 +37,7 @@ class MyTripsTableViewController: UITableViewController {
         }
         
         override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let cell = tableView.cellForRow(at: indexPath) as! TripsTableViewCell
-            let id = cell.tripID
+            let id = data[indexPath.row].id
             performSegue(withIdentifier: "enterTripSegue", sender: id)
         }
         

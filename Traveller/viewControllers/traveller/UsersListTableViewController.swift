@@ -42,10 +42,11 @@ class UsersListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersList", for: indexPath) as! UsersListTableViewCell
         let index = indexPath.row
-        var user = usersList[index]
+        let user = usersList[index]
         cell.fullName.text = user.fullname()
         cell.email.text = user.email
         cell.imageURL.image = users?.usersImages[user.id]
+        cell.phone = user.phoneNumber
         return cell
     }
     
