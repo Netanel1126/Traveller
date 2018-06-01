@@ -48,9 +48,9 @@ class ChatCollectionViewController: UICollectionViewController,UITextFieldDelega
         }
         
         self.chatLog = MessageListener.instance.list
-        var msgTest = MessageResponse(uid: "Zp9PxvzBs2hI0gGtAFCl3i45JZ53", message: "This is a Test to check how does it look like when a different person is sending a message, TODO check with server how does it look like")
+       /* var msgTest = MessageResponse(uid: "Zp9PxvzBs2hI0gGtAFCl3i45JZ53", message: "This is a Test to check how does it look like when a different person is sending a message, TODO check with server how does it look like")
                 
-        chatLog.append(msgTest)
+        chatLog.append(msgTest)*/
         setupInputComponents()
         setupKeyboardObservers()
     }
@@ -189,6 +189,7 @@ class ChatCollectionViewController: UICollectionViewController,UITextFieldDelega
         var msg = MessageResponse(uid: myId! , message: inputTextField.text!)
         if msg.message.isEmpty == false{
             TravellerNotification.serverChatNotification.post(data: msg)
+            ServerModel.instance.send(message: PacketBuilder.messagePacket(message: msg.message))
             self.inputTextField.text = ""
         }
         dismissKeyboard()

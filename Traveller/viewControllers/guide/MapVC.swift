@@ -102,7 +102,7 @@ class MapVC: ViewController {
         }
     }
     
-    @IBAction func BackToTrip(_ sender: UIBarButtonItem) {
+    @IBAction func BacktoTrip(_ sender: UIButton) {
         dismiss()
     }
     
@@ -133,6 +133,7 @@ extension MapVC: CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: myLocation!, span: span)
         map.setRegion(region, animated: true)
         map.showsUserLocation = true
+        
     }
 }
 
