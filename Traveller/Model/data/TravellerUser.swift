@@ -27,6 +27,10 @@ class TravellerUser {
         imgUrl = json["imgUrl"] as! String
     }
     
+    func fullname() -> String {
+        return firstName + " " + lastName
+    }
+    
     func toJson() -> [String:Any] {
         var json = [String:Any]()
         json["id"] = id

@@ -45,7 +45,7 @@ class CreateTripViewController: ViewController, UITableViewDelegate, UITableView
                 self.shownGuides.onNext(result)
                 var chosen: TravellerUser?
                 result.forEach({ user in
-                    if (user.firstName + " " + user.lastName) == input {
+                    if (user.fullname()) == input {
                         chosen = user
                         self.setTableViewVisibility(isHidden: true)
                     }
@@ -83,7 +83,7 @@ class CreateTripViewController: ViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = try! shownGuides.value()[indexPath.row].firstName + " " + shownGuides.value()[indexPath.row].lastName
+        cell.textLabel?.text = try! shownGuides.value()[indexPath.row].fullname()
         return cell
     }
     

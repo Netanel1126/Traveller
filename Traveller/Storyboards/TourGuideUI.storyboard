@@ -96,44 +96,6 @@
             </objects>
             <point key="canvasLocation" x="9.375" y="-855.63380281690138"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="UKJ-7H-aJG">
-            <objects>
-                <viewController id="8eU-fx-pxG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cgV-0l-ZQt">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="poP-dQ-sgl">
-                                <rect key="frame" x="0.0" y="56" width="300" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Call Him" id="Ei8-vU-xeO"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iR3-K0-65u"/>
-                                    <barButtonItem title="Police" id="q0j-tJ-g1c"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="p1B-9C-0q9"/>
-                                    <barButtonItem title="Map" id="CPS-Dq-8b8"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kIj-6C-ey1"/>
-                                    <barButtonItem title="Ignore" id="l6l-rM-Rck"/>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A Is Missing!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yny-qK-JiB">
-                                <rect key="frame" x="0.0" y="20" width="300" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="8iq-gz-OzL"/>
-                    </view>
-                    <size key="freeformSize" width="300" height="100"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XMG-JB-lM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-722" y="-1065"/>
-        </scene>
         <!--Users-->
         <scene sceneID="Tb2-4F-3bc">
             <objects>

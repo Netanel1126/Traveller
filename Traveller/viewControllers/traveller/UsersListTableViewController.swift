@@ -43,7 +43,7 @@ class UsersListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersList", for: indexPath) as! UsersListTableViewCell
         let index = indexPath.row
         var user = usersList[index]
-        cell.fullName.text = user.firstName + " " + user.lastName
+        cell.fullName.text = user.fullname()
         cell.email.text = user.email
         cell.imageURL.image = users?.usersImages[user.id]
         return cell
