@@ -54,4 +54,9 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func showAlert(title: String, onComplete: (() -> ())? = nil) {
+        let popup = ErrorPopupViewController.newInstance(msg: title, onComplete: onComplete)
+        navigationController?.showDetailViewController(popup, sender: nil)
+    }
 }

@@ -13,7 +13,10 @@ target 'Traveller' do
   pod 'RAMReel'
   pod 'TextFieldEffects'
   pod 'Toast-Swift', '~> 3.0.1'
-   
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'   
+  pod 'AIFlatSwitch', '~> 1.0.1'
+  pod 'Reusable'
  target 'TravellerTests' do
     inherit! :search_paths
     # Pods for testing

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "89F8C81B7C6C999F15225299A436B9A2"
+               BlueprintIdentifier = "A883231026DBD410E3BC58E6C31D6110"
                BlueprintName = "RAMReel"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "RAMReel.framework">

@@ -55,21 +55,4 @@ class FirebaseModel{
             onUpdate(childrensArray)
         })
     }
-    
-//    static func readAllObjects(path: String, onComplete: @escaping ([DataSnapshot]?) -> Void){
-//
-//        let ref = databaseRef?.child(path)
-//
-//        let handler = {(snapshot:DataSnapshot) in
-//
-//            if let data  = snapshot.children.allObjects as? [DataSnapshot]{
-//                onComplete(data)
-//            }else{
-//                Logger.log(message: "Error no Trips Are Available", event: .e)
-//                onComplete(nil)
-//            }
-//        }
-//
-//        ref?.observe(DataEventType.value, with: handler)
-//    }
 }

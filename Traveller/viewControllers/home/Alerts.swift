@@ -11,7 +11,7 @@ import UIKit
 class Alerts {
     
     static func joinGroupAlert(onAccept: @escaping () -> Void, onCancel: @escaping () -> Void) -> UIAlertController{
-        let alert = UIAlertController(title: "Would you like to Join this Group", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Would you like to join selected group?", message: "", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .default) { (action) in
             onAccept()
