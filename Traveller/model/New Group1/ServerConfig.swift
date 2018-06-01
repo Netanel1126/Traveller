@@ -8,7 +8,7 @@
 
 import Foundation
 public class ServerConfig {
-    static let ip = "10.0.0.20"
+    static let ip = "10.160.4.74"
     static let port = 5555
 }
 

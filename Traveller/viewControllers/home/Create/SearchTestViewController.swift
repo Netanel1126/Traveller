@@ -20,6 +20,7 @@ class SearchViewController: ViewController {
         super.viewDidLoad()
         let user = DefaultUser.getUser()
         let data = TravellerUserModel.instance.data.filter { user?.id != $0.id }.map {($0.firstName + " " + $0.lastName).lowercased()}
+        print("TEST::" + data.description)
         dataSource = SimplePrefixQueryDataSource(data)
         
         ramReel = RAMReel(frame: view.bounds, dataSource: dataSource, placeholder: "Start by typing…", attemptToDodgeKeyboard: true) {
@@ -34,6 +35,7 @@ class SearchViewController: ViewController {
     }
     
     func onChosen(str: String) {
+        print(dataSource)
         if !dataSource.resultsForQuery(str).contains(str) {
             errorLabel.text = "Please check your spell"
         } else {

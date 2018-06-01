@@ -545,7 +545,6 @@
 				84AC8CAF1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CB01FFE23A800AB9BF9 /* Resources */,
 				CB02AA067A40E1496D0A204B /* [CP] Embed Pods Frameworks */,
-				64F7610E3915B83F108F8B1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -564,8 +563,6 @@
 				84AC8CC21FFE23A800AB9BF9 /* Sources */,
 				84AC8CC31FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CC41FFE23A800AB9BF9 /* Resources */,
-				8DED15E2287D5BB1F128D1EC /* [CP] Embed Pods Frameworks */,
-				9D3E8EA3D097488FF00D8467 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -585,8 +582,6 @@
 				84AC8CCD1FFE23A800AB9BF9 /* Sources */,
 				84AC8CCE1FFE23A800AB9BF9 /* Frameworks */,
 				84AC8CCF1FFE23A800AB9BF9 /* Resources */,
-				CCDD16311E82CA7851D1EA6C /* [CP] Embed Pods Frameworks */,
-				6B08E065D18DE0A29B80134D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -697,66 +692,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		64F7610E3915B83F108F8B1D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Traveller/Pods-Traveller-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B08E065D18DE0A29B80134D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DED15E2287D5BB1F128D1EC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D3E8EA3D097488FF00D8467 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerTests/Pods-TravellerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A8FEE6F11C64FCCEAB135494 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -805,21 +740,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Traveller/Pods-Traveller-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CCDD16311E82CA7851D1EA6C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravellerUITests/Pods-TravellerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D2B19977358C8B0BB708C0D5 /* [CP] Check Pods Manifest.lock */ = {
@@ -1069,11 +989,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3C854CZ2G2;
+				DEVELOPMENT_TEAM = 7X47U7TS77;
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-11243436.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-8286.Traveller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1086,11 +1006,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3C854CZ2G2;
+				DEVELOPMENT_TEAM = 7X47U7TS77;
 				INFOPLIST_FILE = Traveller/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-11243436.Traveller";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Traveller52-8286.Traveller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

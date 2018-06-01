@@ -17,7 +17,7 @@ class ServerModel {
             message in
             let msgs = message.components(separatedBy: "\n")
             msgs.forEach {message in
-                if message.contains("#COORDINATE") || message.contains("#MESSAGE") || message.contains("#OutOfRange") {
+                if message.contains("#COORDINATE") || message.contains("#MSG") || message.contains("#OutOfRange") {
                     guard let response = ServerResponseBuilder.buildResponse(message: message) else { return }
                     if response is CoordinateResponse {
                         TravellerNotification.serverCoordinateNotification.post(data: (response as! CoordinateResponse))

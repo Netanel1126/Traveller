@@ -189,6 +189,7 @@ class ChatCollectionViewController: UICollectionViewController,UITextFieldDelega
         var msg = MessageResponse(uid: myId! , message: inputTextField.text!)
         if msg.message.isEmpty == false{
             TravellerNotification.serverChatNotification.post(data: msg)
+            ServerModel.instance.send(message: PacketBuilder.messagePacket(message: msg.message))
             self.inputTextField.text = ""
         }
         dismissKeyboard()
