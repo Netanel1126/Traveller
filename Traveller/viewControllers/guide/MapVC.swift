@@ -11,16 +11,14 @@ import Toast_Swift
 import CoreLocation
 import MapKit
 import Toast_Swift
-
-class CustomPointAnnotation: MKPointAnnotation {
-    var pinCustomImageName:String!
-}
+import AudioToolbox
 
 class MapVC: ViewController {
     @IBOutlet var map: MKMapView!
     let locationManager = CLLocationManager()
     var annotationHolder: AnnotationHolder?
     var trip: Trip?
+    var group: Group?
     var isRunning = false
     var myLocation: CLLocationCoordinate2D?
     var algThreadTimer: Timer?
@@ -38,6 +36,8 @@ class MapVC: ViewController {
         dismiss()
             return
         }
+        
+        group = GroupModel.instance.getGroup(groupId: trip.id)
         
         if !ServerModel.instance.connectServer(gid: trip.id, uid: user.id) { Logger.log(message: "error connecting server", event: .e)
             dismiss() }
@@ -59,7 +59,10 @@ class MapVC: ViewController {
         } else {// bind out of range notifications
             outOfRangeObserver = TravellerNotification.serverOutofrangeNotification.observe() { res in
                 let client = TravellerUserModel.instance.data.filter{ $0.id == res?.uid}.first
-                self.view.makeToast("\(String(describing: client?.firstName)) \(String(describing: client?.lastName)) is out of range ", duration: 1.0, position: .bottom)
+                if let fullname = client?.fullname() {
+                    self.view.makeToast("\(fullname) is out of range ", duration: 1.0, position: .bottom)
+                    AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                }
             }
         }
         
@@ -70,7 +73,7 @@ class MapVC: ViewController {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(response.latitude ,response.longitude)
             guard let sender = (TravellerUserModel.instance.data.filter {$0.id == response.uid}.first) else { Logger.log(message: "error getting user data", event: .e); return }
-            annotation.title = sender.firstName
+            annotation.title = sender.fullname()
             //            annotation.subtitle = ""
             guard let trip = self.trip else {Logger.log(message: "nil pointer exception getting trip object", event: .e);return}
                 if trip.owners.contains(sender.id) {
@@ -82,7 +85,6 @@ class MapVC: ViewController {
                         self.map.removeAnnotation(oldAnnotation)
                     }
                 }
-        
             self.map.addAnnotation(annotation)
         }
     }
@@ -121,12 +123,12 @@ class MapVC: ViewController {
         _ = ServerModel.instance.stopServer()
         dismiss(animated: true, completion: nil)
     }
-    @objc func sendLocation() {
+    /*@objc func sendLocation() {
         guard let location = self.myLocation else {return}
         if !ServerModel.instance.send(message: PacketBuilder.coordinatePacket(coordinate: location)) {
             self.dismiss()
         }
-    }
+    }*/
 }
 
 //My location
@@ -134,25 +136,42 @@ extension MapVC: CLLocationManagerDelegate {
    
     func bindLocation() {
         locationManager.delegate = self
-        //   manager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+        map.showsUserLocation = true
+        /*DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
             self.sendLocationTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(self.sendLocation), userInfo: nil, repeats: true)
-        })
+        })*/
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let span: MKCoordinateSpan = MKCoordinateSpanMake(0.05,0.05)
         myLocation = location.coordinate
-//        if !ServerModel.instance.send(message: PacketBuilder.coordinatePacket(coordinate: myLocation!)) {
-//            dismiss()
-//        }
+                if !ServerModel.instance.send(message: PacketBuilder.coordinatePacket(coordinate: myLocation!)) {
+                    dismiss()
+                }
         let region = MKCoordinateRegion(center: myLocation!, span: span)
         map.setRegion(region, animated: true)
-        map.showsUserLocation = true
         
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let name = annotation.title
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        annotationView.canShowCallout = true
+        if name == "My Location" {
+            annotationView.image = UIImage(named: "currentLocation")
+        } else
+        if let name = name {
+            guard let id = TravellerUserModel.instance.getID(fullname: name!) else {return annotationView}
+            if (self.trip?.owners.contains(id))! {
+                annotationView.image = UIImage(named: "teacher")
+            } else {
+                annotationView.image = UIImage(named: "traveller")
+            }
+        } 
+        return annotationView
     }
 }
 

@@ -24,14 +24,21 @@ class HomeTripCell: UITableViewCell {
         guard let user = DefaultUser.getUser() else {return }
         guard let group = GroupModel.instance.getGroup(groupId: trip.id) else {return}
         let isRegistered = trip.owners.contains(user.id) || group.travellerIdList.contains(user.id)
-        self.setData(name: trip.name, description: trip.description, guideA: guideA.fullname(), guideB: guideB.fullname(), isRegistered: isRegistered)
+        let image = user.imgUrl
+        self.setData(image: image, name: trip.name, description: trip.description, guideA: guideA.fullname(), guideB: guideB.fullname(), isRegistered: isRegistered)
     }
     
-    func setData(image: UIImage? = nil, name: String, description: String, guideA: String, guideB: String, isRegistered: Bool) {
-        if image == nil {
+    func setData(image: String? = nil, name: String, description: String, guideA: String, guideB: String, isRegistered: Bool) {
+        if image == nil || image == "" {
             profileImage.image = UIImage(named: "default_profile")
         } else {
-            profileImage.image = image
+            ImageFirebaseStorage.loadImage(url: image!, onComplete: {
+                if let image = $0 {
+                    self.profileImage.image = image
+                } else {
+                    self.profileImage.image = UIImage(named: "default_profile")
+                }
+            })
         }
         self.name.text = name
         self.guideLabel.text = "Guides:\n\(guideA), \(guideB)"

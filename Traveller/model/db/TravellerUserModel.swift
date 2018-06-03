@@ -39,6 +39,16 @@ class TravellerUserModel {
         return data.filter{$0.id == userId}.first
     }
     
+    func getID(fullname: String) -> String? {
+        for user in data {
+            if user.fullname() == fullname{
+                return user.id
+            }
+        }
+        return nil
+    }
+    
+    
     func storeUser(travellerUser: TravellerUser, onComplete: @escaping (Error?) -> Void){
         let json = travellerUser.toJson()
         let path = FirebaseModel.userPath + travellerUser.id

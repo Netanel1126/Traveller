@@ -22,10 +22,10 @@ class ErrorPopupViewController: UIViewController {
     }
 
     @IBAction func confirmTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
         if let onComplete = onComplete {
             onComplete()
         }
-       dismiss(animated: true, completion: nil)
     }
     
     static func newInstance(msg: String, onComplete: (() -> ())?) -> ErrorPopupViewController {

@@ -21,7 +21,7 @@ class LoginViewController: ViewController {
                 self.onComplete!(user)
             }, onFailure: { error in
                 let errorPopup = ErrorPopupViewController.newInstance(msg: error.localizedDescription, onComplete: { self.loginButton.isEnabled = true })
-                self.present(errorPopup, animated: true, completion: nil)
+                self.navigationController?.pushViewController(errorPopup, animated: true)
             })
         }
     }
@@ -29,13 +29,13 @@ class LoginViewController: ViewController {
     func isLegalFields() -> Bool{
         if !FieldValidation.isLegalEmail(str: email.text!) {
             let errorPopup = ErrorPopupViewController.newInstance(msg: "Illegal email address", onComplete: { self.loginButton.isEnabled = true })
-            self.present(errorPopup, animated: true, completion: nil)
+            self.navigationController?.pushViewController(errorPopup, animated: true)
             return false
         }
         
         if !FieldValidation.isValidPassword(str: password.text!) {
             let errorPopup = ErrorPopupViewController.newInstance(msg: "Illegal password", onComplete: { self.loginButton.isEnabled = true })
-            self.present(errorPopup, animated: true, completion: nil)
+            self.navigationController?.pushViewController(errorPopup, animated: true)
             return false
         }
         return true
